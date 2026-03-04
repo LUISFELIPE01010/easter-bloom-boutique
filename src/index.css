@@ -128,7 +128,7 @@
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shimmer 8s ease-in-out infinite;
+  animation: shimmer 14s linear infinite;
 }
 
 /* Ornate border */
@@ -226,6 +226,10 @@ html { scroll-behavior: smooth; }
 @keyframes shimmer {
   0% { background-position: -200% center; }
   100% { background-position: 200% center; }
+}
+
+.text-shimmer {
+  padding-bottom: 0.15em;
 }
 
 @keyframes fade-up {
