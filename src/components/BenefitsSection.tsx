@@ -1,17 +1,16 @@
 import { motion } from "framer-motion";
+import { Flame, Leaf, Diamond, Gift } from "lucide-react";
 
 const benefits = [
-  { icon: "🔥", value: "40h+", label: "de queima por vela", desc: "Duração premium que preenche seu lar por semanas" },
-  { icon: "🌱", value: "100%", label: "cera vegetal", desc: "Sustentável, sem parafina, sem toxinas" },
-  { icon: "💎", value: "3", label: "formatos disponíveis", desc: "Vela, Home Spray e Drops — escolha o seu" },
-  { icon: "🎀", value: "∞", label: "momentos especiais", desc: "Presente perfeito para quem você ama" },
+  { icon: Flame, value: "40h+", label: "de queima por vela", desc: "Duração premium que preenche seu lar por semanas" },
+  { icon: Leaf, value: "100%", label: "cera vegetal", desc: "Sustentável, sem parafina, sem toxinas" },
+  { icon: Diamond, value: "3", label: "formatos disponíveis", desc: "Vela, Home Spray e Drops — escolha o seu" },
+  { icon: Gift, value: "∞", label: "momentos especiais", desc: "Presente perfeito para quem você ama" },
 ];
 
 const BenefitsSection = () => (
-  <section className="relative py-24 bg-cream overflow-hidden">
-    <div className="absolute inset-0 opacity-[0.02]"
-      style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v22H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zM0 22v2h20v-2H0zm0 4v2h20v-2H0zm0 4v2h20v-2H0zm0 4v2h20v-2H0zm0 4v2h20v-2H0z' fill='%23876a3e' fill-opacity='0.4'/%3E%3C/svg%3E")` }}
-    />
+  <section className="relative py-24 overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-b from-cream/30 to-background" />
 
     <div className="max-w-6xl mx-auto px-6 relative">
       <motion.div
@@ -34,9 +33,11 @@ const BenefitsSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.6 }}
-            className="group glass-card rounded-2xl p-7 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            className="group rounded-3xl p-7 text-center bg-warm-white/60 border border-gold-light/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
           >
-            <div className="text-4xl mb-4">{b.icon}</div>
+            <div className="w-14 h-14 mx-auto mb-5 rounded-2xl border border-gold-light/30 flex items-center justify-center text-gold">
+              <b.icon size={26} strokeWidth={1.5} />
+            </div>
             <p className="font-display text-3xl font-bold text-shimmer mb-1">{b.value}</p>
             <p className="font-display text-sm font-semibold text-chocolate uppercase tracking-wider mb-3">{b.label}</p>
             <p className="font-body text-sm text-chocolate-light/65 leading-relaxed">{b.desc}</p>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Heart, Star, Award, TrendingUp } from "lucide-react";
 
 const testimonials = [
   {
@@ -32,21 +33,24 @@ const testimonials = [
 ];
 
 const stats = [
-  { value: "2.500+", label: "Velas vendidas", icon: "🕯️" },
-  { value: "98%", label: "Satisfação", icon: "💛" },
-  { value: "4.9/5", label: "Avaliação média", icon: "⭐" },
-  { value: "500+", label: "Avaliações 5★", icon: "✨" },
+  { value: "2.500+", label: "Velas vendidas", icon: TrendingUp },
+  { value: "98%", label: "Satisfação", icon: Heart },
+  { value: "4.9/5", label: "Avaliação média", icon: Star },
+  { value: "500+", label: "Avaliações 5★", icon: Award },
 ];
 
 const SocialProof = () => (
-  <section id="depoimentos" className="relative py-28 bg-cream overflow-hidden">
-    <div className="absolute top-0 left-0 w-full">
-      <div className="divider-floral" />
-    </div>
+  <section id="depoimentos" className="relative py-28 overflow-hidden">
+    {/* Watercolor garden flowers background */}
+    <div className="absolute inset-0 bg-gradient-to-b from-cream/40 via-warm-white to-blush/20" />
     
-    {/* Soft ambient */}
-    <div className="absolute top-20 right-20 w-60 h-60 rounded-full bg-[hsl(220_30%_90%/0.3)] blur-[80px]" />
-    <div className="absolute bottom-20 left-20 w-48 h-48 rounded-full bg-sage/15 blur-[60px]" />
+    {/* Soft floral ambient blobs */}
+    <div className="absolute top-10 left-[10%] w-40 h-40 rounded-full bg-blush/25 blur-[80px]" />
+    <div className="absolute top-32 right-[15%] w-32 h-32 rounded-full bg-sage/20 blur-[60px]" />
+    <div className="absolute bottom-20 left-[20%] w-36 h-36 rounded-full bg-lavender/20 blur-[70px]" />
+    <div className="absolute bottom-10 right-[10%] w-44 h-44 rounded-full bg-peach/25 blur-[90px]" />
+    <div className="absolute top-1/2 left-[5%] w-24 h-24 rounded-full bg-sage/15 blur-[50px]" />
+    <div className="absolute top-1/3 right-[5%] w-28 h-28 rounded-full bg-blush-deep/15 blur-[60px]" />
 
     <div className="max-w-7xl mx-auto px-6 relative">
       <motion.div
@@ -72,8 +76,10 @@ const SocialProof = () => (
         className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
       >
         {stats.map((stat) => (
-          <div key={stat.label} className="text-center glass-card rounded-2xl py-8 px-4">
-            <span className="text-3xl mb-3 block">{stat.icon}</span>
+          <div key={stat.label} className="text-center rounded-3xl py-8 px-4 bg-warm-white/70 border border-gold-light/15">
+            <div className="w-10 h-10 mx-auto mb-3 rounded-xl border border-gold-light/30 flex items-center justify-center text-gold">
+              <stat.icon size={20} strokeWidth={1.5} />
+            </div>
             <p className="font-display text-3xl md:text-4xl font-bold text-shimmer">{stat.value}</p>
             <p className="font-elegant text-base text-chocolate-light/60 mt-1">{stat.label}</p>
           </div>
@@ -89,9 +95,9 @@ const SocialProof = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.6 }}
-            className="glass-card rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative"
+            className="rounded-3xl p-8 bg-warm-white/60 border border-gold-light/15 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative"
           >
-            <div className="absolute top-4 right-6 font-display text-6xl text-gold-light/20 leading-none">"</div>
+            <div className="absolute top-4 right-6 font-display text-6xl text-gold-light/15 leading-none">"</div>
 
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-cream-deep flex items-center justify-center text-lg font-display font-bold text-chocolate border border-gold-light/30">
@@ -102,7 +108,7 @@ const SocialProof = () => (
                 <p className="font-elegant text-sm text-chocolate-light/50">{t.role}</p>
               </div>
               <div className="ml-auto">
-                <span className="inline-block px-3 py-1 rounded-full bg-cream-deep text-xs font-elegant text-chocolate-light border border-gold-light/20">
+                <span className="inline-block px-3 py-1 rounded-full bg-cream-deep/60 text-xs font-elegant text-chocolate-light border border-gold-light/20">
                   {t.product}
                 </span>
               </div>
@@ -110,7 +116,7 @@ const SocialProof = () => (
 
             <div className="flex gap-0.5 mb-4">
               {[...Array(t.rating)].map((_, j) => (
-                <span key={j} className="text-gold text-sm">★</span>
+                <Star key={j} size={14} className="text-gold fill-gold" />
               ))}
             </div>
 

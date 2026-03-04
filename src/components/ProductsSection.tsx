@@ -8,11 +8,7 @@ const products = [
     image: chocoCrunchImg,
     tagline: "O abraço do chocolate",
     description: "Uma sinfonia de chocolate 70%, bolo de cenoura caseiro e baunilha bourbon. Feita para quem acredita que a Páscoa merece todos os sentidos.",
-    notes: [
-      { name: "Chocolate 70%", icon: "🍫" },
-      { name: "Bolo de Cenoura", icon: "🥕" },
-      { name: "Baunilha Bourbon", icon: "🌿" },
-    ],
+    notes: ["Chocolate 70%", "Bolo de Cenoura", "Baunilha Bourbon"],
     bgClass: "from-peach to-blush/30",
     accentClass: "bg-peach",
     duration: "40h de queima",
@@ -23,11 +19,7 @@ const products = [
     image: saltedBlissImg,
     tagline: "Sofisticação em cada nota",
     description: "Caramelo salgado encontra flor de sal do Algarve e um fundo amadeirado de âmbar. Para momentos de pura indulgência.",
-    notes: [
-      { name: "Caramelo Salgado", icon: "🧂" },
-      { name: "Flor de Sal", icon: "✿" },
-      { name: "Âmbar & Madeira", icon: "🪵" },
-    ],
+    notes: ["Caramelo Salgado", "Flor de Sal", "Âmbar & Madeira"],
     bgClass: "from-lavender/30 to-sage/20",
     accentClass: "bg-lavender",
     duration: "40h de queima",
@@ -41,14 +33,7 @@ const scrollToForm = () => {
 
 const ProductsSection = () => (
   <section id="produtos" className="relative py-28 overflow-hidden">
-    {/* Wave separator */}
-    <div className="wave-top">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-16">
-        <path d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,0 L0,0 Z" fill="hsl(var(--cream))" />
-      </svg>
-    </div>
-
-    <div className="absolute inset-0 bg-gradient-to-b from-cream via-background to-cream/50" />
+    <div className="absolute inset-0 bg-gradient-to-b from-cream/30 via-background to-cream/50" />
 
     <div className="max-w-7xl mx-auto px-6 relative">
       {/* Section header */}
@@ -84,7 +69,7 @@ const ProductsSection = () => (
             {/* Image */}
             <div className={`relative ${i % 2 === 1 ? "lg:order-2" : ""}`}>
               <div className={`absolute inset-0 rounded-[2rem] bg-gradient-to-br ${product.bgClass} -rotate-3 scale-105`} />
-              <div className="relative rounded-[2rem] overflow-hidden shadow-[0_25px_60px_-15px_hsl(25_55%_25%/0.2)] ornate-border">
+              <div className="relative rounded-[2rem] overflow-hidden shadow-[0_25px_60px_-15px_hsl(25_55%_25%/0.15)] border border-gold-light/15">
                 <img
                   src={product.image}
                   alt={product.name}
@@ -92,7 +77,7 @@ const ProductsSection = () => (
                 />
               </div>
               {/* Floating badge */}
-              <div className={`absolute -bottom-4 ${i % 2 === 0 ? "-right-4" : "-left-4"} glass-card rounded-xl px-5 py-3 shadow-lg`}>
+              <div className={`absolute -bottom-4 ${i % 2 === 0 ? "-right-4" : "-left-4"} rounded-2xl px-5 py-3 shadow-lg bg-warm-white/80 backdrop-blur-sm border border-gold-light/20`}>
                 <p className="font-elegant text-sm text-chocolate-light">{product.duration}</p>
                 <p className="font-display text-lg font-bold text-gold">{product.weight}</p>
               </div>
@@ -100,7 +85,7 @@ const ProductsSection = () => (
 
             {/* Content */}
             <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-              <span className={`inline-block px-4 py-1.5 rounded-full ${product.accentClass}/50 font-elegant text-sm tracking-[0.15em] text-chocolate-light uppercase mb-4`}>
+              <span className={`inline-block px-4 py-1.5 rounded-full ${product.accentClass}/40 font-elegant text-sm tracking-[0.15em] text-chocolate-light uppercase mb-4 border border-gold-light/15`}>
                 {product.tagline}
               </span>
               <h3 className="font-display text-4xl md:text-5xl font-bold text-chocolate mb-5">{product.name}</h3>
@@ -111,9 +96,9 @@ const ProductsSection = () => (
                 <p className="font-elegant text-sm tracking-[0.2em] text-gold uppercase">Notas olfativas</p>
                 <div className="flex flex-wrap gap-3">
                   {product.notes.map((note) => (
-                    <div key={note.name} className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-warm-white border border-gold-light/20 shadow-sm">
-                      <span className="text-lg">{note.icon}</span>
-                      <span className="font-elegant text-base text-chocolate">{note.name}</span>
+                    <div key={note} className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-warm-white border border-gold-light/20">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+                      <span className="font-elegant text-base text-chocolate">{note}</span>
                     </div>
                   ))}
                 </div>
@@ -132,9 +117,9 @@ const ProductsSection = () => (
       >
         <button
           onClick={scrollToForm}
-          className="btn-glow px-10 py-5 rounded-full bg-gold text-warm-white font-display text-lg tracking-wide shadow-[0_8px_32px_-8px_hsl(38_70%_52%/0.5)] hover:shadow-[0_14px_40px_-8px_hsl(38_70%_52%/0.6)] transition-all duration-300"
+          className="btn-glow px-10 py-4 rounded-full bg-gold text-warm-white font-display tracking-wide shadow-[0_8px_32px_-8px_hsl(38_70%_52%/0.4)] hover:shadow-[0_14px_40px_-8px_hsl(38_70%_52%/0.5)] transition-all duration-300"
         >
-          🌸 Quero na minha Pré-Venda
+          Quero na minha Pré-Venda →
         </button>
       </motion.div>
     </div>
