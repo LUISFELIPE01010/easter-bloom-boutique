@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,54 +7,54 @@
 @layer base {
   :root {
     --background: 30 30% 97%;
-    --foreground: 25 25% 18%;
+    --foreground: 25 30% 15%;
 
-    --card: 30 40% 96%;
-    --card-foreground: 25 25% 18%;
+    --card: 32 45% 96%;
+    --card-foreground: 25 30% 15%;
 
     --popover: 30 30% 97%;
-    --popover-foreground: 25 25% 18%;
+    --popover-foreground: 25 30% 15%;
 
-    --primary: 25 45% 35%;
-    --primary-foreground: 35 60% 95%;
+    --primary: 25 55% 30%;
+    --primary-foreground: 38 60% 96%;
 
-    --secondary: 345 30% 90%;
-    --secondary-foreground: 345 25% 30%;
+    --secondary: 345 35% 91%;
+    --secondary-foreground: 345 30% 28%;
 
     --muted: 30 20% 93%;
-    --muted-foreground: 25 12% 50%;
+    --muted-foreground: 25 15% 48%;
 
-    --accent: 145 20% 88%;
-    --accent-foreground: 145 30% 25%;
+    --accent: 148 22% 86%;
+    --accent-foreground: 148 35% 22%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 25% 88%;
-    --input: 30 25% 88%;
-    --ring: 25 45% 35%;
-
+    --border: 30 30% 86%;
+    --input: 30 30% 86%;
+    --ring: 25 55% 30%;
     --radius: 0.75rem;
 
-    /* Custom tokens */
-    --cream: 40 50% 95%;
-    --blush: 345 40% 92%;
-    --lavender: 260 30% 90%;
-    --sage: 145 25% 85%;
-    --chocolate: 25 50% 28%;
-    --gold: 38 65% 55%;
-    --warm-white: 35 40% 98%;
-
-    --gradient-easter: linear-gradient(135deg, hsl(345 40% 92%), hsl(260 30% 90%), hsl(145 25% 85%));
-    --gradient-warm: linear-gradient(180deg, hsl(40 50% 95%), hsl(30 30% 97%));
-    --gradient-blush: linear-gradient(135deg, hsl(345 40% 92%), hsl(345 30% 85%));
-    --shadow-soft: 0 4px 20px -4px hsl(25 50% 28% / 0.1);
-    --shadow-card: 0 8px 30px -8px hsl(25 50% 28% / 0.12);
-    --shadow-elevated: 0 20px 60px -15px hsl(25 50% 28% / 0.15);
+    /* Extended palette */
+    --cream: 40 55% 95%;
+    --cream-deep: 38 45% 90%;
+    --blush: 345 45% 91%;
+    --blush-deep: 345 40% 82%;
+    --lavender: 265 35% 90%;
+    --lavender-deep: 265 30% 80%;
+    --sage: 148 28% 84%;
+    --sage-deep: 148 25% 70%;
+    --chocolate: 25 55% 25%;
+    --chocolate-light: 25 40% 40%;
+    --gold: 38 70% 52%;
+    --gold-light: 38 60% 70%;
+    --warm-white: 38 50% 98%;
+    --rose: 0 50% 88%;
+    --peach: 20 60% 90%;
 
     --font-display: 'Playfair Display', serif;
     --font-elegant: 'Cormorant Garamond', serif;
-    --font-body: 'Lora', serif;
+    --font-body: 'Crimson Pro', serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -71,60 +71,169 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
   }
-
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
   }
 }
 
 @layer utilities {
-  .font-display {
-    font-family: var(--font-display);
-  }
-  .font-elegant {
-    font-family: var(--font-elegant);
-  }
-  .font-body {
-    font-family: var(--font-body);
-  }
-  .text-shadow-warm {
-    text-shadow: 0 2px 10px hsl(25 50% 28% / 0.15);
-  }
-  .bg-easter-gradient {
-    background: var(--gradient-easter);
-  }
-  .bg-warm-gradient {
-    background: var(--gradient-warm);
-  }
-  .shadow-soft {
-    box-shadow: var(--shadow-soft);
-  }
-  .shadow-card {
-    box-shadow: var(--shadow-card);
-  }
-  .shadow-elevated {
-    box-shadow: var(--shadow-elevated);
-  }
+  .font-display { font-family: var(--font-display); }
+  .font-elegant { font-family: var(--font-elegant); }
+  .font-body { font-family: var(--font-body); }
+}
+
+/* ===== CUSTOM DESIGN ELEMENTS ===== */
+
+/* Decorative divider */
+.divider-floral {
+  position: relative;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, hsl(var(--gold-light)), transparent);
+}
+.divider-floral::after {
+  content: '✿';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: hsl(var(--background));
+  padding: 0 16px;
+  color: hsl(var(--gold));
+  font-size: 1.25rem;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: linear-gradient(135deg, 
+    hsl(var(--warm-white) / 0.85), 
+    hsl(var(--cream) / 0.6));
+  backdrop-filter: blur(20px);
+  border: 1px solid hsl(var(--gold-light) / 0.3);
+}
+
+/* Gold shimmer text */
+.text-shimmer {
+  background: linear-gradient(
+    120deg, 
+    hsl(var(--chocolate)) 0%, 
+    hsl(var(--gold)) 40%, 
+    hsl(var(--chocolate-light)) 60%, 
+    hsl(var(--gold)) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+/* Ornate border */
+.ornate-border {
+  border: 2px solid hsl(var(--gold-light) / 0.4);
+  box-shadow: 
+    inset 0 0 0 4px hsl(var(--warm-white)),
+    inset 0 0 0 5px hsl(var(--gold-light) / 0.2);
+}
+
+/* Gradient overlays */
+.overlay-warm {
+  background: linear-gradient(
+    180deg,
+    hsl(var(--warm-white) / 0.3) 0%,
+    hsl(var(--cream) / 0.7) 30%,
+    hsl(var(--blush) / 0.5) 70%,
+    hsl(var(--background)) 100%
+  );
+}
+
+.overlay-dreamy {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--blush) / 0.4) 0%,
+    hsl(var(--lavender) / 0.3) 30%,
+    hsl(var(--sage) / 0.3) 60%,
+    hsl(var(--cream) / 0.5) 100%
+  );
+}
+
+/* Scroll indicator pulse */
+@keyframes scroll-pulse {
+  0%, 100% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 0.5; transform: translateY(8px); }
+}
+
+/* Float animations with different timings */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-15px) rotate(2deg); }
+  66% { transform: translateY(-8px) rotate(-1deg); }
+}
+@keyframes float-medium {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(-3deg); }
 }
 
 /* Smooth scroll */
-html {
-  scroll-behavior: smooth;
+html { scroll-behavior: smooth; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: hsl(var(--cream)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--gold-light)); border-radius: 10px; }
+
+/* Button hover glow */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+}
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(120deg, hsl(var(--gold-light) / 0), hsl(var(--gold) / 0.4), hsl(var(--gold-light) / 0));
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: -1;
+}
+.btn-glow:hover::before {
+  opacity: 1;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
+/* Section wave separator */
+.wave-top {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
-::-webkit-scrollbar-track {
-  background: hsl(var(--cream));
+.wave-bottom {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--gold));
-  border-radius: 3px;
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes fade-up {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
 }

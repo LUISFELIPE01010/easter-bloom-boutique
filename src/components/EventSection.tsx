@@ -1,68 +1,114 @@
 import { motion } from "framer-motion";
 import avecProducts from "@/assets/avec-products.png";
 
-const EventSection = () => {
-  const scrollToForm = () => {
-    document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  return (
-    <section className="py-24 bg-easter-gradient">
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <span className="font-elegant text-lg text-chocolate/70 tracking-widest uppercase">Evento Especial</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-chocolate mt-3 leading-tight">
-              Uma experiência <br />
-              <span className="italic text-gold">sensorial</span> de Páscoa
-            </h2>
-            <p className="font-body text-foreground/75 mt-6 leading-relaxed text-lg">
-              Mais do que velas — uma jornada olfativa que mistura o aconchego do chocolate com a delicadeza
-              das flores de primavera. Cada vela é feita à mão com cera vegetal premium e fragrâncias exclusivas.
-            </p>
-            <ul className="mt-8 space-y-4">
-              {[
-                "Cera 100% vegetal e sustentável",
-                "Fragrâncias exclusivas da coleção",
-                "Disponível em Vela, Home Spray e Drops",
-                "Embalagem presenteável de Páscoa",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3 font-body text-foreground/80">
-                  <span className="text-gold mt-1">✦</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <button
-              onClick={scrollToForm}
-              className="mt-10 px-10 py-4 rounded-full bg-chocolate font-display text-lg text-primary-foreground shadow-card hover:shadow-elevated hover:opacity-90 transition-all"
-            >
-              Participar do evento 🐰
-            </button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <div className="rounded-2xl overflow-hidden shadow-elevated">
-              <img src={avecProducts} alt="Produtos Avec Páscoa" className="w-full h-full object-cover" />
-            </div>
-            <div className="absolute -bottom-6 -left-6 w-24 h-24 rounded-full bg-blush/60 blur-2xl" />
-            <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-lavender/50 blur-2xl" />
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
+const scrollToForm = () => {
+  document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
 };
+
+const EventSection = () => (
+  <section id="evento" className="relative py-28 overflow-hidden">
+    <div className="absolute inset-0 overlay-dreamy" />
+    
+    {/* Decorative circles */}
+    <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-blush/30 blur-[100px]" />
+    <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-lavender/25 blur-[100px]" />
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-sage/15 blur-[120px]" />
+
+    <div className="max-w-7xl mx-auto px-6 relative">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center mb-16"
+      >
+        <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Evento Especial</span>
+        <h2 className="font-display text-4xl md:text-6xl font-bold text-chocolate mt-4 leading-tight">
+          Uma Páscoa que encanta<br />
+          <span className="italic text-shimmer">todos os sentidos</span>
+        </h2>
+      </motion.div>
+
+      <div className="grid lg:grid-cols-2 gap-16 items-center">
+        {/* Features */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9 }}
+          className="space-y-8"
+        >
+          {[
+            {
+              icon: "🕯️",
+              title: "Velas Artesanais Premium",
+              desc: "Cada vela é despejada à mão com cera de soja 100% vegetal e pavios de algodão trançado.",
+            },
+            {
+              icon: "🌺",
+              title: "Fragrâncias Exclusivas",
+              desc: "Desenvolvidas por perfumistas especialistas, nossas notas são únicas desta coleção.",
+            },
+            {
+              icon: "🎁",
+              title: "Embalagem Presenteável",
+              desc: "Caixa artesanal com elementos de Páscoa, perfeita para presentear quem você ama.",
+            },
+            {
+              icon: "🌿",
+              title: "Sustentável & Vegano",
+              desc: "Zero crueldade animal, ingredientes naturais e embalagens recicláveis.",
+            },
+          ].map((feature, i) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              className="flex gap-5 items-start glass-card rounded-2xl p-6 hover:shadow-lg transition-shadow"
+            >
+              <div className="w-14 h-14 rounded-xl bg-cream-deep flex items-center justify-center text-2xl shrink-0">
+                {feature.icon}
+              </div>
+              <div>
+                <h3 className="font-display text-xl font-semibold text-chocolate mb-1">{feature.title}</h3>
+                <p className="font-body text-chocolate-light/70 leading-relaxed">{feature.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Image */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9 }}
+          className="relative"
+        >
+          <div className="ornate-border rounded-3xl overflow-hidden shadow-[0_25px_80px_-20px_hsl(25_55%_25%/0.25)]">
+            <img src={avecProducts} alt="Formatos disponíveis Avec" className="w-full h-auto" />
+          </div>
+          <div className="absolute -bottom-6 -left-6 w-44 h-44 rounded-full bg-blush/40 blur-3xl" />
+          <div className="absolute -top-6 -right-6 w-36 h-36 rounded-full bg-sage/40 blur-3xl" />
+        </motion.div>
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="text-center mt-16"
+      >
+        <button
+          onClick={scrollToForm}
+          className="px-10 py-5 rounded-full bg-chocolate text-primary-foreground font-display text-lg tracking-wide shadow-lg hover:shadow-xl hover:bg-chocolate-light transition-all duration-300"
+        >
+          Participar do evento 🐰
+        </button>
+      </motion.div>
+    </div>
+  </section>
+);
 
 export default EventSection;
