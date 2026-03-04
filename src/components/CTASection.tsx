@@ -14,10 +14,6 @@ const CTASection = () => (
     <div className="absolute top-20 right-20 w-[400px] h-[400px] rounded-full bg-[hsl(220_40%_88%/0.3)] blur-[120px]" />
     <div className="absolute bottom-10 left-10 w-[300px] h-[300px] rounded-full bg-[hsl(200_35%_90%/0.4)] blur-[100px]" />
 
-    {/* Top garden border */}
-    <div className="absolute top-0 left-0 right-0 opacity-60 rotate-180">
-      <img src={gardenTop} alt="" className="w-full h-auto" />
-    </div>
 
     {/* Bunny decoration */}
     <div className="absolute bottom-8 right-8 opacity-40 w-32 h-32 hidden lg:block">
