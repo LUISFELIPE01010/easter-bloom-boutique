@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import avecProducts from "@/assets/avec-products.png";
+import bunnyCandle from "@/assets/bunny-candle.png";
 
 const scrollToForm = () => {
   document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
@@ -7,12 +8,17 @@ const scrollToForm = () => {
 
 const EventSection = () => (
   <section id="evento" className="relative py-28 overflow-hidden">
-    <div className="absolute inset-0 overlay-dreamy" />
+    {/* Soft watercolor-inspired background */}
+    <div className="absolute inset-0 bg-gradient-to-br from-[hsl(145_20%_94%)] via-[hsl(220_25%_96%)] to-[hsl(260_20%_95%)]" />
     
-    {/* Decorative circles */}
-    <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-blush/30 blur-[100px]" />
-    <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-lavender/25 blur-[100px]" />
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-sage/15 blur-[120px]" />
+    {/* Subtle ambient */}
+    <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-[hsl(220_30%_88%/0.25)] blur-[100px]" />
+    <div className="absolute bottom-20 right-10 w-64 h-64 rounded-full bg-[hsl(145_25%_85%/0.2)] blur-[80px]" />
+
+    {/* Decorative bunny */}
+    <div className="absolute top-12 left-8 w-20 h-20 opacity-25 hidden lg:block">
+      <img src={bunnyCandle} alt="" className="w-full h-full object-contain" />
+    </div>
 
     <div className="max-w-7xl mx-auto px-6 relative">
       <motion.div
@@ -86,11 +92,11 @@ const EventSection = () => (
           transition={{ duration: 0.9 }}
           className="relative"
         >
-          <div className="ornate-border rounded-3xl overflow-hidden shadow-[0_25px_80px_-20px_hsl(25_55%_25%/0.25)]">
+          <div className="ornate-border rounded-3xl overflow-hidden shadow-[0_25px_80px_-20px_hsl(25_55%_25%/0.2)]">
             <img src={avecProducts} alt="Formatos disponíveis Avec" className="w-full h-auto" />
           </div>
-          <div className="absolute -bottom-6 -left-6 w-44 h-44 rounded-full bg-blush/40 blur-3xl" />
-          <div className="absolute -top-6 -right-6 w-36 h-36 rounded-full bg-sage/40 blur-3xl" />
+          <div className="absolute -bottom-6 -left-6 w-44 h-44 rounded-full bg-[hsl(220_30%_88%/0.3)] blur-3xl" />
+          <div className="absolute -top-6 -right-6 w-36 h-36 rounded-full bg-[hsl(145_25%_85%/0.3)] blur-3xl" />
         </motion.div>
       </div>
 

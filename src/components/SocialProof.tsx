@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     name: "Mariana S.",
-    avatar: "🌸",
     text: "A vela Choco Crunch deixou minha casa com um cheirinho tão incrível de chocolate que meus vizinhos vieram perguntar se eu estava fazendo bolo! Parecia Páscoa todos os dias.",
     role: "Cliente desde 2024",
     rating: 5,
@@ -11,7 +10,6 @@ const testimonials = [
   },
   {
     name: "Camila R.",
-    avatar: "🌺",
     text: "Presenteei minha mãe com a coleção completa. Ela ligou chorando de emoção! A embalagem é um charme à parte, parece que saiu de uma boutique parisiense.",
     role: "Cliente desde 2025",
     rating: 5,
@@ -19,7 +17,6 @@ const testimonials = [
   },
   {
     name: "Juliana M.",
-    avatar: "🌷",
     text: "O aroma da Salted Bliss é viciante. Sofisticado e aconchegante ao mesmo tempo. Toda vez que acendo, me sinto em um spa cinco estrelas.",
     role: "Cliente desde 2024",
     rating: 5,
@@ -27,7 +24,6 @@ const testimonials = [
   },
   {
     name: "Fernanda L.",
-    avatar: "🌻",
     text: "Comprei como presente de Páscoa pra mim mesma — zero culpa! A duração é impressionante e a fragrância preenche a casa toda. Já estou na lista de espera da próxima coleção.",
     role: "Cliente desde 2025",
     rating: 5,
@@ -48,9 +44,9 @@ const SocialProof = () => (
       <div className="divider-floral" />
     </div>
     
-    {/* Ambient blobs */}
-    <div className="absolute top-20 right-20 w-80 h-80 rounded-full bg-blush/25 blur-[100px]" />
-    <div className="absolute bottom-20 left-20 w-60 h-60 rounded-full bg-sage/20 blur-[80px]" />
+    {/* Soft ambient */}
+    <div className="absolute top-20 right-20 w-60 h-60 rounded-full bg-[hsl(220_30%_90%/0.3)] blur-[80px]" />
+    <div className="absolute bottom-20 left-20 w-48 h-48 rounded-full bg-sage/15 blur-[60px]" />
 
     <div className="max-w-7xl mx-auto px-6 relative">
       <motion.div
@@ -95,12 +91,11 @@ const SocialProof = () => (
             transition={{ delay: i * 0.1, duration: 0.6 }}
             className="glass-card rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 relative"
           >
-            {/* Quote mark */}
             <div className="absolute top-4 right-6 font-display text-6xl text-gold-light/20 leading-none">"</div>
 
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-full bg-cream-deep flex items-center justify-center text-2xl border border-gold-light/30">
-                {t.avatar}
+              <div className="w-10 h-10 rounded-full bg-cream-deep flex items-center justify-center text-lg font-display font-bold text-chocolate border border-gold-light/30">
+                {t.name.charAt(0)}
               </div>
               <div>
                 <p className="font-display font-semibold text-chocolate">{t.name}</p>

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-easter.jpg";
-import botanicalBorder from "@/assets/botanical-border.png";
+import heroImg from "@/assets/hero-watercolor.jpg";
+import gardenTop from "@/assets/watercolor-garden-top.png";
+import borderBottom from "@/assets/watercolor-border-bottom.png";
 
 const scrollToForm = () => {
   document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
@@ -11,19 +12,8 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroImg} alt="" className="w-full h-full object-cover scale-110" />
-        <div className="absolute inset-0 overlay-warm" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-warm-white/60" />
-      </div>
-
-      {/* Floating decorative elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-[15%] left-[8%] text-5xl animate-float opacity-40" style={{ animationDelay: "0s" }}>🌷</div>
-        <div className="absolute top-[25%] right-[10%] text-4xl animate-float-delayed opacity-35" style={{ animationDelay: "1.5s" }}>🌸</div>
-        <div className="absolute bottom-[30%] left-[15%] text-4xl animate-float opacity-30" style={{ animationDelay: "3s" }}>🥕</div>
-        <div className="absolute bottom-[25%] right-[12%] text-5xl animate-float-delayed opacity-35" style={{ animationDelay: "2s" }}>🍫</div>
-        <div className="absolute top-[40%] left-[5%] text-3xl animate-float opacity-25" style={{ animationDelay: "4s" }}>🐣</div>
-        <div className="absolute top-[60%] right-[6%] text-3xl animate-float-delayed opacity-25" style={{ animationDelay: "5s" }}>🌿</div>
+        <img src={heroImg} alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-warm-white/80 via-warm-white/40 to-background/95" />
       </div>
 
       {/* Content */}
@@ -103,9 +93,9 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Bottom botanical border */}
+      {/* Bottom watercolor garden border */}
       <div className="absolute bottom-0 left-0 right-0 z-20">
-        <img src={botanicalBorder} alt="" className="w-full h-auto opacity-70" />
+        <img src={borderBottom} alt="" className="w-full h-auto opacity-80" />
       </div>
     </section>
   );
