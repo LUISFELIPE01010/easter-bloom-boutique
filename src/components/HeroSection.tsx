@@ -38,7 +38,7 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Main heading */}
-          <h1 className="font-display font-black leading-[0.9] mb-8">
+          <h1 className="font-display font-black leading-[1.05] mb-8">
             <span className="block text-5xl md:text-7xl lg:text-[5.5rem] text-chocolate">
               Transforme sua Páscoa
             </span>
