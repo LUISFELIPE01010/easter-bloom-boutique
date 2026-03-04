@@ -5,7 +5,7 @@ const scrollToForm = () => {
 };
 
 const Navbar = () => (
-  <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-gold-light/20">
+  <nav className="fixed top-0 left-0 right-0 z-50 bg-[hsl(40_82%_95%)] backdrop-blur-sm border-b border-gold-light/20">
     <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="#" className="block">
         <img src={avecLogo} alt="Avec" className="h-10 w-auto" />
