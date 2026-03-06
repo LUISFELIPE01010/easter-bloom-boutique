@@ -21,12 +21,12 @@ const CTASection = () => (
         viewport={{ once: true }}
         className="text-center mb-8"
       >
-        <span className="font-elegant text-base tracking-[0.3em] text-chocolate-light uppercase">Última chance</span>
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-chocolate mt-3 leading-tight">
+        <span className="font-elegant text-base tracking-[0.3em] text-cream uppercase">Última chance</span>
+        <h2 className="font-display text-3xl md:text-4xl font-bold text-warm-white mt-3 leading-tight">
           As vagas estão<br />
           <span className="italic text-shimmer">acabando</span>
         </h2>
-        <p className="font-elegant text-lg text-chocolate-light/60 mt-3">
+        <p className="font-elegant text-lg text-cream/70 mt-3">
           Não perca a chance de garantir acesso antecipado, brindes e os melhores preços da coleção de Páscoa.
         </p>
       </motion.div>
