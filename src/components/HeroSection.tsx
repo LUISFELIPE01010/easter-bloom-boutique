@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-watercolor.jpg";
+import avecLogo from "@/assets/avec-logo-new.png";
 import LeadForm from "./LeadForm";
 
 const HeroSection = () => {
