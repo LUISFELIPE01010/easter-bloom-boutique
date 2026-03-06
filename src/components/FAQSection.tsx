@@ -3,24 +3,20 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "Qual o prazo de entrega?",
-    a: "As velas da coleção de Páscoa serão enviadas a partir do dia 1º de abril. O prazo varia de 3 a 7 dias úteis dependendo da sua localização.",
+    q: "Como funciona o Grupo VIP?",
+    a: "O Grupo VIP é o nosso canal direto com você. Por lá, os membros recebem acesso prioritário aos links das promoções, novidades e lançamentos exclusivos antes de todo mundo.",
   },
   {
-    q: "As velas são veganas e cruelty-free?",
+    q: "O cadastro tem algum custo?",
+    a: "Não! Entrar para o Grupo VIP é totalmente gratuito e sem compromisso.",
+  },
+  {
+    q: "Quando começa a coleção de Páscoa?",
+    a: "A coleção de Páscoa 2026 será lançada em breve. Membros VIP terão acesso antecipado às novidades e condições especiais.",
+  },
+  {
+    q: "As velas são veganas?",
     a: "Sim! Todas as nossas velas são feitas com cera de soja 100% vegetal, sem ingredientes de origem animal e sem testes em animais.",
-  },
-  {
-    q: "Quanto tempo dura cada vela?",
-    a: "Cada vela de 200g tem duração aproximada de 40 horas de queima, proporcionando semanas de aroma no seu lar.",
-  },
-  {
-    q: "Posso presentear alguém?",
-    a: "Com certeza! A coleção de Páscoa vem em embalagem premium presenteável. Você também pode adicionar um cartão personalizado no momento da compra.",
-  },
-  {
-    q: "A pré-venda tem algum custo?",
-    a: "Não! O cadastro na pré-venda é totalmente gratuito e sem compromisso. Você apenas garante sua prioridade e condições especiais.",
   },
 ];
 
@@ -28,36 +24,36 @@ const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative py-28 overflow-hidden">
-      <div className="max-w-3xl mx-auto px-6">
+    <section className="relative py-24 overflow-hidden">
+      <div className="max-w-2xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Dúvidas Frequentes</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-chocolate mt-4">
-            Tudo que você <span className="italic">precisa saber</span>
+          <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Dúvidas</span>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-chocolate mt-3">
+            Perguntas <span className="italic">frequentes</span>
           </h2>
         </motion.div>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           {faqs.map((faq, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
-              className="glass-card rounded-2xl overflow-hidden"
+              transition={{ delay: i * 0.06 }}
+              className="rounded-2xl overflow-hidden bg-warm-white/50 border border-gold-light/15"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between p-6 text-left"
+                className="w-full flex items-center justify-between p-5 text-left"
               >
-                <span className="font-display text-lg font-semibold text-chocolate pr-4">{faq.q}</span>
-                <span className={`text-gold text-2xl transition-transform duration-300 shrink-0 ${openIndex === i ? "rotate-45" : ""}`}>
+                <span className="font-display text-base font-semibold text-chocolate pr-4">{faq.q}</span>
+                <span className={`text-gold text-xl transition-transform duration-300 shrink-0 ${openIndex === i ? "rotate-45" : ""}`}>
                   +
                 </span>
               </button>
@@ -66,7 +62,7 @@ const FAQSection = () => {
                   openIndex === i ? "max-h-48 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
-                <p className="px-6 pb-6 font-body text-chocolate-light/70 leading-relaxed">{faq.a}</p>
+                <p className="px-5 pb-5 font-body text-chocolate-light/65 leading-relaxed text-[0.95rem]">{faq.a}</p>
               </div>
             </motion.div>
           ))}
