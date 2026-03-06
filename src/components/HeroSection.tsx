@@ -36,7 +36,7 @@ const HeroSection = () => {
             </motion.div>
 
             <h1 className="font-display font-black leading-[1.05] mb-6">
-              <img src={avecTextLogo} alt="Avec" className="block h-16 md:h-20 lg:h-28 w-auto" />
+              <img src={avecTextLogo} alt="Avec" className="block h-20 md:h-24 lg:h-36 w-auto" />
               <span className="block text-3xl md:text-4xl lg:text-5xl text-cream/90 font-semibold mt-2">
                 Aromas que contam
               </span>
