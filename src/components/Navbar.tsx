@@ -1,4 +1,4 @@
-import avecLogo from "@/assets/avec-logo.png";
+import avecLogo from "@/assets/avec-logo-new.png";
 
 const scrollToForm = () => {
   document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
