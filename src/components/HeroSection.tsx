@@ -53,7 +53,7 @@ const HeroSection = () => {
             </p>
 
             {/* Trust signals */}
-            <div className="flex flex-wrap gap-3 mt-6 justify-center lg:justify-start">
+            <div className="flex flex-wrap gap-3 mt-6 justify-center">
               {["100% Gratuito", "Sem compromisso", "Vagas limitadas"].map((item) => (
                 <span key={item} className="px-4 py-1.5 rounded-full bg-warm-white/10 border border-gold/20 font-elegant text-sm text-cream/80 tracking-wide backdrop-blur-sm">
                   {item}
