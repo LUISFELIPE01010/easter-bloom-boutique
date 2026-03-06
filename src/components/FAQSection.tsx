@@ -4,19 +4,19 @@ import { useState } from "react";
 const faqs = [
   {
     q: "Como funciona o Grupo VIP?",
-    a: "O Grupo VIP é o nosso canal direto com você. Por lá, os membros recebem acesso prioritário aos links das promoções, novidades e lançamentos exclusivos antes de todo mundo.",
+    a: "O Grupo VIP é o nosso canal direto com você no WhatsApp. Por lá, os membros recebem acesso prioritário aos links das promoções, novidades e lançamentos exclusivos antes de todo mundo.",
   },
   {
     q: "O cadastro tem algum custo?",
-    a: "Não! Entrar para o Grupo VIP é totalmente gratuito e sem compromisso.",
+    a: "Zero! Entrar para o Grupo VIP é totalmente gratuito e sem compromisso. Você só precisa se cadastrar.",
   },
   {
     q: "Quando começa a coleção de Páscoa?",
-    a: "A coleção de Páscoa 2026 será lançada em breve. Membros VIP terão acesso antecipado às novidades e condições especiais.",
+    a: "A coleção de Páscoa 2026 será lançada em breve. Membros VIP terão acesso antecipado e condições que ninguém mais vai ter.",
   },
   {
     q: "As velas são veganas?",
-    a: "Sim! Todas as nossas velas são feitas com cera de soja 100% vegetal, sem ingredientes de origem animal e sem testes em animais.",
+    a: "Sim! Todas as nossas velas são feitas com cera de soja 100% vegetal, sem testes em animais e com embalagens recicláveis.",
   },
 ];
 
@@ -25,14 +25,17 @@ const FAQSection = () => {
 
   return (
     <section className="relative py-24 overflow-hidden">
-      <div className="max-w-2xl mx-auto px-6">
+      {/* Warm cream background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-cream-deep/60 via-cream to-warm-white" />
+
+      <div className="max-w-2xl mx-auto px-6 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Dúvidas</span>
+          <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Tire suas dúvidas</span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-chocolate mt-3">
             Perguntas <span className="italic">frequentes</span>
           </h2>
@@ -46,7 +49,7 @@ const FAQSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.06 }}
-              className="rounded-2xl overflow-hidden bg-warm-white/50 border border-gold-light/15"
+              className="rounded-2xl overflow-hidden bg-warm-white/80 border border-gold-light/15 shadow-sm"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}

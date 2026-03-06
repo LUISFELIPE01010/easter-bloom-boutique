@@ -4,30 +4,35 @@ import { Crown, Clock, Tag, Gift } from "lucide-react";
 const benefits = [
   {
     icon: Crown,
-    title: "Acesso Prioritário",
-    desc: "Receba os links das promoções antes de todo mundo, direto no seu WhatsApp.",
+    title: "Acesso antes de todo mundo",
+    desc: "Receba os links de compra direto no WhatsApp, antes de qualquer pessoa.",
   },
   {
     icon: Tag,
-    title: "Preços Exclusivos",
-    desc: "Condições especiais e descontos que só membros VIP têm acesso.",
+    title: "Descontos que ninguém tem",
+    desc: "Preços exclusivos que só quem é VIP consegue. Não rola melhor que isso.",
   },
   {
     icon: Gift,
-    title: "Brindes Especiais",
-    desc: "Brindes exclusivos para membros do grupo em cada lançamento.",
+    title: "Brindes surpresa",
+    desc: "Cada lançamento vem com mimos exclusivos para quem é do grupo.",
   },
   {
     icon: Clock,
-    title: "Novidades em Primeira Mão",
-    desc: "Fique sabendo dos lançamentos e novidades antes de qualquer pessoa.",
+    title: "Lançamentos em primeira mão",
+    desc: "A gente avisa você primeiro. Sem chance de ficar de fora do que é bom.",
   },
 ];
 
 const BenefitsSection = () => (
   <section className="relative py-24 overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-b from-background via-cream/30 to-background" />
+    {/* Rich warm background */}
+    <div className="absolute inset-0 bg-gradient-to-br from-[hsl(25_55%_22%)] via-[hsl(25_45%_18%)] to-[hsl(30_40%_15%)]" />
     
+    {/* Ambient glows */}
+    <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-gold/5 blur-[150px]" />
+    <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-blush/5 blur-[120px]" />
+
     <div className="max-w-5xl mx-auto px-6 relative">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -36,9 +41,12 @@ const BenefitsSection = () => (
         className="text-center mb-14"
       >
         <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Por que entrar?</span>
-        <h2 className="font-display text-3xl md:text-5xl font-bold text-chocolate mt-3 leading-tight">
-          O que você ganha no <span className="italic text-shimmer">Grupo VIP</span>
+        <h2 className="font-display text-3xl md:text-5xl font-bold text-cream mt-3 leading-tight">
+          O que o <span className="italic text-gold">Grupo VIP</span> te dá
         </h2>
+        <p className="font-elegant text-lg text-cream/50 mt-3 max-w-lg mx-auto">
+          Não é só um grupo. É o seu atalho para os melhores aromas, antes de todo mundo.
+        </p>
       </motion.div>
 
       <div className="grid sm:grid-cols-2 gap-5">
@@ -49,14 +57,14 @@ const BenefitsSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.6 }}
-            className="flex gap-4 items-start p-6 rounded-2xl bg-warm-white/50 border border-gold-light/15 hover:shadow-md hover:border-gold-light/30 transition-all duration-300"
+            className="flex gap-4 items-start p-6 rounded-2xl bg-warm-white/5 border border-gold/10 hover:bg-warm-white/10 hover:border-gold/25 transition-all duration-300"
           >
-            <div className="w-11 h-11 rounded-xl border border-gold-light/30 flex items-center justify-center text-gold shrink-0">
+            <div className="w-11 h-11 rounded-xl border border-gold/25 flex items-center justify-center text-gold shrink-0">
               <b.icon size={20} strokeWidth={1.5} />
             </div>
             <div>
-              <h3 className="font-display text-lg font-semibold text-chocolate mb-1">{b.title}</h3>
-              <p className="font-body text-chocolate-light/65 leading-relaxed text-[0.95rem]">{b.desc}</p>
+              <h3 className="font-display text-lg font-semibold text-cream mb-1">{b.title}</h3>
+              <p className="font-body text-cream/50 leading-relaxed text-[0.95rem]">{b.desc}</p>
             </div>
           </motion.div>
         ))}
