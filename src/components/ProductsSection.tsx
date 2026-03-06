@@ -10,19 +10,26 @@ const products = [
   {
     name: "Choco Crunch",
     note: "Chocolate Belga · Avelã · Baunilha",
+    tagline: "O abraço quente do cacau belga com a crocância da avelã.",
     img: chocoCrunchImg,
   },
   {
     name: "Salted Bliss",
     note: "Caramelo Salgado · Flor de Sal · Âmbar",
+    tagline: "A sofisticação do caramelo com toques de flor de sal e âmbar dourado.",
     img: saltedBlissImg,
   },
 ];
 
 const ProductsSection = () => (
   <section id="produtos" className="relative py-24 overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-br from-lavender/15 via-background to-blush/10" />
+    {/* Warm cream/blush gradient */}
+    <div className="absolute inset-0 bg-gradient-to-br from-cream via-blush/30 to-peach/40" />
     
+    {/* Ambient */}
+    <div className="absolute top-10 right-0 w-[400px] h-[400px] rounded-full bg-lavender/20 blur-[120px]" />
+    <div className="absolute bottom-10 left-0 w-[350px] h-[350px] rounded-full bg-sage/15 blur-[100px]" />
+
     <div className="max-w-5xl mx-auto px-6 relative">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -32,7 +39,7 @@ const ProductsSection = () => (
       >
         <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Coleção Páscoa</span>
         <h2 className="font-display text-3xl md:text-5xl font-bold text-chocolate mt-3">
-          Conheça os <span className="italic text-shimmer">aromas</span>
+          Os aromas que vão <span className="italic text-shimmer">derreter seu coração</span>
         </h2>
       </motion.div>
 
@@ -44,7 +51,7 @@ const ProductsSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15, duration: 0.7 }}
-            className="group rounded-3xl overflow-hidden border border-gold-light/15 bg-warm-white/40 hover:shadow-xl transition-all duration-500"
+            className="group rounded-3xl overflow-hidden border border-chocolate/10 bg-warm-white/70 shadow-[0_10px_40px_-15px_hsl(25_55%_25%/0.1)] hover:shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.2)] transition-all duration-500"
           >
             <div className="aspect-[4/3] overflow-hidden">
               <img
@@ -55,7 +62,8 @@ const ProductsSection = () => (
             </div>
             <div className="p-6 text-center">
               <h3 className="font-display text-2xl font-bold text-chocolate">{p.name}</h3>
-              <p className="font-elegant text-base text-chocolate-light/60 mt-1 tracking-wide">{p.note}</p>
+              <p className="font-elegant text-sm text-gold tracking-widest mt-1 uppercase">{p.note}</p>
+              <p className="font-body text-chocolate-light/60 mt-2 text-[0.95rem] leading-relaxed">{p.tagline}</p>
             </div>
           </motion.div>
         ))}
@@ -69,9 +77,9 @@ const ProductsSection = () => (
       >
         <button
           onClick={scrollToForm}
-          className="px-10 py-4 rounded-full bg-chocolate text-primary-foreground font-display tracking-wide shadow-lg hover:shadow-xl hover:bg-chocolate-light transition-all duration-300"
+          className="btn-glow px-10 py-4 rounded-full bg-chocolate text-primary-foreground font-display tracking-wide shadow-[0_8px_30px_-8px_hsl(25_55%_25%/0.4)] hover:shadow-[0_14px_40px_-8px_hsl(25_55%_25%/0.5)] transition-all duration-300"
         >
-          Quero acesso VIP →
+          Garantir acesso VIP →
         </button>
       </motion.div>
     </div>
