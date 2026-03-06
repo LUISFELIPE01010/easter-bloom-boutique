@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-watercolor.jpg";
-import avecLogo from "@/assets/avec-logo-new.png";
 import LeadForm from "./LeadForm";
 
 const HeroSection = () => {
@@ -20,7 +19,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="text-left"
+            className="text-center lg:text-left"
           >
             {/* Badge */}
             <motion.div
@@ -35,27 +34,28 @@ const HeroSection = () => {
               </span>
             </motion.div>
 
-            <div className="mb-6">
-              <img src={avecLogo} alt="Avec" className="h-28 md:h-40 lg:h-48 w-auto drop-shadow-lg mb-3 block" />
-              <h1 className="font-display font-black leading-[1.05]">
-                <span className="block text-3xl md:text-4xl lg:text-5xl text-cream/90 font-semibold">
-                  Aromas que contam
-                </span>
-                <span className="block text-3xl md:text-4xl lg:text-5xl italic text-gold mt-1 pb-2">
-                  histórias de Páscoa
-                </span>
-              </h1>
-            </div>
+            <h1 className="font-display font-black leading-[1.05] mb-6">
+              <span className="block text-5xl md:text-6xl lg:text-8xl text-warm-white">Avec</span>
+              <span className="block text-3xl md:text-4xl lg:text-5xl text-cream/90 font-semibold mt-2">
+                Aromas que contam
+              </span>
+              <span className="block text-3xl md:text-4xl lg:text-5xl italic text-gold mt-1 pb-2">
+                histórias de Páscoa
+              </span>
+            </h1>
 
-            <p className="font-elegant text-lg md:text-xl text-cream/70 max-w-md leading-relaxed">
-              Velas artesanais feitas com amor. Entre no grupo VIP e seja a primeira a garantir 
-              os cheirinhos mais desejados — com preço especial e brindes exclusivos.
+            <p className="font-elegant text-lg md:text-xl text-cream/70 max-w-md mx-auto lg:mx-0 leading-relaxed">
+              Velas artesanais feitas com amor. Entre no grupo VIP e seja a primeira a garantir os cheirinhos mais
+              desejados — com preço especial e brindes exclusivos.
             </p>
 
             {/* Trust signals */}
-            <div className="flex flex-wrap gap-3 mt-6 justify-start">
+            <div className="flex flex-wrap gap-3 mt-6 justify-center lg:justify-start">
               {["100% Gratuito", "Sem compromisso", "Vagas limitadas"].map((item) => (
-                <span key={item} className="px-4 py-1.5 rounded-full bg-warm-white/10 border border-gold/20 font-elegant text-sm text-cream/80 tracking-wide backdrop-blur-sm">
+                <span
+                  key={item}
+                  className="px-4 py-1.5 rounded-full bg-warm-white/10 border border-gold/20 font-elegant text-sm text-cream/80 tracking-wide backdrop-blur-sm"
+                >
                   {item}
                 </span>
               ))}
@@ -71,7 +71,9 @@ const HeroSection = () => {
             <div className="rounded-3xl p-8 bg-warm-white/95 backdrop-blur-lg shadow-[0_25px_80px_-15px_hsl(25_55%_15%/0.4)] border border-gold-light/20">
               <div className="text-center mb-6">
                 <h2 className="font-display text-2xl font-bold text-chocolate">Entre para o Grupo VIP</h2>
-                <p className="font-elegant text-base text-chocolate-light/60 mt-1">Receba acesso antecipado e brindes</p>
+                <p className="font-elegant text-base text-chocolate-light/60 mt-1">
+                  Receba acesso antecipado e brindes
+                </p>
               </div>
               <LeadForm />
             </div>
