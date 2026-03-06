@@ -1,4 +1,4 @@
-import avecLogo from "@/assets/avec-logo.png";
+import avecLogo from "@/assets/avec-logo-new.png";
 
 const Footer = () => (
   <footer className="py-10 bg-[hsl(25_55%_15%)] border-t border-gold/10">
