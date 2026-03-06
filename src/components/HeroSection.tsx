@@ -20,7 +20,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="text-center"
+            className="text-left"
           >
             {/* Badge */}
             <motion.div
@@ -36,7 +36,7 @@ const HeroSection = () => {
             </motion.div>
 
             <div className="mb-6">
-              <img src={avecLogo} alt="Avec" className="h-28 md:h-40 lg:h-48 w-auto drop-shadow-lg mb-3 mx-auto block" />
+              <img src={avecLogo} alt="Avec" className="h-28 md:h-40 lg:h-48 w-auto drop-shadow-lg mb-3 block" />
               <h1 className="font-display font-black leading-[1.05]">
                 <span className="block text-3xl md:text-4xl lg:text-5xl text-cream/90 font-semibold">
                   Aromas que contam
@@ -47,13 +47,13 @@ const HeroSection = () => {
               </h1>
             </div>
 
-            <p className="font-elegant text-lg md:text-xl text-cream/70 max-w-md mx-auto leading-relaxed">
+            <p className="font-elegant text-lg md:text-xl text-cream/70 max-w-md leading-relaxed">
               Velas artesanais feitas com amor. Entre no grupo VIP e seja a primeira a garantir 
               os cheirinhos mais desejados — com preço especial e brindes exclusivos.
             </p>
 
             {/* Trust signals */}
-            <div className="flex flex-wrap gap-3 mt-6 justify-center">
+            <div className="flex flex-wrap gap-3 mt-6 justify-start">
               {["100% Gratuito", "Sem compromisso", "Vagas limitadas"].map((item) => (
                 <span key={item} className="px-4 py-1.5 rounded-full bg-warm-white/10 border border-gold/20 font-elegant text-sm text-cream/80 tracking-wide backdrop-blur-sm">
                   {item}
