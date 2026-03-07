@@ -37,7 +37,7 @@ const ProductsSection = () => (
         viewport={{ once: true }}
         className="text-center mb-14"
       >
-        <span className="font-elegant text-base tracking-[0.3em] text-secondary uppercase">Coleção Páscoa</span>
+        <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Coleção Páscoa</span>
         <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-chocolate mt-3">
           Os aromas que vão <span className="italic text-shimmer">derreter seu coração</span>
         </h2>
@@ -51,7 +51,7 @@ const ProductsSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15, duration: 0.7 }}
-            className="group rounded-3xl overflow-hidden border border-secondary/10 bg-warm-white/70 shadow-[0_10px_40px_-15px_hsl(210_35%_43%/0.1)] hover:shadow-[0_20px_60px_-15px_hsl(210_35%_43%/0.2)] transition-all duration-500"
+            className="group rounded-3xl overflow-hidden border border-chocolate/10 bg-warm-white/70 shadow-[0_10px_40px_-15px_hsl(25_55%_25%/0.1)] hover:shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.2)] transition-all duration-500"
           >
             <div className="aspect-[4/3] overflow-hidden">
               <img
@@ -62,7 +62,7 @@ const ProductsSection = () => (
             </div>
             <div className="p-6 text-center">
               <h3 className="font-display text-2xl font-bold text-chocolate">{p.name}</h3>
-              <p className="font-elegant text-sm text-secondary tracking-widest mt-1 uppercase">{p.note}</p>
+              <p className="font-elegant text-sm text-gold tracking-widest mt-1 uppercase">{p.note}</p>
               <p className="font-body text-chocolate-light/60 mt-2 text-[0.95rem] leading-relaxed">{p.tagline}</p>
             </div>
           </motion.div>
@@ -77,7 +77,7 @@ const ProductsSection = () => (
       >
         <button
           onClick={scrollToForm}
-          className="btn-glow px-10 py-4 rounded-full bg-secondary text-secondary-foreground font-display tracking-wide shadow-[0_8px_30px_-8px_hsl(210_35%_43%/0.4)] hover:shadow-[0_14px_40px_-8px_hsl(210_35%_43%/0.5)] transition-all duration-300"
+          className="btn-glow px-10 py-4 rounded-full bg-chocolate text-primary-foreground font-display tracking-wide shadow-[0_8px_30px_-8px_hsl(25_55%_25%/0.4)] hover:shadow-[0_14px_40px_-8px_hsl(25_55%_25%/0.5)] transition-all duration-300"
         >
           Garantir acesso VIP →
         </button>

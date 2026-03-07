@@ -6,51 +6,51 @@
 
 @layer base {
   :root {
-    --background: 32 70% 96%;
-    --foreground: 25 40% 18%;
+    --background: 30 30% 97%;
+    --foreground: 25 30% 15%;
 
-    --card: 32 60% 94%;
-    --card-foreground: 25 40% 18%;
+    --card: 32 45% 96%;
+    --card-foreground: 25 30% 15%;
 
-    --popover: 32 70% 96%;
-    --popover-foreground: 25 40% 18%;
+    --popover: 30 30% 97%;
+    --popover-foreground: 25 30% 15%;
 
-    --primary: 32 76% 77%;
-    --primary-foreground: 25 45% 18%;
+    --primary: 25 55% 30%;
+    --primary-foreground: 38 60% 96%;
 
-    --secondary: 210 35% 43%;
-    --secondary-foreground: 38 60% 96%;
+    --secondary: 345 35% 91%;
+    --secondary-foreground: 345 30% 28%;
 
-    --muted: 32 40% 91%;
-    --muted-foreground: 25 20% 45%;
+    --muted: 30 20% 93%;
+    --muted-foreground: 25 15% 48%;
 
-    --accent: 210 35% 43%;
-    --accent-foreground: 38 60% 96%;
+    --accent: 148 22% 86%;
+    --accent-foreground: 148 35% 22%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 32 40% 84%;
-    --input: 32 40% 84%;
-    --ring: 210 35% 43%;
+    --border: 30 30% 86%;
+    --input: 30 30% 86%;
+    --ring: 25 55% 30%;
     --radius: 0.75rem;
 
     /* Extended palette */
-    --cream: 32 65% 93%;
-    --cream-deep: 32 50% 87%;
-    --blush: 32 55% 89%;
-    --blush-deep: 32 45% 80%;
-    --lavender: 210 30% 88%;
-    --lavender-deep: 210 25% 78%;
-    --sage: 210 20% 82%;
-    --sage-deep: 210 18% 68%;
-    --chocolate: 25 50% 22%;
-    --chocolate-light: 25 35% 38%;
-    --gold: 32 76% 77%;
-    --gold-light: 32 60% 68%;
-    --warm-white: 35 50% 97%;
-    --rose: 32 45% 90%;
-    --peach: 30 55% 88%;
+    --cream: 40 55% 95%;
+    --cream-deep: 38 45% 90%;
+    --blush: 345 45% 91%;
+    --blush-deep: 345 40% 82%;
+    --lavender: 265 35% 90%;
+    --lavender-deep: 265 30% 80%;
+    --sage: 148 28% 84%;
+    --sage-deep: 148 25% 70%;
+    --chocolate: 25 55% 25%;
+    --chocolate-light: 25 40% 40%;
+    --gold: 38 70% 52%;
+    --gold-light: 38 60% 70%;
+    --warm-white: 38 50% 98%;
+    --rose: 0 50% 88%;
+    --peach: 20 60% 90%;
 
     --font-display: 'Playfair Display', serif;
     --font-elegant: 'Poppins', sans-serif;
@@ -93,7 +93,7 @@
 .divider-floral {
   position: relative;
   height: 2px;
-  background: linear-gradient(90deg, transparent, hsl(var(--secondary)), transparent);
+  background: linear-gradient(90deg, transparent, hsl(var(--gold-light)), transparent);
 }
 .divider-floral::after {
   content: '✿';
@@ -103,7 +103,7 @@
   transform: translate(-50%, -50%);
   background: hsl(var(--background));
   padding: 0 16px;
-  color: hsl(var(--secondary));
+  color: hsl(var(--gold));
   font-size: 1.25rem;
 }
 
@@ -116,14 +116,14 @@
   border: 1px solid hsl(var(--gold-light) / 0.3);
 }
 
-/* Blue shimmer text */
+/* Gold shimmer text */
 .text-shimmer {
   background: linear-gradient(
     120deg, 
-    hsl(var(--secondary)) 0%, 
-    hsl(var(--primary)) 40%, 
-    hsl(var(--secondary)) 60%, 
-    hsl(var(--primary)) 100%
+    hsl(var(--chocolate)) 0%, 
+    hsl(var(--gold)) 40%, 
+    hsl(var(--chocolate-light)) 60%, 
+    hsl(var(--gold)) 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;

@@ -44,7 +44,7 @@ const EventSection = () => (
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <span className="font-elegant text-base tracking-[0.3em] text-secondary uppercase">Evento Especial</span>
+        <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Evento Especial</span>
         <h2 className="font-display text-4xl md:text-6xl font-bold text-chocolate mt-4 leading-tight">
           Uma Páscoa que encanta<br />
           <span className="italic text-shimmer">todos os sentidos</span>
@@ -67,9 +67,9 @@ const EventSection = () => (
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="flex gap-5 items-start rounded-2xl p-6 bg-warm-white/50 border border-secondary/15 hover:shadow-md transition-shadow"
+              className="flex gap-5 items-start rounded-2xl p-6 bg-warm-white/50 border border-gold-light/15 hover:shadow-md transition-shadow"
             >
-              <div className="w-12 h-12 rounded-xl border border-secondary/30 flex items-center justify-center text-secondary shrink-0">
+              <div className="w-12 h-12 rounded-xl border border-gold-light/30 flex items-center justify-center text-gold shrink-0">
                 <feature.icon size={22} strokeWidth={1.5} />
               </div>
               <div>
@@ -88,7 +88,7 @@ const EventSection = () => (
           transition={{ duration: 0.9 }}
           className="relative"
         >
-          <div className="rounded-3xl overflow-hidden border border-secondary/20 shadow-[0_25px_80px_-20px_hsl(210_35%_43%/0.15)]">
+          <div className="rounded-3xl overflow-hidden border border-gold-light/20 shadow-[0_25px_80px_-20px_hsl(25_55%_25%/0.15)]">
             <img src={avecProducts} alt="Formatos disponíveis Avec" className="w-full h-auto" />
           </div>
           <div className="absolute -bottom-6 -left-6 w-44 h-44 rounded-full bg-sage/20 blur-3xl" />
@@ -104,7 +104,7 @@ const EventSection = () => (
       >
         <button
           onClick={scrollToForm}
-          className="px-10 py-4 rounded-full bg-secondary text-secondary-foreground font-display tracking-wide shadow-lg hover:shadow-xl hover:opacity-90 transition-all duration-300"
+          className="px-10 py-4 rounded-full bg-chocolate text-primary-foreground font-display tracking-wide shadow-lg hover:shadow-xl hover:bg-chocolate-light transition-all duration-300"
         >
           Participar do evento →
         </button>

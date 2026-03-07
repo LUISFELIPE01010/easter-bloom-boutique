@@ -14,7 +14,7 @@ const LeadForm = ({ id = "lead-form" }: { id?: string }) => {
   };
 
   const inputClass =
-    "w-full pl-12 pr-5 py-4 rounded-2xl bg-warm-white/80 backdrop-blur-sm border border-secondary/25 font-body text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-secondary focus:shadow-[0_0_0_3px_hsl(210_35%_43%/0.1)] transition-all duration-300";
+    "w-full pl-12 pr-5 py-4 rounded-2xl bg-warm-white/80 backdrop-blur-sm border border-gold-light/25 font-body text-foreground placeholder:text-chocolate-light/40 focus:outline-none focus:border-gold focus:shadow-[0_0_0_3px_hsl(38_70%_52%/0.1)] transition-all duration-300";
 
   return (
     <form id={id} onSubmit={handleSubmit} className="w-full space-y-3">
@@ -57,10 +57,10 @@ const LeadForm = ({ id = "lead-form" }: { id?: string }) => {
         whileTap={{ scale: 0.98 }}
         type="submit"
         disabled={submitted}
-        className={`w-full mt-2 py-4 rounded-2xl font-display text-lg tracking-wide transition-all duration-500 shadow-[0_8px_25px_-8px_hsl(210_35%_43%/0.35)] hover:shadow-[0_12px_35px_-8px_hsl(210_35%_43%/0.45)] ${
+        className={`w-full mt-2 py-4 rounded-2xl font-display text-lg tracking-wide transition-all duration-500 shadow-[0_8px_25px_-8px_hsl(25_55%_25%/0.35)] hover:shadow-[0_12px_35px_-8px_hsl(25_55%_25%/0.45)] ${
           submitted
             ? "bg-sage-deep text-warm-white"
-            : "bg-secondary text-secondary-foreground"
+            : "bg-chocolate text-primary-foreground"
         }`}
       >
         {submitted ? "✨ Cadastro realizado!" : "Entrar para o Grupo VIP →"}

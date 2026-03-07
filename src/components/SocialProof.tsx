@@ -45,7 +45,7 @@ const SocialProof = () => {
           viewport={{ once: true }}
           className="text-center mb-8 md:mb-12">
           
-          <span className="font-elegant text-sm md:text-base tracking-[0.3em] text-secondary uppercase">
+          <span className="font-elegant text-sm md:text-base tracking-[0.3em] text-gold uppercase">
             Quem ama, recomenda
           </span>
           
@@ -58,7 +58,7 @@ const SocialProof = () => {
           {/* Prev button */}
           <button
             onClick={() => paginate(-1)}
-            className="absolute left-0 md:-left-6 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-warm-white/80 border border-secondary/20 shadow-md flex items-center justify-center text-secondary hover:bg-warm-white transition-colors"
+            className="absolute left-0 md:-left-6 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-warm-white/80 border border-gold-light/20 shadow-md flex items-center justify-center text-chocolate hover:bg-warm-white transition-colors"
             aria-label="Anterior">
             
             <ChevronLeft size={20} />
@@ -89,7 +89,7 @@ const SocialProof = () => {
           {/* Next button */}
           <button
             onClick={() => paginate(1)}
-            className="absolute right-0 md:-right-6 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-warm-white/80 border border-secondary/20 shadow-md flex items-center justify-center text-secondary hover:bg-warm-white transition-colors"
+            className="absolute right-0 md:-right-6 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-warm-white/80 border border-gold-light/20 shadow-md flex items-center justify-center text-chocolate hover:bg-warm-white transition-colors"
             aria-label="Próximo">
             
             <ChevronRight size={20} />
@@ -104,8 +104,8 @@ const SocialProof = () => {
             onClick={() => {setDirection(i > current ? 1 : -1);setCurrent(i);}}
             className={`rounded-full transition-all duration-300 ${
             i === current ?
-            "w-8 h-2.5 bg-secondary" :
-            "w-2.5 h-2.5 bg-secondary/20 hover:bg-secondary/40"}`
+            "w-8 h-2.5 bg-gold" :
+            "w-2.5 h-2.5 bg-chocolate/20 hover:bg-chocolate/40"}`
             }
             aria-label={`Slide ${i + 1}`} />
 
