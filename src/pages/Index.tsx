@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import BenefitsSection from "@/components/BenefitsSection";
+
 import ProductsSection from "@/components/ProductsSection";
 import SocialProof from "@/components/SocialProof";
 import FAQSection from "@/components/FAQSection";
