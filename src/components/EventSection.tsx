@@ -88,7 +88,7 @@ const EventSection = () => (
           transition={{ duration: 0.9 }}
           className="relative"
         >
-          <div className="rounded-3xl overflow-hidden border border-gold-light/20 shadow-[0_25px_80px_-20px_hsl(25_55%_25%/0.15)]">
+          <div className="rounded-3xl overflow-hidden border border-secondary/20 shadow-[0_25px_80px_-20px_hsl(210_35%_43%/0.15)]">
             <img src={avecProducts} alt="Formatos disponíveis Avec" className="w-full h-auto" />
           </div>
           <div className="absolute -bottom-6 -left-6 w-44 h-44 rounded-full bg-sage/20 blur-3xl" />
