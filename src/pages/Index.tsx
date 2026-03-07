@@ -10,7 +10,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <CountdownTimer />
-      <Navbar />
       <HeroSection />
       <ProductsSection />
       <SocialProof />
