@@ -60,7 +60,7 @@ const LeadForm = ({ id = "lead-form" }: { id?: string }) => {
         className={`w-full mt-2 py-4 rounded-2xl font-display text-lg tracking-wide transition-all duration-500 shadow-[0_8px_25px_-8px_hsl(25_55%_25%/0.35)] hover:shadow-[0_12px_35px_-8px_hsl(25_55%_25%/0.45)] ${
           submitted
             ? "bg-sage-deep text-warm-white"
-            : "bg-chocolate text-primary-foreground"
+            : "bg-chocolate text-gold"
         }`}
       >
         {submitted ? "✨ Cadastro realizado!" : "Entrar para o Grupo VIP"}
