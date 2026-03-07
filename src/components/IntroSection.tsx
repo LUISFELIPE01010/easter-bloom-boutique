@@ -17,7 +17,7 @@ const IntroSection = () => (
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="relative"
         >
-          <div className="rounded-3xl overflow-hidden border border-gold-light/20 shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.15)]">
+          <div className="rounded-3xl overflow-hidden border border-secondary/20 shadow-[0_20px_60px_-15px_hsl(210_35%_43%/0.15)]">
             <img src={flatlayImg} alt="Coleção de Páscoa Avec" className="w-full h-auto" />
           </div>
           {/* Decorative accent */}
