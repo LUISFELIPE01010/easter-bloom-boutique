@@ -40,9 +40,9 @@ const BenefitsSection = () => (
         viewport={{ once: true }}
         className="text-center mb-14"
       >
-        <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Por que entrar?</span>
+        <span className="font-elegant text-base tracking-[0.3em] text-primary uppercase">Por que entrar?</span>
         <h2 className="font-display text-3xl md:text-5xl font-bold text-cream mt-3 leading-tight">
-          O que o <span className="italic text-gold">Grupo VIP</span> te dá
+          O que o <span className="italic text-primary">Grupo VIP</span> te dá
         </h2>
         <p className="font-elegant text-lg text-cream/50 mt-3 max-w-lg mx-auto">
           Não é só um grupo. É o seu atalho para os melhores aromas, antes de todo mundo.
