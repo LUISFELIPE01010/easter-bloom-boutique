@@ -36,11 +36,11 @@ const HeroSection = () => {
             
 
             <h1 className="font-display font-black leading-[1.05] mb-3 lg:mb-6">
-              <img src={avecTextLogo} alt="Avec" className="block h-16 md:h-24 lg:h-36 w-auto" />
-              <span className="block text-2xl md:text-4xl lg:text-5xl text-cream/90 font-semibold mt-2">
+              <img src={avecTextLogo} alt="Avec" className="block h-20 md:h-28 lg:h-40 w-auto" />
+              <span className="block text-3xl md:text-5xl lg:text-6xl text-cream/90 font-semibold mt-2">
                 Aromas que contam
               </span>
-              <span className="block text-2xl md:text-4xl lg:text-5xl italic text-shimmer mt-1 pb-2">
+              <span className="block text-3xl md:text-5xl lg:text-6xl italic text-shimmer mt-1 pb-2">
                 histórias de Páscoa
               </span>
             </h1>
@@ -69,10 +69,10 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}>
             
-            <div className="rounded-3xl p-6 lg:p-8 bg-warm-white/95 backdrop-blur-lg shadow-[0_25px_80px_-15px_hsl(25_55%_15%/0.4)] border border-gold-light/20">
-              <div className="text-center mb-6">
-                <h2 className="font-display text-2xl font-bold text-chocolate">Entre para o Grupo VIP</h2>
-                <p className="font-elegant text-base text-chocolate-light/60 mt-1">
+            <div className="rounded-3xl p-5 lg:p-6 bg-warm-white/95 backdrop-blur-lg shadow-[0_25px_80px_-15px_hsl(25_55%_15%/0.4)] border border-gold-light/20">
+              <div className="text-center mb-4">
+                <h2 className="font-display text-xl font-bold text-chocolate">Entre para o Grupo VIP</h2>
+                <p className="font-elegant text-sm text-chocolate-light/60 mt-1">
                   Receba acesso antecipado e brindes
                 </p>
               </div>
