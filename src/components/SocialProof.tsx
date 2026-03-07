@@ -5,7 +5,11 @@ import feedback1 from "@/assets/feedback-1.jpg";
 import feedback2 from "@/assets/feedback-2.jpg";
 import feedback3 from "@/assets/feedback-3.jpg";
 
-const feedbacks = [feedback1, feedback2, feedback3];
+const feedbacks = [
+  { src: feedback1, caption: "Salted Bliss — o aroma que conquista à primeira vela 🕯️" },
+  { src: feedback2, caption: "Choco Crunch — irresistível do início ao fim 🍫" },
+  { src: feedback3, caption: "\"Vou comprar mais vezes com toda certeza!\" ❤️" },
+];
 
 const SocialProof = () => {
   const [current, setCurrent] = useState(0);
