@@ -25,7 +25,7 @@ const HeroSection = () => {
             {/* Badge */}
 
             <h1 className="font-display font-black leading-[1.05] mb-6">
-              <img src={avecTextLogo} alt="Avec" className="block h-24 md:h-28 lg:h-36 w-auto" />
+              <img src={avecTextLogo} alt="Avec" className="block h-24 md:h-28 lg:h-36 w-auto mx-auto" />
               <span className="block text-3xl md:text-4xl lg:text-5xl text-cream/90 font-semibold mt-2">
                 Aromas que contam
               </span>
