@@ -14,7 +14,7 @@ const CTASection = () => (
     <div className="absolute top-20 right-20 w-[400px] h-[400px] rounded-full bg-gold/8 blur-[130px]" />
     <div className="absolute bottom-10 left-10 w-[300px] h-[300px] rounded-full bg-sage/10 blur-[100px]" />
 
-    <div className="max-w-lg mx-auto px-6 relative z-10">
+    <div className="max-w-lg mx-auto px-4 sm:px-6 relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
