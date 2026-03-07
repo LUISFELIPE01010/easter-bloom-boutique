@@ -30,7 +30,7 @@ const ProductsSection = () => (
     <div className="absolute top-10 right-0 w-[400px] h-[400px] rounded-full bg-lavender/20 blur-[120px]" />
     <div className="absolute bottom-10 left-0 w-[350px] h-[350px] rounded-full bg-sage/15 blur-[100px]" />
 
-    <div className="max-w-5xl mx-auto px-6 relative">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
