@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-watercolor.jpg";
-
+import avecTextLogo from "@/assets/avec-text-logo.png";
 import LeadForm from "./LeadForm";
 
 const HeroSection = () => {
@@ -22,12 +22,7 @@ const HeroSection = () => {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="text-center lg:text-left">
             
-            {/* Badge */}
-            
-
-
-
-
+            <img src={avecTextLogo} alt="Avec" className="h-10 md:h-14 lg:h-16 mx-auto lg:mx-0 mb-4 lg:mb-6" />
 
 
 
