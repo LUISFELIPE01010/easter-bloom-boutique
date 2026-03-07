@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-easter-garden.jpg";
+import heroImg from "@/assets/hero-watercolor.jpg";
 import avecTextLogo from "@/assets/avec-text-logo.png";
 import LeadForm from "./LeadForm";
 
@@ -8,8 +8,8 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-start lg:items-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroImg} alt="" className="w-full h-full object-cover object-bottom lg:object-center" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(30_30%_25%/0.65)] via-[hsl(30_25%_30%/0.45)] to-[hsl(30_20%_20%/0.55)]" />
+        <img src={heroImg} alt="" className="w-full h-full object-cover object-[center_20%] lg:object-center" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(25_55%_18%/0.55)] via-[hsl(25_40%_20%/0.4)] to-[hsl(30_30%_15%/0.7)]" />
       </div>
 
       {/* Content */}
