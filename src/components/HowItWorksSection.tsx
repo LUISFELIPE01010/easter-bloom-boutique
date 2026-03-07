@@ -19,7 +19,7 @@ const HowItWorksSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Como funciona</span>
+            <span className="font-elegant text-base tracking-[0.3em] text-secondary uppercase">Como funciona</span>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-chocolate mt-4 mb-12">
               Simples como <span className="italic">acender uma vela</span>
             </h2>
