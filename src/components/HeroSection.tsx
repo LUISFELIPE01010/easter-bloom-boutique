@@ -13,7 +13,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-12 pb-8 lg:pt-16 lg:pb-16">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 pt-12 pb-8 lg:pt-16 lg:pb-16">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Text side */}
           <motion.div

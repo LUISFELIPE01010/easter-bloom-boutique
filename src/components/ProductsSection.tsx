@@ -43,7 +43,7 @@ const ProductsSection = () => (
         </h2>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
         {products.map((p, i) => (
           <motion.div
             key={p.name}
