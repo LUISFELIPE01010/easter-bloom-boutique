@@ -40,7 +40,7 @@ const HowItWorksSection = () => (
                 </div>
                 <div className="pt-1">
                   <h3 className="font-display text-xl font-semibold text-chocolate mb-1 flex items-center gap-2">
-                    <step.icon size={18} strokeWidth={1.5} className="text-gold" />
+                    <step.icon size={18} strokeWidth={1.5} className="text-secondary" />
                     {step.title}
                   </h3>
                   <p className="font-body text-chocolate-light/70 leading-relaxed">{step.desc}</p>
