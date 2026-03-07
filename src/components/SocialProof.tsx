@@ -5,7 +5,11 @@ import feedback1 from "@/assets/feedback-1.jpg";
 import feedback2 from "@/assets/feedback-2.jpg";
 import feedback3 from "@/assets/feedback-3.jpg";
 
-const feedbacks = [feedback1, feedback2, feedback3];
+const feedbacks = [
+  { src: feedback1, caption: "Salted Bliss — o aroma que conquista à primeira vela 🕯️" },
+  { src: feedback2, caption: "Choco Crunch — irresistível do início ao fim 🍫" },
+  { src: feedback3, caption: "\"Vou comprar mais vezes com toda certeza!\" ❤️" },
+];
 
 const SocialProof = () => {
   const [current, setCurrent] = useState(0);
@@ -67,10 +71,8 @@ const SocialProof = () => {
           {/* Slide container */}
           <div className="relative w-full max-w-md aspect-square overflow-hidden rounded-3xl">
             <AnimatePresence initial={false} custom={direction} mode="wait">
-              <motion.img
+              <motion.div
                 key={current}
-                src={feedbacks[current]}
-                alt={`Feedback ${current + 1}`}
                 custom={direction}
                 variants={variants}
                 initial="enter"
@@ -81,10 +83,19 @@ const SocialProof = () => {
                 dragConstraints={{ left: 0, right: 0 }}
                 dragElastic={0.3}
                 onDragEnd={handleDragEnd}
-                className="w-full h-full object-cover rounded-3xl cursor-grab active:cursor-grabbing" />
-              
+                className="w-full cursor-grab active:cursor-grabbing">
+                <img
+                  src={feedbacks[current].src}
+                  alt={feedbacks[current].caption}
+                  className="w-full h-full object-cover rounded-3xl aspect-square" />
+              </motion.div>
             </AnimatePresence>
           </div>
+
+          {/* Caption */}
+          <p className="text-center mt-4 font-elegant text-sm md:text-base text-chocolate/80 italic min-h-[2.5rem]">
+            {feedbacks[current].caption}
+          </p>
 
           {/* Next button */}
           <button
