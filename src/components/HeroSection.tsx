@@ -52,7 +52,7 @@ const HeroSection = () => {
           >
             <div className="rounded-3xl p-8 bg-warm-white/95 backdrop-blur-lg shadow-[0_25px_80px_-15px_hsl(25_55%_15%/0.4)] border border-gold-light/20">
               <div className="text-center mb-6">
-                <h2 className="font-display text-2xl font-bold text-chocolate">Entre para o Grupo VIP</h2>
+                <h2 className="font-display text-2xl font-bold text-gold">Entre para o Grupo VIP</h2>
                 <p className="font-elegant text-base text-chocolate-light/60 mt-1">
                   Receba acesso antecipado e brindes
                 </p>
