@@ -67,9 +67,9 @@ const EventSection = () => (
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="flex gap-5 items-start rounded-2xl p-6 bg-warm-white/50 border border-gold-light/15 hover:shadow-md transition-shadow"
+              className="flex gap-5 items-start rounded-2xl p-6 bg-warm-white/50 border border-secondary/15 hover:shadow-md transition-shadow"
             >
-              <div className="w-12 h-12 rounded-xl border border-gold-light/30 flex items-center justify-center text-gold shrink-0">
+              <div className="w-12 h-12 rounded-xl border border-secondary/30 flex items-center justify-center text-secondary shrink-0">
                 <feature.icon size={22} strokeWidth={1.5} />
               </div>
               <div>
