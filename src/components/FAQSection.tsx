@@ -24,7 +24,7 @@ const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-16 md:py-24 overflow-hidden">
       {/* Warm cream background */}
       <div className="absolute inset-0 bg-gradient-to-b from-cream-deep/60 via-cream to-warm-white" />
 
