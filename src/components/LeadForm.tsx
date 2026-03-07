@@ -14,7 +14,7 @@ const LeadForm = ({ id = "lead-form" }: { id?: string }) => {
   };
 
   const inputClass =
-    "w-full pl-12 pr-5 py-4 rounded-2xl bg-warm-white/80 backdrop-blur-sm border border-gold-light/25 font-body text-foreground placeholder:text-chocolate-light/40 focus:outline-none focus:border-gold focus:shadow-[0_0_0_3px_hsl(38_70%_52%/0.1)] transition-all duration-300";
+    "w-full pl-12 pr-5 py-3 sm:py-4 rounded-2xl bg-warm-white/80 backdrop-blur-sm border border-gold-light/25 font-body text-foreground placeholder:text-chocolate-light/40 focus:outline-none focus:border-gold focus:shadow-[0_0_0_3px_hsl(38_70%_52%/0.1)] transition-all duration-300";
 
   return (
     <form id={id} onSubmit={handleSubmit} className="w-full space-y-3">
