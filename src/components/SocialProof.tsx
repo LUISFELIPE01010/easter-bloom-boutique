@@ -58,53 +58,54 @@ const SocialProof = () => {
         </motion.div>
 
         {/* Carousel */}
-        <div className="relative flex items-center justify-center">
-          {/* Prev button */}
-          <button
-            onClick={() => paginate(-1)}
-            className="absolute left-0 md:-left-6 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-warm-white/80 border border-gold-light/20 shadow-md flex items-center justify-center text-chocolate hover:bg-warm-white transition-colors"
-            aria-label="Anterior">
-            
-            <ChevronLeft size={20} />
-          </button>
+        <div className="relative">
+          <div className="relative flex items-center justify-center">
+            {/* Prev button */}
+            <button
+              onClick={() => paginate(-1)}
+              className="absolute left-0 md:-left-6 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-warm-white/80 border border-gold-light/20 shadow-md flex items-center justify-center text-chocolate hover:bg-warm-white transition-colors"
+              aria-label="Anterior">
+              <ChevronLeft size={20} />
+            </button>
 
-          {/* Slide container */}
-          <div className="relative w-full max-w-md aspect-square overflow-hidden rounded-3xl">
-            <AnimatePresence initial={false} custom={direction} mode="wait">
-              <motion.div
-                key={current}
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={0.3}
-                onDragEnd={handleDragEnd}
-                className="w-full cursor-grab active:cursor-grabbing">
-                <img
-                  src={feedbacks[current].src}
-                  alt={feedbacks[current].caption}
-                  className="w-full h-full object-cover rounded-3xl aspect-square" />
-              </motion.div>
-            </AnimatePresence>
+            {/* Slide container */}
+            <div className="relative w-full max-w-lg overflow-hidden rounded-3xl">
+              <AnimatePresence initial={false} custom={direction} mode="wait">
+                <motion.div
+                  key={current}
+                  custom={direction}
+                  variants={variants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                  drag="x"
+                  dragConstraints={{ left: 0, right: 0 }}
+                  dragElastic={0.3}
+                  onDragEnd={handleDragEnd}
+                  className="w-full cursor-grab active:cursor-grabbing">
+                  <img
+                    src={feedbacks[current].src}
+                    alt={feedbacks[current].caption}
+                    loading="lazy"
+                    className="w-full object-cover rounded-3xl" />
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            {/* Next button */}
+            <button
+              onClick={() => paginate(1)}
+              className="absolute right-0 md:-right-6 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-warm-white/80 border border-gold-light/20 shadow-md flex items-center justify-center text-chocolate hover:bg-warm-white transition-colors"
+              aria-label="Próximo">
+              <ChevronRight size={20} />
+            </button>
           </div>
 
-          {/* Caption */}
+          {/* Caption below image */}
           <p className="text-center mt-4 font-elegant text-sm md:text-base text-chocolate/80 italic min-h-[2.5rem]">
             {feedbacks[current].caption}
           </p>
-
-          {/* Next button */}
-          <button
-            onClick={() => paginate(1)}
-            className="absolute right-0 md:-right-6 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-warm-white/80 border border-gold-light/20 shadow-md flex items-center justify-center text-chocolate hover:bg-warm-white transition-colors"
-            aria-label="Próximo">
-            
-            <ChevronRight size={20} />
-          </button>
         </div>
 
         {/* Dots */}
