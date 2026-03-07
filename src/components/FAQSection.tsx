@@ -49,7 +49,7 @@ const FAQSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.06 }}
-              className="rounded-2xl overflow-hidden bg-warm-white/80 border border-gold-light/15 shadow-sm"
+              className="rounded-2xl overflow-hidden bg-warm-white/80 border border-secondary/15 shadow-sm"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
