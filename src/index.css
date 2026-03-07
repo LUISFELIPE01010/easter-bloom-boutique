@@ -93,7 +93,7 @@
 .divider-floral {
   position: relative;
   height: 2px;
-  background: linear-gradient(90deg, transparent, hsl(var(--gold-light)), transparent);
+  background: linear-gradient(90deg, transparent, hsl(var(--secondary)), transparent);
 }
 .divider-floral::after {
   content: '✿';
@@ -103,7 +103,7 @@
   transform: translate(-50%, -50%);
   background: hsl(var(--background));
   padding: 0 16px;
-  color: hsl(var(--gold));
+  color: hsl(var(--secondary));
   font-size: 1.25rem;
 }
 
@@ -116,14 +116,14 @@
   border: 1px solid hsl(var(--gold-light) / 0.3);
 }
 
-/* Gold shimmer text */
+/* Blue shimmer text */
 .text-shimmer {
   background: linear-gradient(
     120deg, 
-    hsl(var(--chocolate)) 0%, 
-    hsl(var(--gold)) 40%, 
-    hsl(var(--chocolate-light)) 60%, 
-    hsl(var(--gold)) 100%
+    hsl(var(--secondary)) 0%, 
+    hsl(var(--primary)) 40%, 
+    hsl(var(--secondary)) 60%, 
+    hsl(var(--primary)) 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;

@@ -17,15 +17,15 @@ const IntroSection = () => (
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="relative"
         >
-          <div className="rounded-3xl overflow-hidden border border-gold-light/20 shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.15)]">
+          <div className="rounded-3xl overflow-hidden border border-secondary/20 shadow-[0_20px_60px_-15px_hsl(210_35%_43%/0.15)]">
             <img src={flatlayImg} alt="Coleção de Páscoa Avec" className="w-full h-auto" />
           </div>
           {/* Decorative accent */}
           <div className="absolute -bottom-8 -right-8 w-40 h-40 rounded-full bg-blush/40 blur-3xl" />
           <div className="absolute -top-8 -left-8 w-32 h-32 rounded-full bg-sage/40 blur-3xl" />
           {/* Badge overlay */}
-          <div className="absolute -bottom-4 -right-4 md:bottom-6 md:right-6 rounded-2xl px-6 py-4 shadow-lg bg-warm-white/80 backdrop-blur-sm border border-gold-light/20">
-            <p className="font-display text-2xl font-bold text-gold">Edição Limitada</p>
+          <div className="absolute -bottom-4 -right-4 md:bottom-6 md:right-6 rounded-2xl px-6 py-4 shadow-lg bg-warm-white/80 backdrop-blur-sm border border-secondary/20">
+            <p className="font-display text-2xl font-bold text-secondary">Edição Limitada</p>
             <p className="font-elegant text-chocolate-light">Páscoa 2026</p>
           </div>
         </motion.div>
@@ -37,7 +37,7 @@ const IntroSection = () => (
           viewport={{ once: true }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Uma experiência sensorial</span>
+          <span className="font-elegant text-base tracking-[0.3em] text-secondary uppercase">Uma experiência sensorial</span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-chocolate mt-4 leading-[1.1]">
             Quando o aroma <br />
             conta uma <span className="italic text-shimmer">história</span>
@@ -59,7 +59,7 @@ const IntroSection = () => (
           {/* Feature pills */}
           <div className="mt-10 flex flex-wrap gap-3">
             {["100% Artesanal", "Cera Vegetal", "Fragrância Premium", "Presenteável"].map((item) => (
-              <span key={item} className="px-5 py-2.5 rounded-full bg-warm-white/60 border border-gold-light/20 font-elegant text-base text-chocolate-light tracking-wide">
+              <span key={item} className="px-5 py-2.5 rounded-full bg-warm-white/60 border border-secondary/20 font-elegant text-base text-chocolate-light tracking-wide">
                 {item}
               </span>
             ))}
@@ -67,7 +67,7 @@ const IntroSection = () => (
 
           <button
             onClick={scrollToForm}
-            className="mt-10 px-8 py-4 rounded-full bg-chocolate text-primary-foreground font-display tracking-wide shadow-lg hover:shadow-xl hover:bg-chocolate-light transition-all duration-300"
+            className="mt-10 px-8 py-4 rounded-full bg-secondary text-secondary-foreground font-display tracking-wide shadow-lg hover:shadow-xl hover:opacity-90 transition-all duration-300"
           >
             Quero participar da pré-venda →
           </button>

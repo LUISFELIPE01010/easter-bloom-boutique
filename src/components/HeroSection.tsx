@@ -9,7 +9,7 @@ const HeroSection = () => {
       {/* Background image */}
       <div className="absolute inset-0">
         <img src={heroImg} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(25_55%_18%/0.55)] via-[hsl(25_40%_20%/0.4)] to-[hsl(30_30%_15%/0.7)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary/55 via-secondary/40 to-secondary/70" />
       </div>
 
       {/* Content */}
@@ -48,7 +48,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="rounded-3xl p-8 bg-warm-white/95 backdrop-blur-lg shadow-[0_25px_80px_-15px_hsl(25_55%_15%/0.4)] border border-gold-light/20">
+            <div className="rounded-3xl p-8 bg-warm-white/95 backdrop-blur-lg shadow-[0_25px_80px_-15px_hsl(210_35%_43%/0.4)] border border-secondary/20">
               <div className="text-center mb-6">
                 <h2 className="font-display text-2xl font-bold text-chocolate">Entre para o Grupo VIP</h2>
                 <p className="font-elegant text-base text-chocolate-light/60 mt-1">

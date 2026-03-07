@@ -7,7 +7,7 @@ const CTASection = () => (
     {/* Watercolor garden background */}
     <div className="absolute inset-0">
       <img src={watercolorBg} alt="" className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(25_55%_15%/0.55)] via-[hsl(25_40%_20%/0.45)] to-[hsl(30_30%_15%/0.65)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/55 via-secondary/45 to-secondary/65" />
     </div>
     
     {/* Ambient blobs */}
@@ -36,7 +36,7 @@ const CTASection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.15 }}
-        className="bg-warm-white/80 backdrop-blur-sm rounded-3xl p-5 sm:p-8 border border-gold-light/20 shadow-[0_20px_60px_-20px_hsl(25_55%_25%/0.12)]"
+        className="bg-warm-white/80 backdrop-blur-sm rounded-3xl p-5 sm:p-8 border border-secondary/20 shadow-[0_20px_60px_-20px_hsl(210_35%_43%/0.12)]"
       >
         <LeadForm id="lead-form-bottom" />
       </motion.div>

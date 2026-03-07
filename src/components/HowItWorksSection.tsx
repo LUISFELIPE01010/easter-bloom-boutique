@@ -19,7 +19,7 @@ const HowItWorksSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Como funciona</span>
+            <span className="font-elegant text-base tracking-[0.3em] text-secondary uppercase">Como funciona</span>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-chocolate mt-4 mb-12">
               Simples como <span className="italic">acender uma vela</span>
             </h2>
@@ -35,12 +35,12 @@ const HowItWorksSection = () => (
                 transition={{ delay: i * 0.15, duration: 0.6 }}
                 className="flex gap-6 items-start"
               >
-                <div className="shrink-0 w-16 h-16 rounded-2xl bg-warm-white border border-gold-light/30 flex items-center justify-center">
-                  <span className="font-display text-xl font-bold text-gold">{step.num}</span>
+                <div className="shrink-0 w-16 h-16 rounded-2xl bg-warm-white border border-secondary/30 flex items-center justify-center">
+                  <span className="font-display text-xl font-bold text-secondary">{step.num}</span>
                 </div>
                 <div className="pt-1">
                   <h3 className="font-display text-xl font-semibold text-chocolate mb-1 flex items-center gap-2">
-                    <step.icon size={18} strokeWidth={1.5} className="text-gold" />
+                    <step.icon size={18} strokeWidth={1.5} className="text-secondary" />
                     {step.title}
                   </h3>
                   <p className="font-body text-chocolate-light/70 leading-relaxed">{step.desc}</p>
@@ -58,7 +58,7 @@ const HowItWorksSection = () => (
           transition={{ duration: 0.9 }}
           className="relative"
         >
-          <div className="rounded-[2rem] overflow-hidden border border-gold-light/20 shadow-[0_25px_80px_-20px_hsl(25_55%_25%/0.15)]">
+          <div className="rounded-[2rem] overflow-hidden border border-secondary/20 shadow-[0_25px_80px_-20px_hsl(210_35%_43%/0.15)]">
             <img src={lifestyleImg} alt="Acendendo vela Avec" className="w-full h-auto" />
           </div>
           <div className="absolute -bottom-8 -left-8 w-48 h-48 rounded-full bg-peach/40 blur-[80px]" />

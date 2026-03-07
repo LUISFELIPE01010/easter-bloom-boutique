@@ -27,7 +27,7 @@ const benefits = [
 const BenefitsSection = () => (
   <section className="relative py-24 overflow-hidden">
     {/* Rich warm background */}
-    <div className="absolute inset-0 bg-gradient-to-br from-[hsl(25_55%_22%)] via-[hsl(25_45%_18%)] to-[hsl(30_40%_15%)]" />
+    <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary/90 to-secondary/80" />
     
     {/* Ambient glows */}
     <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-gold/5 blur-[150px]" />
@@ -40,9 +40,9 @@ const BenefitsSection = () => (
         viewport={{ once: true }}
         className="text-center mb-14"
       >
-        <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Por que entrar?</span>
+        <span className="font-elegant text-base tracking-[0.3em] text-primary uppercase">Por que entrar?</span>
         <h2 className="font-display text-3xl md:text-5xl font-bold text-cream mt-3 leading-tight">
-          O que o <span className="italic text-gold">Grupo VIP</span> te dá
+          O que o <span className="italic text-primary">Grupo VIP</span> te dá
         </h2>
         <p className="font-elegant text-lg text-cream/50 mt-3 max-w-lg mx-auto">
           Não é só um grupo. É o seu atalho para os melhores aromas, antes de todo mundo.
@@ -57,9 +57,9 @@ const BenefitsSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.6 }}
-            className="flex gap-4 items-start p-6 rounded-2xl bg-warm-white/5 border border-gold/10 hover:bg-warm-white/10 hover:border-gold/25 transition-all duration-300"
+            className="flex gap-4 items-start p-6 rounded-2xl bg-warm-white/5 border border-primary/10 hover:bg-warm-white/10 hover:border-primary/25 transition-all duration-300"
           >
-            <div className="w-11 h-11 rounded-xl border border-gold/25 flex items-center justify-center text-gold shrink-0">
+            <div className="w-11 h-11 rounded-xl border border-primary/25 flex items-center justify-center text-primary shrink-0">
               <b.icon size={20} strokeWidth={1.5} />
             </div>
             <div>

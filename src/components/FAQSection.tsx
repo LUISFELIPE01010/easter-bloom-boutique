@@ -35,7 +35,7 @@ const FAQSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Tire suas dúvidas</span>
+          <span className="font-elegant text-base tracking-[0.3em] text-secondary uppercase">Tire suas dúvidas</span>
           <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-chocolate mt-3">
             Perguntas <span className="italic">frequentes</span>
           </h2>
@@ -49,14 +49,14 @@ const FAQSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.06 }}
-              className="rounded-2xl overflow-hidden bg-warm-white/80 border border-gold-light/15 shadow-sm"
+              className="rounded-2xl overflow-hidden bg-warm-white/80 border border-secondary/15 shadow-sm"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex items-center justify-between p-5 text-left"
               >
                 <span className="font-display text-base font-semibold text-chocolate pr-4">{faq.q}</span>
-                <span className={`text-gold text-xl transition-transform duration-300 shrink-0 ${openIndex === i ? "rotate-45" : ""}`}>
+                <span className={`text-secondary text-xl transition-transform duration-300 shrink-0 ${openIndex === i ? "rotate-45" : ""}`}>
                   +
                 </span>
               </button>
