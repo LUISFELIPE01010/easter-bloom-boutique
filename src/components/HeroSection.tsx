@@ -35,17 +35,17 @@ const HeroSection = () => {
 
             
 
-            <h1 className="font-display font-black leading-[1.05] mb-6">
-              <img src={avecTextLogo} alt="Avec" className="block h-20 md:h-24 lg:h-36 w-auto" />
-              <span className="block text-3xl md:text-4xl lg:text-5xl text-cream/90 font-semibold mt-2">
+            <h1 className="font-display font-black leading-[1.05] mb-3 lg:mb-6">
+              <img src={avecTextLogo} alt="Avec" className="block h-16 md:h-24 lg:h-36 w-auto" />
+              <span className="block text-2xl md:text-4xl lg:text-5xl text-cream/90 font-semibold mt-2">
                 Aromas que contam
               </span>
-              <span className="block text-3xl md:text-4xl lg:text-5xl italic text-shimmer mt-1 pb-2">
+              <span className="block text-2xl md:text-4xl lg:text-5xl italic text-shimmer mt-1 pb-2">
                 histórias de Páscoa
               </span>
             </h1>
 
-            <p className="font-elegant text-lg md:text-xl text-cream/70 max-w-md mx-auto lg:mx-0 leading-relaxed">
+            <p className="font-elegant text-base md:text-xl text-cream/70 max-w-md mx-auto lg:mx-0 leading-relaxed">
               Velas artesanais feitas com amor. Entre no grupo VIP e seja a primeira a garantir os cheirinhos mais desejados!
             
             </p>
