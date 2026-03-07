@@ -37,7 +37,7 @@ const IntroSection = () => (
           viewport={{ once: true }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Uma experiência sensorial</span>
+          <span className="font-elegant text-base tracking-[0.3em] text-secondary uppercase">Uma experiência sensorial</span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-chocolate mt-4 leading-[1.1]">
             Quando o aroma <br />
             conta uma <span className="italic text-shimmer">história</span>
