@@ -24,7 +24,7 @@ const CTASection = () => (
         <span className="font-elegant text-base tracking-[0.3em] text-cream uppercase">Última chance</span>
         <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-warm-white mt-3 leading-tight">
           As vagas estão<br />
-          <span className="italic text-shimmer">acabando</span>
+          <span className="italic">acabando</span>
         </h2>
         <p className="font-elegant text-lg text-cream/70 mt-3">
           Não perca a chance de garantir acesso antecipado, brindes e os melhores preços da coleção de Páscoa.
