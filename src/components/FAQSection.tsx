@@ -28,7 +28,7 @@ const FAQSection = () => {
       {/* Warm cream background */}
       <div className="absolute inset-0 bg-gradient-to-b from-cream-deep/60 via-cream to-warm-white" />
 
-      <div className="max-w-2xl mx-auto px-6 relative">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
