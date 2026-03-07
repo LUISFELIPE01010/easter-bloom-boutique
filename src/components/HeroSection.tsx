@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-watercolor.jpg";
 import avecTextLogo from "@/assets/avec-text-logo.png";
-import historiasPascoa from "@/assets/historias-pascoa-title.png";
 import LeadForm from "./LeadForm";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-start lg:items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img src={heroImg} alt="" className="w-full h-full object-cover" />
@@ -14,7 +13,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-4 lg:pt-20 pb-16">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-28 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text side */}
           <motion.div
@@ -30,7 +29,9 @@ const HeroSection = () => {
               <span className="block text-3xl md:text-4xl lg:text-5xl text-cream/90 font-semibold mt-2">
                 Aromas que contam
               </span>
-              <img src={historiasPascoa} alt="histórias de Páscoa" className="block h-16 md:h-20 lg:h-28 w-auto mx-auto mt-1" />
+              <span className="block text-3xl md:text-4xl lg:text-5xl italic text-gold mt-1 pb-2">
+                histórias de Páscoa
+              </span>
             </h1>
 
             <p className="font-elegant text-lg md:text-xl text-cream/70 max-w-md mx-auto lg:mx-0 leading-relaxed">
@@ -47,7 +48,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="rounded-3xl p-5 sm:p-8 bg-warm-white/95 backdrop-blur-lg shadow-[0_25px_80px_-15px_hsl(25_55%_15%/0.4)] border border-gold-light/20">
+            <div className="rounded-3xl p-8 bg-warm-white/95 backdrop-blur-lg shadow-[0_25px_80px_-15px_hsl(25_55%_15%/0.4)] border border-gold-light/20">
               <div className="text-center mb-6">
                 <h2 className="font-display text-2xl font-bold text-chocolate">Entre para o Grupo VIP</h2>
                 <p className="font-elegant text-base text-chocolate-light/60 mt-1">
