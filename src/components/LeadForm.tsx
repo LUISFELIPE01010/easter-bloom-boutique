@@ -63,7 +63,7 @@ const LeadForm = ({ id = "lead-form" }: { id?: string }) => {
             : "bg-chocolate text-primary-foreground"
         }`}
       >
-        {submitted ? "✨ Cadastro realizado!" : "Entrar para o Grupo VIP"}
+        {submitted ? "✨ Cadastro realizado!" : "Entrar para o Grupo"}
       </motion.button>
 
       <p className="text-center mt-3 font-elegant text-sm text-chocolate-light/40">
