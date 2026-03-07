@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImg from "@/assets/hero-watercolor.jpg";
+import heroImg from "@/assets/hero-easter-garden.jpg";
 import avecTextLogo from "@/assets/avec-text-logo.png";
 import LeadForm from "./LeadForm";
 
