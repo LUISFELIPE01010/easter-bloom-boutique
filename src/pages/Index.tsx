@@ -4,12 +4,10 @@ import SocialProof from "@/components/SocialProof";
 import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import CountdownTimer from "@/components/CountdownTimer";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <CountdownTimer />
       <HeroSection />
       <ProductsSection />
       <SocialProof />
