@@ -35,8 +35,8 @@ const HowItWorksSection = () => (
                 transition={{ delay: i * 0.15, duration: 0.6 }}
                 className="flex gap-6 items-start"
               >
-                <div className="shrink-0 w-16 h-16 rounded-2xl bg-warm-white border border-gold-light/30 flex items-center justify-center">
-                  <span className="font-display text-xl font-bold text-gold">{step.num}</span>
+                <div className="shrink-0 w-16 h-16 rounded-2xl bg-warm-white border border-secondary/30 flex items-center justify-center">
+                  <span className="font-display text-xl font-bold text-secondary">{step.num}</span>
                 </div>
                 <div className="pt-1">
                   <h3 className="font-display text-xl font-semibold text-chocolate mb-1 flex items-center gap-2">
