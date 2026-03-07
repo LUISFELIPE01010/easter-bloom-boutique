@@ -22,7 +22,7 @@ const products = [
 ];
 
 const ProductsSection = () => (
-  <section id="produtos" className="relative py-24 overflow-hidden">
+  <section id="produtos" className="relative py-16 md:py-24 overflow-hidden">
     {/* Warm cream/blush gradient */}
     <div className="absolute inset-0 bg-gradient-to-br from-cream via-blush/30 to-peach/40" />
     
