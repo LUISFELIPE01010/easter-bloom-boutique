@@ -46,21 +46,21 @@ const HeroSection = () => {
             </h1>
 
             <p className="font-elegant text-lg md:text-xl text-cream/70 max-w-md mx-auto lg:mx-0 leading-relaxed">
-              Velas artesanais feitas com amor. Entre no grupo VIP e seja a primeira a garantir os cheirinhos mais
-              desejados — com preço especial e brindes exclusivos.
+              Velas artesanais feitas com amor. Entre no grupo VIP e seja a primeira a garantir os cheirinhos mais desejados!
+            
             </p>
 
             {/* Trust signals */}
-            <div className="flex flex-wrap gap-3 mt-6 justify-center lg:justify-start">
-              {["100% Gratuito", "Sem compromisso", "Vagas limitadas"].map((item) =>
-              <span
-                key={item}
-                className="px-4 py-1.5 rounded-full bg-warm-white/10 border border-gold/20 font-elegant text-sm text-cream/80 tracking-wide backdrop-blur-sm">
-                
-                  {item}
-                </span>
-              )}
-            </div>
+            
+
+
+
+
+
+
+
+
+            
           </motion.div>
 
           {/* Form side */}
