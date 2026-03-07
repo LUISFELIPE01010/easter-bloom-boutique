@@ -23,17 +23,17 @@ const HeroSection = () => {
             className="text-center lg:text-left">
             
             {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="inline-flex items-center gap-2 mb-6 px-5 py-2 rounded-full border border-gold/30 bg-[hsl(38_50%_98%/0.15)] backdrop-blur-md">
-              
-              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse-soft" />
-              
+            
 
-              
-            </motion.div>
+
+
+
+
+
+
+
+
+            
 
             <h1 className="font-display font-black leading-[1.05] mb-6">
               <img src={avecTextLogo} alt="Avec" className="block h-20 md:h-24 lg:h-36 w-auto" />
