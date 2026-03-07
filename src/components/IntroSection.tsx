@@ -59,7 +59,7 @@ const IntroSection = () => (
           {/* Feature pills */}
           <div className="mt-10 flex flex-wrap gap-3">
             {["100% Artesanal", "Cera Vegetal", "Fragrância Premium", "Presenteável"].map((item) => (
-              <span key={item} className="px-5 py-2.5 rounded-full bg-warm-white/60 border border-gold-light/20 font-elegant text-base text-chocolate-light tracking-wide">
+              <span key={item} className="px-5 py-2.5 rounded-full bg-warm-white/60 border border-secondary/20 font-elegant text-base text-chocolate-light tracking-wide">
                 {item}
               </span>
             ))}
