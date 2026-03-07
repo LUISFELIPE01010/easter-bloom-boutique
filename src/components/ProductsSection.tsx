@@ -39,7 +39,7 @@ const ProductsSection = () => (
       >
         <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Coleção Páscoa</span>
         <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-chocolate mt-3">
-          Os aromas que vão <span className="italic">derreter seu coração</span>
+          Os aromas que vão <span className="italic text-gold">derreter seu coração</span>
         </h2>
       </motion.div>
 
