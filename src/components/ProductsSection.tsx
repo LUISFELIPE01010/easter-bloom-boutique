@@ -51,7 +51,7 @@ const ProductsSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.15, duration: 0.7 }}
-            className="group rounded-3xl overflow-hidden border border-chocolate/10 bg-warm-white/70 shadow-[0_10px_40px_-15px_hsl(25_55%_25%/0.1)] hover:shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.2)] transition-all duration-500"
+            className="group rounded-3xl overflow-hidden border border-secondary/10 bg-warm-white/70 shadow-[0_10px_40px_-15px_hsl(210_35%_43%/0.1)] hover:shadow-[0_20px_60px_-15px_hsl(210_35%_43%/0.2)] transition-all duration-500"
           >
             <div className="aspect-[4/3] overflow-hidden">
               <img
