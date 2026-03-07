@@ -67,7 +67,7 @@ const IntroSection = () => (
 
           <button
             onClick={scrollToForm}
-            className="mt-10 px-8 py-4 rounded-full bg-chocolate text-primary-foreground font-display tracking-wide shadow-lg hover:shadow-xl hover:bg-chocolate-light transition-all duration-300"
+            className="mt-10 px-8 py-4 rounded-full bg-secondary text-secondary-foreground font-display tracking-wide shadow-lg hover:shadow-xl hover:opacity-90 transition-all duration-300"
           >
             Quero participar da pré-venda →
           </button>

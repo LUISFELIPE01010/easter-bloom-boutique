@@ -58,7 +58,7 @@ const HowItWorksSection = () => (
           transition={{ duration: 0.9 }}
           className="relative"
         >
-          <div className="rounded-[2rem] overflow-hidden border border-gold-light/20 shadow-[0_25px_80px_-20px_hsl(25_55%_25%/0.15)]">
+          <div className="rounded-[2rem] overflow-hidden border border-secondary/20 shadow-[0_25px_80px_-20px_hsl(210_35%_43%/0.15)]">
             <img src={lifestyleImg} alt="Acendendo vela Avec" className="w-full h-auto" />
           </div>
           <div className="absolute -bottom-8 -left-8 w-48 h-48 rounded-full bg-peach/40 blur-[80px]" />

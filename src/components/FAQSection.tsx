@@ -56,7 +56,7 @@ const FAQSection = () => {
                 className="w-full flex items-center justify-between p-5 text-left"
               >
                 <span className="font-display text-base font-semibold text-chocolate pr-4">{faq.q}</span>
-                <span className={`text-gold text-xl transition-transform duration-300 shrink-0 ${openIndex === i ? "rotate-45" : ""}`}>
+                <span className={`text-secondary text-xl transition-transform duration-300 shrink-0 ${openIndex === i ? "rotate-45" : ""}`}>
                   +
                 </span>
               </button>

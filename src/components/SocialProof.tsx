@@ -104,8 +104,8 @@ const SocialProof = () => {
             onClick={() => {setDirection(i > current ? 1 : -1);setCurrent(i);}}
             className={`rounded-full transition-all duration-300 ${
             i === current ?
-            "w-8 h-2.5 bg-gold" :
-            "w-2.5 h-2.5 bg-chocolate/20 hover:bg-chocolate/40"}`
+            "w-8 h-2.5 bg-secondary" :
+            "w-2.5 h-2.5 bg-secondary/20 hover:bg-secondary/40"}`
             }
             aria-label={`Slide ${i + 1}`} />
 

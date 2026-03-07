@@ -57,9 +57,9 @@ const BenefitsSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.6 }}
-            className="flex gap-4 items-start p-6 rounded-2xl bg-warm-white/5 border border-gold/10 hover:bg-warm-white/10 hover:border-gold/25 transition-all duration-300"
+            className="flex gap-4 items-start p-6 rounded-2xl bg-warm-white/5 border border-primary/10 hover:bg-warm-white/10 hover:border-primary/25 transition-all duration-300"
           >
-            <div className="w-11 h-11 rounded-xl border border-gold/25 flex items-center justify-center text-gold shrink-0">
+            <div className="w-11 h-11 rounded-xl border border-primary/25 flex items-center justify-center text-primary shrink-0">
               <b.icon size={20} strokeWidth={1.5} />
             </div>
             <div>

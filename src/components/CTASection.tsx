@@ -36,7 +36,7 @@ const CTASection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.15 }}
-        className="bg-warm-white/80 backdrop-blur-sm rounded-3xl p-5 sm:p-8 border border-gold-light/20 shadow-[0_20px_60px_-20px_hsl(25_55%_25%/0.12)]"
+        className="bg-warm-white/80 backdrop-blur-sm rounded-3xl p-5 sm:p-8 border border-secondary/20 shadow-[0_20px_60px_-20px_hsl(210_35%_43%/0.12)]"
       >
         <LeadForm id="lead-form-bottom" />
       </motion.div>

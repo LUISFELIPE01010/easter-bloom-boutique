@@ -62,7 +62,7 @@ const ProductsSection = () => (
             </div>
             <div className="p-6 text-center">
               <h3 className="font-display text-2xl font-bold text-chocolate">{p.name}</h3>
-              <p className="font-elegant text-sm text-gold tracking-widest mt-1 uppercase">{p.note}</p>
+              <p className="font-elegant text-sm text-secondary tracking-widest mt-1 uppercase">{p.note}</p>
               <p className="font-body text-chocolate-light/60 mt-2 text-[0.95rem] leading-relaxed">{p.tagline}</p>
             </div>
           </motion.div>

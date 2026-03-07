@@ -104,7 +104,7 @@ const EventSection = () => (
       >
         <button
           onClick={scrollToForm}
-          className="px-10 py-4 rounded-full bg-chocolate text-primary-foreground font-display tracking-wide shadow-lg hover:shadow-xl hover:bg-chocolate-light transition-all duration-300"
+          className="px-10 py-4 rounded-full bg-secondary text-secondary-foreground font-display tracking-wide shadow-lg hover:shadow-xl hover:opacity-90 transition-all duration-300"
         >
           Participar do evento →
         </button>
