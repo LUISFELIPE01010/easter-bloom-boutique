@@ -77,7 +77,7 @@ const ProductsSection = () => (
       >
         <button
           onClick={scrollToForm}
-          className="btn-glow px-10 py-4 rounded-full bg-chocolate text-primary-foreground font-display tracking-wide shadow-[0_8px_30px_-8px_hsl(25_55%_25%/0.4)] hover:shadow-[0_14px_40px_-8px_hsl(25_55%_25%/0.5)] transition-all duration-300"
+          className="btn-glow px-10 py-4 rounded-full bg-secondary text-secondary-foreground font-display tracking-wide shadow-[0_8px_30px_-8px_hsl(210_35%_43%/0.4)] hover:shadow-[0_14px_40px_-8px_hsl(210_35%_43%/0.5)] transition-all duration-300"
         >
           Garantir acesso VIP →
         </button>
