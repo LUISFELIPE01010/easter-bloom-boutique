@@ -46,7 +46,7 @@ const CountdownTimer = () => {
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`sticky top-0 z-50 py-2.5 px-4 text-center transition-colors duration-500 ${
+      className={`sticky top-0 z-50 py-1.5 sm:py-2.5 px-4 text-center transition-colors duration-500 ${
         isExpired
           ? "bg-destructive/90 backdrop-blur-md"
           : isUrgent
@@ -54,7 +54,7 @@ const CountdownTimer = () => {
           : "bg-chocolate/95 backdrop-blur-md"
       }`}
     >
-      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+      <div className="max-w-5xl mx-auto flex items-center justify-center gap-2 sm:gap-4">
         <div className="flex items-center gap-2">
           <Clock size={16} className={`${isUrgent ? "animate-pulse" : ""} text-cream`} />
           <span className="font-elegant text-xs sm:text-sm text-cream/80">
@@ -69,13 +69,6 @@ const CountdownTimer = () => {
             <TimeBlock value={seconds} label="seg" isUrgent={isUrgent} />
           </div>
         )}
-
-        <button
-          onClick={scrollToForm}
-          className="text-xs sm:text-sm font-display text-gold hover:text-gold-light underline underline-offset-2 transition-colors"
-        >
-          Garantir vaga →
-        </button>
       </div>
     </motion.div>
   );
