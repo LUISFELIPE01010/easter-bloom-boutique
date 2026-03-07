@@ -58,7 +58,7 @@ const SocialProof = () => {
           {/* Prev button */}
           <button
             onClick={() => paginate(-1)}
-            className="absolute left-0 md:-left-6 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-warm-white/80 border border-gold-light/20 shadow-md flex items-center justify-center text-chocolate hover:bg-warm-white transition-colors"
+            className="absolute left-0 md:-left-6 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-warm-white/80 border border-secondary/20 shadow-md flex items-center justify-center text-secondary hover:bg-warm-white transition-colors"
             aria-label="Anterior">
             
             <ChevronLeft size={20} />
