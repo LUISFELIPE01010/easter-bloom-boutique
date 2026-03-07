@@ -37,7 +37,7 @@ const ProductsSection = () => (
         viewport={{ once: true }}
         className="text-center mb-14"
       >
-        <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Coleção Páscoa</span>
+        <span className="font-elegant text-base tracking-[0.3em] text-secondary uppercase">Coleção Páscoa</span>
         <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-chocolate mt-3">
           Os aromas que vão <span className="italic text-shimmer">derreter seu coração</span>
         </h2>
