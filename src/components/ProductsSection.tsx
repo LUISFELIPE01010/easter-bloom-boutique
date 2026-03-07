@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import chocoCrunchImg from "@/assets/choco-crunch.jpg";
+import chocoCrunchImg from "@/assets/choco-crunch.png";
 import saltedBlissImg from "@/assets/salted-bliss.png";
 
 const scrollToForm = () => {
