@@ -20,19 +20,19 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="text-center lg:text-left"
-          >
+            className="text-center lg:text-left">
+            
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="inline-flex items-center gap-2 mb-6 px-5 py-2 rounded-full border border-gold/30 bg-[hsl(38_50%_98%/0.15)] backdrop-blur-md"
-            >
+              className="inline-flex items-center gap-2 mb-6 px-5 py-2 rounded-full border border-gold/30 bg-[hsl(38_50%_98%/0.15)] backdrop-blur-md">
+              
               <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse-soft" />
-              <span className="font-elegant text-base tracking-[0.15em] text-cream uppercase">
-                Edição Limitada · Páscoa 2026
-              </span>
+              
+
+              
             </motion.div>
 
             <h1 className="font-display font-black leading-[1.05] mb-6">
@@ -52,14 +52,14 @@ const HeroSection = () => {
 
             {/* Trust signals */}
             <div className="flex flex-wrap gap-3 mt-6 justify-center lg:justify-start">
-              {["100% Gratuito", "Sem compromisso", "Vagas limitadas"].map((item) => (
-                <span
-                  key={item}
-                  className="px-4 py-1.5 rounded-full bg-warm-white/10 border border-gold/20 font-elegant text-sm text-cream/80 tracking-wide backdrop-blur-sm"
-                >
+              {["100% Gratuito", "Sem compromisso", "Vagas limitadas"].map((item) =>
+              <span
+                key={item}
+                className="px-4 py-1.5 rounded-full bg-warm-white/10 border border-gold/20 font-elegant text-sm text-cream/80 tracking-wide backdrop-blur-sm">
+                
                   {item}
                 </span>
-              ))}
+              )}
             </div>
           </motion.div>
 
@@ -67,8 +67,8 @@ const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          >
+            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}>
+            
             <div className="rounded-3xl p-8 bg-warm-white/95 backdrop-blur-lg shadow-[0_25px_80px_-15px_hsl(25_55%_15%/0.4)] border border-gold-light/20">
               <div className="text-center mb-6">
                 <h2 className="font-display text-2xl font-bold text-chocolate">Entre para o Grupo VIP</h2>
@@ -81,8 +81,8 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
