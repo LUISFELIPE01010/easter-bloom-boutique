@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-watercolor.jpg";
 import avecTextLogo from "@/assets/avec-text-logo.png";
+import historiasPascoa from "@/assets/historias-pascoa-title.png";
 import LeadForm from "./LeadForm";
 
 const HeroSection = () => {
