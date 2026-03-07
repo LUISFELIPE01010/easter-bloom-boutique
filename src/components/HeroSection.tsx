@@ -5,16 +5,16 @@ import LeadForm from "./LeadForm";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-start lg:items-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroImg} alt="" className="w-full h-full object-cover" />
+        <img src={heroImg} alt="" className="w-full h-full object-cover object-[center_20%] lg:object-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(25_55%_18%/0.55)] via-[hsl(25_40%_20%/0.4)] to-[hsl(30_30%_15%/0.7)]" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-28 pb-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-20 pb-8 lg:pt-28 lg:pb-16">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Text side */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
