@@ -27,7 +27,7 @@ const benefits = [
 const BenefitsSection = () => (
   <section className="relative py-24 overflow-hidden">
     {/* Rich warm background */}
-    <div className="absolute inset-0 bg-gradient-to-br from-[hsl(25_55%_22%)] via-[hsl(25_45%_18%)] to-[hsl(30_40%_15%)]" />
+    <div className="absolute inset-0 bg-gradient-to-br from-secondary via-secondary/90 to-secondary/80" />
     
     {/* Ambient glows */}
     <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-gold/5 blur-[150px]" />
