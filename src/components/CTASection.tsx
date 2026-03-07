@@ -3,7 +3,7 @@ import LeadForm from "./LeadForm";
 import watercolorBg from "@/assets/watercolor-garden-cta.jpg";
 
 const CTASection = () => (
-  <section className="relative py-24 overflow-hidden">
+  <section className="relative py-16 md:py-24 overflow-hidden">
     {/* Watercolor garden background */}
     <div className="absolute inset-0">
       <img src={watercolorBg} alt="" className="w-full h-full object-cover" />
