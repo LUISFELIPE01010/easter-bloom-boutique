@@ -24,8 +24,8 @@ const IntroSection = () => (
           <div className="absolute -bottom-8 -right-8 w-40 h-40 rounded-full bg-blush/40 blur-3xl" />
           <div className="absolute -top-8 -left-8 w-32 h-32 rounded-full bg-sage/40 blur-3xl" />
           {/* Badge overlay */}
-          <div className="absolute -bottom-4 -right-4 md:bottom-6 md:right-6 rounded-2xl px-6 py-4 shadow-lg bg-warm-white/80 backdrop-blur-sm border border-gold-light/20">
-            <p className="font-display text-2xl font-bold text-gold">Edição Limitada</p>
+          <div className="absolute -bottom-4 -right-4 md:bottom-6 md:right-6 rounded-2xl px-6 py-4 shadow-lg bg-warm-white/80 backdrop-blur-sm border border-secondary/20">
+            <p className="font-display text-2xl font-bold text-secondary">Edição Limitada</p>
             <p className="font-elegant text-chocolate-light">Páscoa 2026</p>
           </div>
         </motion.div>
