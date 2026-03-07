@@ -89,7 +89,7 @@ const EventSection = () => (
           className="relative"
         >
           <div className="rounded-3xl overflow-hidden border border-gold-light/20 shadow-[0_25px_80px_-20px_hsl(25_55%_25%/0.15)]">
-            <img src={avecProducts} alt="Formatos disponíveis Avec" className="w-full h-auto" />
+            <img src={avecProducts} alt="Formatos disponíveis Avec" loading="lazy" className="w-full h-auto" />
           </div>
           <div className="absolute -bottom-6 -left-6 w-44 h-44 rounded-full bg-sage/20 blur-3xl" />
           <div className="absolute -top-6 -right-6 w-36 h-36 rounded-full bg-blush/20 blur-3xl" />

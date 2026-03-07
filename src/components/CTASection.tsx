@@ -6,7 +6,7 @@ const CTASection = () => (
   <section className="relative py-16 md:py-24 overflow-hidden">
     {/* Watercolor garden background */}
     <div className="absolute inset-0">
-      <img src={watercolorBg} alt="" className="w-full h-full object-cover" />
+      <img src={watercolorBg} alt="" loading="lazy" className="w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-b from-[hsl(25_55%_15%/0.55)] via-[hsl(25_40%_20%/0.45)] to-[hsl(30_30%_15%/0.65)]" />
     </div>
     
