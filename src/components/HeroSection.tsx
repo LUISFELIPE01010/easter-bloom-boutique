@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-watercolor.jpg";
 import avecTextLogo from "@/assets/avec-text-logo.png";
+import historiasPascoa from "@/assets/historias-pascoa-title.png";
 import LeadForm from "./LeadForm";
 
 const HeroSection = () => {
@@ -29,9 +30,7 @@ const HeroSection = () => {
               <span className="block text-3xl md:text-4xl lg:text-5xl text-cream/90 font-semibold mt-2">
                 Aromas que contam
               </span>
-              <span className="block text-3xl md:text-4xl lg:text-5xl italic text-gold mt-1 pb-2">
-                histórias de Páscoa
-              </span>
+              <img src={historiasPascoa} alt="histórias de Páscoa" className="block h-16 md:h-20 lg:h-28 w-auto mx-auto mt-1" />
             </h1>
 
             <p className="font-elegant text-lg md:text-xl text-cream/70 max-w-md mx-auto lg:mx-0 leading-relaxed">
