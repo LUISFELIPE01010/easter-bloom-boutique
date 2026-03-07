@@ -6,51 +6,51 @@
 
 @layer base {
   :root {
-    --background: 30 30% 97%;
-    --foreground: 25 30% 15%;
+    --background: 38 40% 96%;
+    --foreground: 210 35% 18%;
 
-    --card: 32 45% 96%;
-    --card-foreground: 25 30% 15%;
+    --card: 38 35% 94%;
+    --card-foreground: 210 35% 18%;
 
-    --popover: 30 30% 97%;
-    --popover-foreground: 25 30% 15%;
+    --popover: 38 40% 96%;
+    --popover-foreground: 210 35% 18%;
 
-    --primary: 25 55% 30%;
-    --primary-foreground: 38 60% 96%;
+    --primary: 210 35% 43%;
+    --primary-foreground: 38 40% 96%;
 
-    --secondary: 345 35% 91%;
-    --secondary-foreground: 345 30% 28%;
+    --secondary: 38 30% 88%;
+    --secondary-foreground: 210 30% 28%;
 
-    --muted: 30 20% 93%;
-    --muted-foreground: 25 15% 48%;
+    --muted: 38 25% 91%;
+    --muted-foreground: 210 15% 48%;
 
-    --accent: 148 22% 86%;
-    --accent-foreground: 148 35% 22%;
+    --accent: 210 25% 82%;
+    --accent-foreground: 210 35% 22%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 30% 86%;
-    --input: 30 30% 86%;
-    --ring: 25 55% 30%;
+    --border: 38 25% 84%;
+    --input: 38 25% 84%;
+    --ring: 210 35% 43%;
     --radius: 0.75rem;
 
     /* Extended palette */
-    --cream: 40 55% 95%;
-    --cream-deep: 38 45% 90%;
-    --blush: 345 45% 91%;
-    --blush-deep: 345 40% 82%;
-    --lavender: 265 35% 90%;
-    --lavender-deep: 265 30% 80%;
-    --sage: 148 28% 84%;
-    --sage-deep: 148 25% 70%;
-    --chocolate: 25 55% 25%;
-    --chocolate-light: 25 40% 40%;
-    --gold: 38 70% 52%;
-    --gold-light: 38 60% 70%;
-    --warm-white: 38 50% 98%;
-    --rose: 0 50% 88%;
-    --peach: 20 60% 90%;
+    --cream: 38 45% 93%;
+    --cream-deep: 38 35% 87%;
+    --blush: 38 30% 89%;
+    --blush-deep: 38 25% 80%;
+    --lavender: 210 30% 88%;
+    --lavender-deep: 210 25% 78%;
+    --sage: 210 20% 82%;
+    --sage-deep: 210 18% 68%;
+    --chocolate: 210 35% 28%;
+    --chocolate-light: 210 25% 43%;
+    --gold: 210 35% 43%;
+    --gold-light: 210 25% 62%;
+    --warm-white: 38 40% 97%;
+    --rose: 38 35% 90%;
+    --peach: 35 40% 90%;
 
     --font-display: 'Playfair Display', serif;
     --font-elegant: 'Poppins', sans-serif;
