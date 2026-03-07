@@ -59,7 +59,7 @@ const HowItWorksSection = () => (
           className="relative"
         >
           <div className="rounded-[2rem] overflow-hidden border border-gold-light/20 shadow-[0_25px_80px_-20px_hsl(25_55%_25%/0.15)]">
-            <img src={lifestyleImg} alt="Acendendo vela Avec" className="w-full h-auto" />
+            <img src={lifestyleImg} alt="Acendendo vela Avec" loading="lazy" className="w-full h-auto" />
           </div>
           <div className="absolute -bottom-8 -left-8 w-48 h-48 rounded-full bg-peach/40 blur-[80px]" />
           <div className="absolute -top-8 -right-8 w-40 h-40 rounded-full bg-lavender/30 blur-[80px]" />

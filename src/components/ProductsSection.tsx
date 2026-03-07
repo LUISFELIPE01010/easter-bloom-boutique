@@ -57,6 +57,7 @@ const ProductsSection = () => (
               <img
                 src={p.img}
                 alt={p.name}
+                loading="lazy"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
             </div>
