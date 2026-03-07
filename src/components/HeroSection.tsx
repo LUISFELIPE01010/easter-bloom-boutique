@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-watercolor.jpg";
-import avecTextLogo from "@/assets/avec-text-logo.png";
+
 import LeadForm from "./LeadForm";
 
 const HeroSection = () => {
@@ -36,7 +36,7 @@ const HeroSection = () => {
             
 
             <h1 className="font-display font-black leading-[1.05] mb-3 lg:mb-6">
-              <img src={avecTextLogo} alt="Avec" className="block h-20 md:h-28 lg:h-40 w-auto mx-auto lg:mx-0" />
+              
               <span className="block text-3xl md:text-5xl lg:text-6xl text-cream/90 font-semibold mt-2">
                 Aromas que contam
               </span>

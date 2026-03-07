@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProductsSection from "@/components/ProductsSection";
 import SocialProof from "@/components/SocialProof";
@@ -11,7 +10,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <CountdownTimer />
-      <Navbar />
       <HeroSection />
       <ProductsSection />
       <SocialProof />
