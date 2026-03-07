@@ -22,7 +22,7 @@ const products = [
 ];
 
 const ProductsSection = () => (
-  <section id="produtos" className="relative py-24 overflow-hidden">
+  <section id="produtos" className="relative py-16 md:py-24 overflow-hidden">
     {/* Warm cream/blush gradient */}
     <div className="absolute inset-0 bg-gradient-to-br from-cream via-blush/30 to-peach/40" />
     
@@ -30,7 +30,7 @@ const ProductsSection = () => (
     <div className="absolute top-10 right-0 w-[400px] h-[400px] rounded-full bg-lavender/20 blur-[120px]" />
     <div className="absolute bottom-10 left-0 w-[350px] h-[350px] rounded-full bg-sage/15 blur-[100px]" />
 
-    <div className="max-w-5xl mx-auto px-6 relative">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -38,12 +38,12 @@ const ProductsSection = () => (
         className="text-center mb-14"
       >
         <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Coleção Páscoa</span>
-        <h2 className="font-display text-3xl md:text-5xl font-bold text-chocolate mt-3">
+        <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-chocolate mt-3">
           Os aromas que vão <span className="italic text-shimmer">derreter seu coração</span>
         </h2>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
         {products.map((p, i) => (
           <motion.div
             key={p.name}

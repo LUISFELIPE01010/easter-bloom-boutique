@@ -24,11 +24,11 @@ const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-16 md:py-24 overflow-hidden">
       {/* Warm cream background */}
       <div className="absolute inset-0 bg-gradient-to-b from-cream-deep/60 via-cream to-warm-white" />
 
-      <div className="max-w-2xl mx-auto px-6 relative">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ const FAQSection = () => {
           className="text-center mb-12"
         >
           <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Tire suas dúvidas</span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-chocolate mt-3">
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-chocolate mt-3">
             Perguntas <span className="italic">frequentes</span>
           </h2>
         </motion.div>

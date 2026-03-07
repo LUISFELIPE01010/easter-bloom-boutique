@@ -1,73 +1,119 @@
-import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import feedback1 from "@/assets/feedback-1.jpg";
+import feedback2 from "@/assets/feedback-2.jpg";
+import feedback3 from "@/assets/feedback-3.jpg";
 
-const testimonials = [
-  {
-    name: "Tiago M.",
-    badge: "+50 Produtos",
-    text: "Encontrei a Avec por acaso e desde a primeira vela, viciei. Cada aroma é uma experiência diferente. Não largo mais!",
-  },
-  {
-    name: "Maria Eduarda",
-    badge: "+150 Produtos",
-    text: "Sou completamente apaixonada pela Avec. Faltam palavras pra descrever o quão especial cada produto é. Incrível demais!",
-  },
-  {
-    name: "Carolina S.",
-    badge: "Membro VIP",
-    text: "Entrar pro grupo VIP mudou tudo. Garanto os lançamentos antes de esgotar e ainda ganho brindes. Melhor decisão!",
-  },
-];
+const feedbacks = [feedback1, feedback2, feedback3];
 
-const SocialProof = () => (
-  <section id="depoimentos" className="relative py-24 overflow-hidden">
-    {/* Deep sage/chocolate background */}
-    <div className="absolute inset-0 bg-gradient-to-br from-[hsl(148_20%_18%)] via-[hsl(148_15%_14%)] to-[hsl(25_30%_12%)]" />
-    
-    {/* Ambient glows */}
-    <div className="absolute top-1/3 left-0 w-[400px] h-[400px] rounded-full bg-sage/5 blur-[130px]" />
-    <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] rounded-full bg-gold/3 blur-[100px]" />
+const SocialProof = () => {
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(0);
 
-    <div className="max-w-5xl mx-auto px-6 relative">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-14"
-      >
-        <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Quem ama, recomenda</span>
-        <h2 className="font-display text-3xl md:text-5xl font-bold text-cream mt-3">
-          +2.000 pessoas já são <span className="italic text-gold">VIP</span>
-        </h2>
-      </motion.div>
+  const paginate = useCallback((dir: number) => {
+    setDirection(dir);
+    setCurrent((prev) => (prev + dir + feedbacks.length) % feedbacks.length);
+  }, []);
 
-      <div className="grid md:grid-cols-3 gap-6">
-        {testimonials.map((t, i) => (
-          <motion.div
-            key={t.name}
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.12, duration: 0.6 }}
-            className="rounded-2xl p-6 bg-warm-white/5 border border-gold/10 hover:bg-warm-white/10 transition-all"
+  // Auto-play
+  useEffect(() => {
+    const timer = setInterval(() => paginate(1), 4000);
+    return () => clearInterval(timer);
+  }, [paginate]);
+
+  const variants = {
+    enter: (d: number) => ({ x: d > 0 ? 300 : -300, opacity: 0, scale: 0.95 }),
+    center: { x: 0, opacity: 1, scale: 1 },
+    exit: (d: number) => ({ x: d > 0 ? -300 : 300, opacity: 0, scale: 0.95 }),
+  };
+
+  // Swipe support
+  const handleDragEnd = (_: any, info: { offset: { x: number } }) => {
+    if (info.offset.x < -50) paginate(1);
+    else if (info.offset.x > 50) paginate(-1);
+  };
+
+  return (
+    <section id="depoimentos" className="relative py-16 md:py-24 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-cream via-background to-cream-deep/40" />
+
+      <div className="max-w-3xl mx-auto px-6 relative">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-8 md:mb-12"
+        >
+          <span className="font-elegant text-sm md:text-base tracking-[0.3em] text-gold uppercase">
+            Quem ama, recomenda
+          </span>
+          <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-chocolate mt-3">
+            +2.000 pessoas já são <span className="italic text-shimmer">VIP</span>
+          </h2>
+        </motion.div>
+
+        {/* Carousel */}
+        <div className="relative flex items-center justify-center">
+          {/* Prev button */}
+          <button
+            onClick={() => paginate(-1)}
+            className="absolute left-0 md:-left-6 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-warm-white/80 border border-gold-light/20 shadow-md flex items-center justify-center text-chocolate hover:bg-warm-white transition-colors"
+            aria-label="Anterior"
           >
-            <div className="flex gap-0.5 mb-3">
-              {[...Array(5)].map((_, s) => (
-                <Star key={s} size={14} className="fill-gold text-gold" />
-              ))}
-            </div>
-            <p className="font-body text-cream/65 leading-relaxed mb-4 text-[0.95rem]">"{t.text}"</p>
-            <div className="flex items-center justify-between">
-              <span className="font-display font-semibold text-cream">{t.name}</span>
-              <span className="px-3 py-1 rounded-full bg-gold/10 border border-gold/20 font-elegant text-xs text-gold tracking-wide">
-                {t.badge}
-              </span>
-            </div>
-          </motion.div>
-        ))}
+            <ChevronLeft size={20} />
+          </button>
+
+          {/* Slide container */}
+          <div className="relative w-full max-w-md aspect-square overflow-hidden rounded-3xl">
+            <AnimatePresence initial={false} custom={direction} mode="wait">
+              <motion.img
+                key={current}
+                src={feedbacks[current]}
+                alt={`Feedback ${current + 1}`}
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.3}
+                onDragEnd={handleDragEnd}
+                className="w-full h-full object-cover rounded-3xl cursor-grab active:cursor-grabbing"
+              />
+            </AnimatePresence>
+          </div>
+
+          {/* Next button */}
+          <button
+            onClick={() => paginate(1)}
+            className="absolute right-0 md:-right-6 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-warm-white/80 border border-gold-light/20 shadow-md flex items-center justify-center text-chocolate hover:bg-warm-white transition-colors"
+            aria-label="Próximo"
+          >
+            <ChevronRight size={20} />
+          </button>
+        </div>
+
+        {/* Dots */}
+        <div className="flex justify-center gap-2.5 mt-6">
+          {feedbacks.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => { setDirection(i > current ? 1 : -1); setCurrent(i); }}
+              className={`rounded-full transition-all duration-300 ${
+                i === current
+                  ? "w-8 h-2.5 bg-gold"
+                  : "w-2.5 h-2.5 bg-chocolate/20 hover:bg-chocolate/40"
+              }`}
+              aria-label={`Slide ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default SocialProof;
