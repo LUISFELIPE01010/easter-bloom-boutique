@@ -44,7 +44,7 @@ const EventSection = () => (
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Evento Especial</span>
+        <span className="font-elegant text-base tracking-[0.3em] text-secondary uppercase">Evento Especial</span>
         <h2 className="font-display text-4xl md:text-6xl font-bold text-chocolate mt-4 leading-tight">
           Uma Páscoa que encanta<br />
           <span className="italic text-shimmer">todos os sentidos</span>
