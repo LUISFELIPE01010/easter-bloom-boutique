@@ -35,7 +35,7 @@ const FAQSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Tire suas dúvidas</span>
+          <span className="font-elegant text-base tracking-[0.3em] text-secondary uppercase">Tire suas dúvidas</span>
           <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-chocolate mt-3">
             Perguntas <span className="italic">frequentes</span>
           </h2>
