@@ -45,7 +45,7 @@ const SocialProof = () => {
           viewport={{ once: true }}
           className="text-center mb-8 md:mb-12">
           
-          <span className="font-elegant text-sm md:text-base tracking-[0.3em] text-gold uppercase">
+          <span className="font-elegant text-sm md:text-base tracking-[0.3em] text-secondary uppercase">
             Quem ama, recomenda
           </span>
           
