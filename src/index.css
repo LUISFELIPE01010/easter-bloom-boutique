@@ -93,7 +93,7 @@
 .divider-floral {
   position: relative;
   height: 2px;
-  background: linear-gradient(90deg, transparent, hsl(var(--gold-light)), transparent);
+  background: linear-gradient(90deg, transparent, hsl(var(--secondary)), transparent);
 }
 .divider-floral::after {
   content: '✿';
@@ -103,7 +103,7 @@
   transform: translate(-50%, -50%);
   background: hsl(var(--background));
   padding: 0 16px;
-  color: hsl(var(--gold));
+  color: hsl(var(--secondary));
   font-size: 1.25rem;
 }
 
