@@ -22,7 +22,7 @@ const HeroSection = () => {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="text-center lg:text-left">
             
-            <img src={avecTextLogo} alt="Avec" className="h-10 md:h-14 lg:h-16 mx-auto lg:mx-0 mb-4 lg:mb-6" />
+            <img src={avecTextLogo} alt="Avec" className="h-16 md:h-20 lg:h-24 mx-auto lg:mx-0 mb-4 lg:mb-6" />
 
 
 
