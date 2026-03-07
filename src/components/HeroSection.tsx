@@ -29,7 +29,7 @@ const HeroSection = () => {
               <span className="block text-3xl md:text-4xl lg:text-5xl text-cream/90 font-semibold mt-2">
                 Aromas que contam
               </span>
-              <span className="block text-3xl md:text-4xl lg:text-5xl italic text-gold mt-1 pb-2">
+              <span className="block text-3xl md:text-4xl lg:text-5xl italic text-shimmer mt-1 pb-2">
                 histórias de Páscoa
               </span>
             </h1>
