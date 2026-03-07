@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import chocoCrunchImg from "@/assets/choco-crunch.jpg";
-import saltedBlissImg from "@/assets/salted-bliss.jpg";
+import saltedBlissImg from "@/assets/salted-bliss.png";
 
 const scrollToForm = () => {
   document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
