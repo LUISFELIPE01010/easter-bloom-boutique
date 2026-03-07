@@ -6,7 +6,7 @@ import LeadForm from "./LeadForm";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-start justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-start lg:items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img src={heroImg} alt="" className="w-full h-full object-cover" />
