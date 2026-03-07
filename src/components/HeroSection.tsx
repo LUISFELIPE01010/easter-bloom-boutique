@@ -6,7 +6,7 @@ import LeadForm from "./LeadForm";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-start justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-start lg:items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
         <img src={heroImg} alt="" className="w-full h-full object-cover" />
@@ -14,7 +14,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-4 pb-16">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 pt-4 lg:pt-20 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text side */}
           <motion.div
