@@ -9,7 +9,7 @@ const HeroSection = () => {
       {/* Background image */}
       <div className="absolute inset-0">
         <img src={heroImg} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-black/20" />
+        
       </div>
 
       {/* Content */}
@@ -20,21 +20,21 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="text-center lg:text-left"
-          >
+            className="text-center lg:text-left">
+            
             {/* Badge */}
 
             <h1 className="font-display font-black leading-[1.05] mb-6">
               <img src={avecTextLogo} alt="Avec" className="block h-24 md:h-28 lg:h-36 w-auto mx-auto" />
-              <span className="block text-3xl md:text-4xl lg:text-5xl text-cream/90 font-semibold mt-2">
+              <span className="block text-3xl md:text-4xl lg:text-5xl font-semibold mt-2 text-white">
                 Aromas que contam
               </span>
-              <span className="block text-3xl md:text-4xl lg:text-5xl italic mt-1 pb-2 text-warm-white">
+              <span className="block text-3xl md:text-4xl lg:text-5xl italic mt-1 pb-2 bg-gradient-to-r from-[hsl(25,55%,28%)] via-[hsl(25,40%,38%)] to-[hsl(25,50%,30%)] bg-clip-text text-transparent">
                 histórias de Páscoa
               </span>
             </h1>
 
-            <p className="font-elegant text-lg md:text-xl text-cream/70 max-w-md mx-auto lg:mx-0 leading-relaxed">
+            <p className="font-elegant text-lg md:text-xl max-w-md mx-auto lg:mx-0 leading-relaxed text-white">
               Velas artesanais feitas com amor. Entre no grupo VIP e seja a primeira a garantir os cheirinhos mais
               desejados!
             </p>
@@ -46,8 +46,8 @@ const HeroSection = () => {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          >
+            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}>
+            
             <div className="rounded-3xl p-8 bg-warm-white/95 backdrop-blur-lg shadow-[0_25px_80px_-15px_hsl(25_55%_15%/0.4)] border border-gold-light/20">
               <div className="text-center mb-6">
                 <h2 className="font-display text-2xl font-bold text-gold">Entre para o Grupo VIP</h2>
@@ -60,8 +60,8 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
