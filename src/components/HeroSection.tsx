@@ -34,7 +34,7 @@ const HeroSection = () => {
               </span>
             </h1>
 
-            <p className="font-elegant text-lg md:text-xl max-w-md mx-auto lg:mx-0 leading-relaxed text-white">
+            <p className="font-elegant text-lg md:text-xl text-cream/70 max-w-md mx-auto lg:mx-0 leading-relaxed">
               Velas artesanais feitas com amor. Entre no grupo VIP e seja a primeira a garantir os cheirinhos mais
               desejados!
             </p>
