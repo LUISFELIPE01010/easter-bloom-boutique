@@ -109,14 +109,7 @@ const ProductsSection = () => (
             transition={{ delay: i * 0.15, duration: 0.7 }}
             className="group rounded-3xl overflow-hidden border border-chocolate/10 bg-warm-white/70 shadow-[0_10px_40px_-15px_hsl(25_55%_25%/0.1)] hover:shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.2)] transition-all duration-500"
           >
-            <div className="aspect-[4/3] overflow-hidden">
-              <img
-                src={p.img}
-                alt={p.name}
-                loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-            </div>
+            <ProductCarousel images={p.images} name={p.name} />
             <div className="p-6 text-center">
               <h3 className="font-display text-2xl font-bold text-chocolate">{p.name}</h3>
               <p className="font-elegant text-sm text-gold tracking-widest mt-1 uppercase">{p.note}</p>
