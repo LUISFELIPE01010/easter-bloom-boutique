@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import chocoCrunchImg from "@/assets/choco-crunch.png";
 import saltedBlissImg from "@/assets/salted-bliss.png";
 
@@ -11,15 +13,69 @@ const products = [
     name: "Choco Crunch",
     note: "Chocolate Belga · Avelã · Baunilha",
     tagline: "O abraço quente do cacau belga com a crocância da avelã.",
-    img: chocoCrunchImg,
+    images: [chocoCrunchImg, null, null],
   },
   {
     name: "Salted Bliss",
     note: "Caramelo Salgado · Flor de Sal · Âmbar",
     tagline: "A sofisticação do caramelo com toques de flor de sal e âmbar dourado.",
-    img: saltedBlissImg,
+    images: [saltedBlissImg, null, null],
   },
 ];
+
+const ProductCarousel = ({ images, name }: { images: (string | null)[]; name: string }) => {
+  const [current, setCurrent] = useState(0);
+
+  const prev = () => setCurrent((c) => (c - 1 + images.length) % images.length);
+  const next = () => setCurrent((c) => (c + 1) % images.length);
+
+  return (
+    <div className="relative aspect-[4/3] overflow-hidden">
+      {images[current] ? (
+        <img
+          src={images[current]!}
+          alt={`${name} - foto ${current + 1}`}
+          loading="lazy"
+          className="w-full h-full object-cover transition-opacity duration-500"
+        />
+      ) : (
+        <div className="w-full h-full bg-chocolate/5 flex items-center justify-center">
+          <span className="font-elegant text-sm text-chocolate/30 tracking-widest uppercase">Em breve</span>
+        </div>
+      )}
+
+      {/* Nav arrows */}
+      <button
+        onClick={prev}
+        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-warm-white/80 border border-chocolate/10 shadow flex items-center justify-center text-chocolate/60 hover:text-chocolate transition-colors"
+        aria-label="Foto anterior"
+      >
+        <ChevronLeft size={16} />
+      </button>
+      <button
+        onClick={next}
+        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-warm-white/80 border border-chocolate/10 shadow flex items-center justify-center text-chocolate/60 hover:text-chocolate transition-colors"
+        aria-label="Próxima foto"
+      >
+        <ChevronRight size={16} />
+      </button>
+
+      {/* Dots */}
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`rounded-full transition-all duration-300 ${
+              i === current ? "w-5 h-2 bg-gold" : "w-2 h-2 bg-warm-white/60"
+            }`}
+            aria-label={`Foto ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const ProductsSection = () => (
   <section id="produtos" className="relative py-16 md:py-24 overflow-hidden">
@@ -53,14 +109,7 @@ const ProductsSection = () => (
             transition={{ delay: i * 0.15, duration: 0.7 }}
             className="group rounded-3xl overflow-hidden border border-chocolate/10 bg-warm-white/70 shadow-[0_10px_40px_-15px_hsl(25_55%_25%/0.1)] hover:shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.2)] transition-all duration-500"
           >
-            <div className="aspect-[4/3] overflow-hidden">
-              <img
-                src={p.img}
-                alt={p.name}
-                loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-            </div>
+            <ProductCarousel images={p.images} name={p.name} />
             <div className="p-6 text-center">
               <h3 className="font-display text-2xl font-bold text-chocolate">{p.name}</h3>
               <p className="font-elegant text-sm text-gold tracking-widest mt-1 uppercase">{p.note}</p>
