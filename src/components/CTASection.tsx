@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
-import LeadForm from "./LeadForm";
 import watercolorBg from "@/assets/watercolor-garden-cta.jpg";
+
+const scrollToForm = () => {
+  document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
+};
 
 const CTASection = () => (
   <section className="relative py-16 md:py-24 overflow-hidden">
@@ -19,7 +22,7 @@ const CTASection = () => (
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-8"
+        className="text-center"
       >
         <span className="font-elegant text-base tracking-[0.3em] text-cream uppercase">Última chance</span>
         <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-warm-white mt-3 leading-tight">
@@ -29,16 +32,15 @@ const CTASection = () => (
         <p className="font-elegant text-lg text-cream/70 mt-3">
           Não perca a chance de garantir acesso antecipado, brindes e os melhores preços da coleção de Páscoa.
         </p>
-      </motion.div>
-      
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.15 }}
-        className="bg-warm-white/80 backdrop-blur-sm rounded-3xl p-5 sm:p-8 border border-gold-light/20 shadow-[0_20px_60px_-20px_hsl(25_55%_25%/0.12)]"
-      >
-        <LeadForm id="lead-form-bottom" />
+
+        <motion.button
+          whileHover={{ scale: 1.03, y: -2 }}
+          whileTap={{ scale: 0.97 }}
+          onClick={scrollToForm}
+          className="mt-8 px-10 py-4 rounded-full bg-warm-white text-chocolate font-display text-lg tracking-wide shadow-[0_8px_30px_-8px_hsl(25_55%_25%/0.4)] hover:shadow-[0_14px_40px_-8px_hsl(25_55%_25%/0.5)] transition-all duration-300"
+        >
+          Garantir minha vaga ↑
+        </motion.button>
       </motion.div>
     </div>
   </section>
