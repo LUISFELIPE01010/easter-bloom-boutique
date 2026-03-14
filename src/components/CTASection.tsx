@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import watercolorBg from "@/assets/watercolor-garden-cta.jpg";
+import watercolorBg from "@/assets/watercolor-garden-cta.png";
 
 const scrollToForm = () => {
   document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
