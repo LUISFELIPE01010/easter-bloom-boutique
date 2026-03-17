@@ -9,7 +9,7 @@ const HeroSection = () => {
       {/* Background image */}
       <div className="absolute inset-0">
         <img src={heroImg} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/25 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" />
       </div>
 
       {/* Content */}
@@ -44,7 +44,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="rounded-3xl p-8 backdrop-blur-sm border border-white/5">
+            <div className="rounded-3xl p-8 bg-black/30 backdrop-blur-xl border border-white/10 shadow-2xl">
               <div className="text-center mb-6">
                 <h2 className="font-body text-2xl font-bold text-white">Entre para o Grupo VIP</h2>
                 <p className="font-body text-base text-white/60 mt-1">
