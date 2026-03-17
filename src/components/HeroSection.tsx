@@ -9,7 +9,7 @@ const HeroSection = () => {
       {/* Background image */}
       <div className="absolute inset-0">
         <img src={heroImg} alt="" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/25 to-transparent" />
       </div>
 
       {/* Content */}
@@ -22,8 +22,6 @@ const HeroSection = () => {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="text-center lg:text-left"
           >
-            {/* Badge */}
-
             <h1 className="font-display font-black leading-[1.05] mb-6">
               <img src={avecTextLogo} alt="Avec" className="block h-24 md:h-28 lg:h-36 w-auto mx-auto lg:mx-0" />
               <span className="block text-2xl md:text-3xl lg:text-4xl text-white font-semibold mt-2">
@@ -38,8 +36,6 @@ const HeroSection = () => {
               Velas artesanais feitas com amor. Entre no grupo VIP e seja a primeira a garantir os cheirinhos mais
               desejados!
             </p>
-
-            {/* Trust signals */}
           </motion.div>
 
           {/* Form side */}
@@ -48,14 +44,14 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="rounded-3xl p-8 bg-warm-white/95 backdrop-blur-lg shadow-[0_25px_80px_-15px_hsl(25_55%_15%/0.4)] border border-gold-light/20">
+            <div className="rounded-3xl p-8 bg-black/30 backdrop-blur-xl border border-white/10 shadow-[0_25px_80px_-15px_rgba(0,0,0,0.4)]">
               <div className="text-center mb-6">
-                <h2 className="font-display text-2xl font-bold text-gold">Entre para o Grupo VIP</h2>
-                <p className="font-elegant text-base text-chocolate-light/60 mt-1">
+                <h2 className="font-body text-2xl font-bold text-white">Entre para o Grupo VIP</h2>
+                <p className="font-body text-base text-white/60 mt-1">
                   Receba acesso antecipado e brindes
                 </p>
               </div>
-              <LeadForm />
+              <LeadForm variant="hero" />
             </div>
           </motion.div>
         </div>
