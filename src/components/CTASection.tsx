@@ -5,8 +5,8 @@ const scrollToForm = () => {
   document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
 };
 
-const CTASection = () => (
-  <section className="relative py-16 md:py-24 overflow-hidden">
+const CTASection = () =>
+<section className="relative py-16 md:py-24 overflow-hidden">
     {/* Watercolor garden background */}
     <div className="absolute inset-0">
       <img src={watercolorBg} alt="" loading="lazy" className="w-full h-full object-cover" />
@@ -19,11 +19,11 @@ const CTASection = () => (
 
     <div className="max-w-lg mx-auto px-4 sm:px-6 relative z-10">
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center"
-      >
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="text-center">
+      
         <span className="font-elegant text-base tracking-[0.3em] text-cream uppercase">Última chance</span>
         <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-warm-white mt-3 leading-tight">
           As vagas estão<br />
@@ -34,16 +34,16 @@ const CTASection = () => (
         </p>
 
         <motion.button
-          whileHover={{ scale: 1.03, y: -2 }}
-          whileTap={{ scale: 0.97 }}
-          onClick={scrollToForm}
-          className="mt-8 px-10 py-4 rounded-full bg-warm-white text-chocolate font-display text-lg tracking-wide shadow-[0_8px_30px_-8px_hsl(25_55%_25%/0.4)] hover:shadow-[0_14px_40px_-8px_hsl(25_55%_25%/0.5)] transition-all duration-300"
-        >
-          Garantir minha vaga ↑
+        whileHover={{ scale: 1.03, y: -2 }}
+        whileTap={{ scale: 0.97 }}
+        onClick={scrollToForm}
+        className="mt-8 px-10 py-4 rounded-full bg-warm-white text-chocolate font-display text-lg tracking-wide shadow-[0_8px_30px_-8px_hsl(25_55%_25%/0.4)] hover:shadow-[0_14px_40px_-8px_hsl(25_55%_25%/0.5)] transition-all duration-300">
+        
+          Garantir minha vaga 
         </motion.button>
       </motion.div>
     </div>
-  </section>
-);
+  </section>;
+
 
 export default CTASection;
