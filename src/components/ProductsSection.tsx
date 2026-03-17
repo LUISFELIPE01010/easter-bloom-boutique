@@ -1,6 +1,4 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import chocoCrunchImg from "@/assets/choco-crunch.png";
 import saltedBlissImg from "@/assets/salted-bliss.png";
 
@@ -13,85 +11,35 @@ const products = [
     name: "Choco Crunch",
     note: "Chocolate Belga · Avelã · Baunilha",
     tagline: "O abraço quente do cacau belga com a crocância da avelã.",
-    images: [chocoCrunchImg, null, null],
+    description:
+      "Uma experiência sensorial única que transporta para uma confeitaria europeia. As notas de topo de chocolate amargo se misturam com a avelã torrada, enquanto a base de baunilha bourbon cria uma atmosfera acolhedora e envolvente.",
+    details: ["Duração: +40 horas", "Cera de soja 100% natural", "Pavio de algodão ecológico"],
+    image: chocoCrunchImg,
   },
   {
     name: "Salted Bliss",
     note: "Caramelo Salgado · Flor de Sal · Âmbar",
     tagline: "A sofisticação do caramelo com toques de flor de sal e âmbar dourado.",
-    images: [saltedBlissImg, null, null],
+    description:
+      "Um equilíbrio perfeito entre doce e salgado. O caramelo artesanal se encontra com cristais de flor de sal, enquanto o âmbar dourado confere profundidade e elegância. Uma fragrância que transforma qualquer espaço.",
+    details: ["Duração: +40 horas", "Cera de soja 100% natural", "Pavio de algodão ecológico"],
+    image: saltedBlissImg,
   },
 ];
 
-const ProductCarousel = ({ images, name }: { images: (string | null)[]; name: string }) => {
-  const [current, setCurrent] = useState(0);
-
-  const prev = () => setCurrent((c) => (c - 1 + images.length) % images.length);
-  const next = () => setCurrent((c) => (c + 1) % images.length);
-
-  return (
-    <div className="relative aspect-[4/3] overflow-hidden">
-      {images[current] ? (
-        <img
-          src={images[current]!}
-          alt={`${name} - foto ${current + 1}`}
-          loading="lazy"
-          className="w-full h-full object-cover transition-opacity duration-500"
-        />
-      ) : (
-        <div className="w-full h-full bg-chocolate/5 flex items-center justify-center">
-          <span className="font-elegant text-sm text-chocolate/30 tracking-widest uppercase">Em breve</span>
-        </div>
-      )}
-
-      {/* Nav arrows */}
-      <button
-        onClick={prev}
-        className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-warm-white/80 border border-chocolate/10 shadow flex items-center justify-center text-chocolate/60 hover:text-chocolate transition-colors"
-        aria-label="Foto anterior"
-      >
-        <ChevronLeft size={16} />
-      </button>
-      <button
-        onClick={next}
-        className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-warm-white/80 border border-chocolate/10 shadow flex items-center justify-center text-chocolate/60 hover:text-chocolate transition-colors"
-        aria-label="Próxima foto"
-      >
-        <ChevronRight size={16} />
-      </button>
-
-      {/* Dots */}
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-        {images.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`rounded-full transition-all duration-300 ${
-              i === current ? "w-5 h-2 bg-gold" : "w-2 h-2 bg-warm-white/60"
-            }`}
-            aria-label={`Foto ${i + 1}`}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
-
 const ProductsSection = () => (
-  <section id="produtos" className="relative py-16 md:py-24 overflow-hidden">
-    {/* Warm cream/blush gradient */}
+  <section id="produtos" className="relative py-16 md:py-28 overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-br from-cream via-blush/30 to-peach/40" />
-    
-    {/* Ambient */}
+
     <div className="absolute top-10 right-0 w-[400px] h-[400px] rounded-full bg-lavender/20 blur-[120px]" />
     <div className="absolute bottom-10 left-0 w-[350px] h-[350px] rounded-full bg-sage/15 blur-[100px]" />
 
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-14"
+        className="text-center mb-16 md:mb-20"
       >
         <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Coleção Páscoa</span>
         <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-chocolate mt-3">
@@ -99,39 +47,74 @@ const ProductsSection = () => (
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-        {products.map((p, i) => (
-          <motion.div
-            key={p.name}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.15, duration: 0.7 }}
-            className="group rounded-3xl overflow-hidden border border-chocolate/10 bg-warm-white/70 shadow-[0_10px_40px_-15px_hsl(25_55%_25%/0.1)] hover:shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.2)] transition-all duration-500"
-          >
-            <ProductCarousel images={p.images} name={p.name} />
-            <div className="p-6 text-center">
-              <h3 className="font-display text-2xl font-bold text-chocolate">{p.name}</h3>
-              <p className="font-elegant text-sm text-gold tracking-widest mt-1 uppercase">{p.note}</p>
-              <p className="font-body text-chocolate-light/60 mt-2 text-[0.95rem] leading-relaxed">{p.tagline}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+      <div className="space-y-16 md:space-y-24">
+        {products.map((p, i) => {
+          const isReversed = i % 2 !== 0;
+          return (
+            <motion.div
+              key={p.name}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 items-center"
+            >
+              {/* Image */}
+              <div className={`${isReversed ? "md:order-2" : "md:order-1"}`}>
+                <div className="relative group">
+                  <div className="overflow-hidden rounded-3xl border border-chocolate/10 shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.15)] group-hover:shadow-[0_30px_80px_-15px_hsl(25_55%_25%/0.25)] transition-shadow duration-500">
+                    <img
+                      src={p.image}
+                      alt={`${p.name}`}
+                      loading="lazy"
+                      className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  {/* Floating badge */}
+                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-warm-white rounded-full px-5 py-2 shadow-lg border border-gold-light/20">
+                    <span className="font-elegant text-xs tracking-[0.2em] text-gold uppercase font-medium">
+                      Edição Limitada
+                    </span>
+                  </div>
+                </div>
+              </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="text-center mt-12"
-      >
-        <button
-          onClick={scrollToForm}
-          className="btn-glow px-10 py-4 rounded-full bg-chocolate text-primary-foreground font-display tracking-wide shadow-[0_8px_30px_-8px_hsl(25_55%_25%/0.4)] hover:shadow-[0_14px_40px_-8px_hsl(25_55%_25%/0.5)] transition-all duration-300"
-        >
-          Garantir acesso VIP →
-        </button>
-      </motion.div>
+              {/* Details */}
+              <div className={`${isReversed ? "md:order-1 md:text-right" : "md:order-2"} flex flex-col justify-center pt-6 md:pt-0`}>
+                <h3 className="font-display text-3xl md:text-4xl font-bold text-chocolate">{p.name}</h3>
+                <p className="font-elegant text-sm text-gold tracking-[0.2em] mt-2 uppercase">{p.note}</p>
+
+                <p className="font-body text-lg text-chocolate/70 mt-4 leading-relaxed italic">{p.tagline}</p>
+
+                <p className="font-body text-base text-chocolate-light/60 mt-4 leading-relaxed">{p.description}</p>
+
+                {/* Details chips */}
+                <div className={`flex flex-wrap gap-2 mt-6 ${isReversed ? "md:justify-end" : ""}`}>
+                  {p.details.map((d, j) => (
+                    <span
+                      key={j}
+                      className="inline-block px-4 py-1.5 rounded-full bg-cream-deep/60 border border-chocolate/8 font-body text-sm text-chocolate/60"
+                    >
+                      {d}
+                    </span>
+                  ))}
+                </div>
+
+                <div className={`mt-8 ${isReversed ? "md:flex md:justify-end" : ""}`}>
+                  <motion.button
+                    whileHover={{ scale: 1.03, y: -2 }}
+                    whileTap={{ scale: 0.97 }}
+                    onClick={scrollToForm}
+                    className="px-8 py-3.5 rounded-full bg-chocolate text-primary-foreground font-body font-semibold tracking-wide shadow-[0_8px_30px_-8px_hsl(25_55%_25%/0.4)] hover:shadow-[0_14px_40px_-8px_hsl(25_55%_25%/0.5)] transition-all duration-300"
+                  >
+                    Quero garantir o meu →
+                  </motion.button>
+                </div>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
     </div>
   </section>
 );
