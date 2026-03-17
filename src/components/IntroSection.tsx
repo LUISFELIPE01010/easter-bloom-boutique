@@ -49,11 +49,11 @@ const IntroSection = () =>
             
 
           </p>
-            <p className="font-body text-lg text-chocolate-light/80 leading-relaxed">
-              Imagine acender uma vela e sentir o aroma envolvente de chocolate belga 
-              misturado com notas sutis de bolo de cenoura. Ou deixar-se levar pela 
-              sofisticação do caramelo salgado com toques florais.
-            </p>
+            
+
+
+
+          
           </div>
 
           {/* Feature pills */}
