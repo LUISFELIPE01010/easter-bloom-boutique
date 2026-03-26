@@ -37,6 +37,8 @@ const ProductCarousel = ({ images }: ProductCarouselProps) => {
               exit="exit"
               transition={{ duration: 0.4, ease: "easeInOut" }}
               className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
               draggable={false}
             />
           </AnimatePresence>
