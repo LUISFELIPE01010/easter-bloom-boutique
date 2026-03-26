@@ -23,7 +23,13 @@ const products = [
     description:
       "Uma experiência sensorial única que transporta para uma confeitaria europeia. As notas de topo de chocolate amargo se misturam com a avelã torrada, enquanto a base de baunilha bourbon cria uma atmosfera acolhedora e envolvente.",
     details: ["Duração: +40 horas", "Cera de soja 100% natural", "Pavio de algodão ecológico"],
-    images: [{ src: chocoCrunchImg, alt: "Choco Crunch" }],
+    images: [
+      { src: chocoCrunchImg, alt: "Choco Crunch" },
+      { src: chocoCrunchCandleImg, alt: "Choco Crunch - Vela" },
+      { src: chocoCrunchDropsImg, alt: "Choco Crunch - Essência" },
+      { src: chocoCrunchKitImg, alt: "Choco Crunch - Kit Completo" },
+      { src: chocoCrunchSprayImg, alt: "Choco Crunch - Spray" },
+    ],
   },
   {
     name: "Salted Bliss",
