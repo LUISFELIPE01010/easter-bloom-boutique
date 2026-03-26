@@ -1,4 +1,6 @@
-import { motion } from "framer-motion";
+import { useState, useCallback, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import feedback1 from "@/assets/feedback-1.jpg";
 import feedback2 from "@/assets/feedback-2.jpg";
 import feedback3 from "@/assets/feedback-3.jpg";
@@ -27,7 +29,32 @@ const feedbacks = [
   },
 ];
 
+const variants = {
+  enter: (d: number) => ({ x: d > 0 ? 400 : -400, opacity: 0 }),
+  center: { x: 0, opacity: 1 },
+  exit: (d: number) => ({ x: d > 0 ? -400 : 400, opacity: 0 }),
+};
+
 const SocialProof = () => {
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(0);
+
+  const go = useCallback(
+    (dir: number) => {
+      setDirection(dir);
+      setCurrent((prev) => (prev + dir + feedbacks.length) % feedbacks.length);
+    },
+    []
+  );
+
+  // Auto-play
+  useEffect(() => {
+    const timer = setInterval(() => go(1), 5000);
+    return () => clearInterval(timer);
+  }, [go]);
+
+  const fb = feedbacks[current];
+
   return (
     <section id="depoimentos" className="relative py-16 md:py-24 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-cream via-background to-cream-deep/40" />
@@ -47,40 +74,39 @@ const SocialProof = () => {
           </h2>
         </motion.div>
 
-        <div className="space-y-8 md:space-y-12">
-          {feedbacks.map((fb, i) => {
-            const isReversed = i % 2 !== 0;
-            return (
+        {/* Carousel container */}
+        <div className="relative group">
+          <div className="overflow-hidden rounded-3xl border border-chocolate/5 shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.12)]">
+            <AnimatePresence initial={false} custom={direction} mode="popLayout">
               <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.7 }}
-                className={`grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center ${
-                  isReversed ? "md:direction-rtl" : ""
-                }`}
+                key={current}
+                custom={direction}
+                variants={variants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 0.45, ease: "easeInOut" }}
+                className="grid grid-cols-1 md:grid-cols-2"
               >
                 {/* Image */}
-                <div className={`${isReversed ? "md:order-2" : "md:order-1"}`}>
-                  <div className="overflow-hidden rounded-3xl shadow-[0_15px_50px_-15px_hsl(25_55%_25%/0.15)]">
-                    <img
-                      src={fb.src}
-                      alt={fb.quote}
-                      loading="lazy"
-                      className="w-full aspect-[4/3] object-cover hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
+                <div className="relative">
+                  <img
+                    src={fb.src}
+                    alt={fb.quote}
+                    loading="lazy"
+                    className="w-full aspect-square md:aspect-auto md:h-full object-cover"
+                    draggable={false}
+                  />
                 </div>
 
                 {/* Text */}
-                <div className={`${isReversed ? "md:order-1 md:text-right" : "md:order-2"} flex flex-col justify-center`}>
-                  <div className="flex gap-1 mb-3" style={{ justifyContent: isReversed ? "flex-end" : "flex-start" }}>
+                <div className="flex flex-col justify-center p-8 md:p-12 bg-warm-white/60">
+                  <div className="flex gap-1 mb-4">
                     {Array.from({ length: fb.stars }).map((_, s) => (
                       <span key={s} className="text-gold text-lg">★</span>
                     ))}
                   </div>
-                  <blockquote className="font-body text-lg md:text-xl text-chocolate/80 leading-relaxed italic mb-4">
+                  <blockquote className="font-body text-lg md:text-xl text-chocolate/80 leading-relaxed italic mb-6">
                     "{fb.quote}"
                   </blockquote>
                   <div>
@@ -89,8 +115,43 @@ const SocialProof = () => {
                   </div>
                 </div>
               </motion.div>
-            );
-          })}
+            </AnimatePresence>
+          </div>
+
+          {/* Navigation arrows */}
+          <button
+            onClick={() => go(-1)}
+            className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 rounded-full bg-warm-white/80 backdrop-blur-sm border border-chocolate/10 shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-warm-white"
+            aria-label="Depoimento anterior"
+          >
+            <ChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-chocolate" />
+          </button>
+          <button
+            onClick={() => go(1)}
+            className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 md:w-10 md:h-10 rounded-full bg-warm-white/80 backdrop-blur-sm border border-chocolate/10 shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-warm-white"
+            aria-label="Próximo depoimento"
+          >
+            <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-chocolate" />
+          </button>
+
+          {/* Dots */}
+          <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
+            {feedbacks.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => {
+                  setDirection(idx > current ? 1 : -1);
+                  setCurrent(idx);
+                }}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  idx === current
+                    ? "bg-gold w-6 shadow-md"
+                    : "bg-chocolate/20 hover:bg-chocolate/40"
+                }`}
+                aria-label={`Ir para depoimento ${idx + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
