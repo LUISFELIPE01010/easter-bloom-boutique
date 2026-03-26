@@ -70,22 +70,25 @@ const ProductsSection = () => (
             >
               {/* Image */}
               <div className={`${isReversed ? "md:order-2" : "md:order-1"}`}>
-                <div className="relative group">
-                  <div className="overflow-hidden rounded-3xl border border-chocolate/10 shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.15)] group-hover:shadow-[0_30px_80px_-15px_hsl(25_55%_25%/0.25)] transition-shadow duration-500">
-                    <img
-                      src={p.image}
-                      alt={`${p.name}`}
-                      loading="lazy"
-                      className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
+                {p.images.length > 1 ? (
+                  <ProductCarousel images={p.images} />
+                ) : (
+                  <div className="relative group">
+                    <div className="overflow-hidden rounded-3xl border border-chocolate/10 shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.15)] group-hover:shadow-[0_30px_80px_-15px_hsl(25_55%_25%/0.25)] transition-shadow duration-500">
+                      <img
+                        src={p.images[0].src}
+                        alt={p.images[0].alt}
+                        loading="lazy"
+                        className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-warm-white rounded-full px-5 py-2 shadow-lg border border-gold-light/20">
+                      <span className="font-elegant text-xs tracking-[0.2em] text-gold uppercase font-medium">
+                        Edição Limitada
+                      </span>
+                    </div>
                   </div>
-                  {/* Floating badge */}
-                  <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-warm-white rounded-full px-5 py-2 shadow-lg border border-gold-light/20">
-                    <span className="font-elegant text-xs tracking-[0.2em] text-gold uppercase font-medium">
-                      Edição Limitada
-                    </span>
-                  </div>
-                </div>
+                )}
               </div>
 
               {/* Details */}
