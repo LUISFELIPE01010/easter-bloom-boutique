@@ -33,6 +33,7 @@ const products = [
       { src: saltedBlissCandleImg, alt: "Salted Bliss - Vela" },
       { src: saltedBlissDropsImg, alt: "Salted Bliss - Essência" },
       { src: saltedBlissKitImg, alt: "Salted Bliss - Kit Completo" },
+      { src: saltedBlissSprayImg, alt: "Salted Bliss - Spray" },
     ],
   },
 ];
