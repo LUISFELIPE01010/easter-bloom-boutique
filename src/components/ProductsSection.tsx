@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
+import ProductCarousel from "@/components/ProductCarousel";
 import chocoCrunchImg from "@/assets/choco-crunch.png";
 import saltedBlissImg from "@/assets/salted-bliss.png";
+import saltedBlissKitImg from "@/assets/salted-bliss-kit.png";
+import saltedBlissCandleImg from "@/assets/salted-bliss-candle.png";
+import saltedBlissDropsImg from "@/assets/salted-bliss-drops.png";
 
 const scrollToForm = () => {
   document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
@@ -14,7 +18,7 @@ const products = [
     description:
       "Uma experiência sensorial única que transporta para uma confeitaria europeia. As notas de topo de chocolate amargo se misturam com a avelã torrada, enquanto a base de baunilha bourbon cria uma atmosfera acolhedora e envolvente.",
     details: ["Duração: +40 horas", "Cera de soja 100% natural", "Pavio de algodão ecológico"],
-    image: chocoCrunchImg,
+    images: [{ src: chocoCrunchImg, alt: "Choco Crunch" }],
   },
   {
     name: "Salted Bliss",
@@ -23,7 +27,12 @@ const products = [
     description:
       "Um equilíbrio perfeito entre doce e salgado. O caramelo artesanal se encontra com cristais de flor de sal, enquanto o âmbar dourado confere profundidade e elegância. Uma fragrância que transforma qualquer espaço.",
     details: ["Duração: +40 horas", "Cera de soja 100% natural", "Pavio de algodão ecológico"],
-    image: saltedBlissImg,
+    images: [
+      { src: saltedBlissImg, alt: "Salted Bliss" },
+      { src: saltedBlissCandleImg, alt: "Salted Bliss - Vela" },
+      { src: saltedBlissDropsImg, alt: "Salted Bliss - Essência" },
+      { src: saltedBlissKitImg, alt: "Salted Bliss - Kit Completo" },
+    ],
   },
 ];
 
