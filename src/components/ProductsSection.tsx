@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import ProductCarousel from "@/components/ProductCarousel";
 import chocoCrunchImg from "@/assets/choco-crunch.png";
+import chocoCrunchKitImg from "@/assets/choco-crunch-kit.png";
+import chocoCrunchCandleImg from "@/assets/choco-crunch-candle.png";
+import chocoCrunchDropsImg from "@/assets/choco-crunch-drops.png";
+import chocoCrunchSprayImg from "@/assets/choco-crunch-spray.png";
 import saltedBlissImg from "@/assets/salted-bliss.png";
 import saltedBlissKitImg from "@/assets/salted-bliss-kit.png";
 import saltedBlissCandleImg from "@/assets/salted-bliss-candle.png";
