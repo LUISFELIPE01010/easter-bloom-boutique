@@ -5,6 +5,7 @@ import saltedBlissImg from "@/assets/salted-bliss.png";
 import saltedBlissKitImg from "@/assets/salted-bliss-kit.png";
 import saltedBlissCandleImg from "@/assets/salted-bliss-candle.png";
 import saltedBlissDropsImg from "@/assets/salted-bliss-drops.png";
+import saltedBlissSprayImg from "@/assets/salted-bliss-spray.png";
 
 const scrollToForm = () => {
   document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
@@ -32,6 +33,7 @@ const products = [
       { src: saltedBlissCandleImg, alt: "Salted Bliss - Vela" },
       { src: saltedBlissDropsImg, alt: "Salted Bliss - Essência" },
       { src: saltedBlissKitImg, alt: "Salted Bliss - Kit Completo" },
+      { src: saltedBlissSprayImg, alt: "Salted Bliss - Spray" },
     ],
   },
 ];
