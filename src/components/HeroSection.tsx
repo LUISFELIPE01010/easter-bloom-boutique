@@ -44,7 +44,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
-            <div className="rounded-3xl p-8 bg-black/20 backdrop-blur-lg border border-white/8 shadow-2xl">
+            <div className="rounded-3xl p-8 <div className="rounded-3xl p-8 bg-black/10 backdrop-blur-sm border border-white/10 shadow-2xl">">
               <div className="text-center mb-6">
                 <h2 className="font-body text-2xl font-bold text-white">Entre para o Grupo VIP</h2>
                 <p className="font-body text-base text-white/60 mt-1">
