@@ -90,11 +90,6 @@ const ProductsSection = () => (
                         className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700"
                       />
                     </div>
-                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-warm-white rounded-full px-5 py-2 shadow-lg border border-gold-light/20">
-                      <span className="font-elegant text-xs tracking-[0.2em] text-gold uppercase font-medium">
-                        Edição Limitada
-                      </span>
-                    </div>
                   </div>
                 )}
               </div>
