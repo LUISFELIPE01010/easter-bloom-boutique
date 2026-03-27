@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import flatlayImg from "@/assets/flatlay-easter.jpg";
+import experienciaImg from "@/assets/experiencia-sensorial.png";
 
 const VIP_LINK = "https://grupovipavec.avecaromas.com/entrar-no-grupo/";
 
