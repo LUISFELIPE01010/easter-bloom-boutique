@@ -87,12 +87,6 @@ const ProductCarousel = ({ images }: ProductCarouselProps) => {
         </div>
       )}
 
-      {/* Floating badge */}
-      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-warm-white rounded-full px-5 py-2 shadow-lg border border-gold-light/20 z-10">
-        <span className="font-elegant text-xs tracking-[0.2em] text-gold uppercase font-medium">
-          Edição Limitada
-        </span>
-      </div>
     </div>
   );
 };
