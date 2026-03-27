@@ -2,9 +2,7 @@ import { motion } from "framer-motion";
 import { Flame, Sparkles, Gift, Leaf } from "lucide-react";
 import avecProducts from "@/assets/avec-products.png";
 
-const scrollToForm = () => {
-  document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
-};
+const VIP_LINK = "https://grupovipavec.avecaromas.com/entrar-no-grupo/";
 
 const features = [
   {
