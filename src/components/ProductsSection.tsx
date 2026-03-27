@@ -11,9 +11,7 @@ import saltedBlissCandleImg from "@/assets/salted-bliss-candle.png";
 import saltedBlissDropsImg from "@/assets/salted-bliss-drops.png";
 import saltedBlissSprayImg from "@/assets/salted-bliss-spray.png";
 
-const scrollToForm = () => {
-  document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
-};
+const VIP_LINK = "https://grupovipavec.avecaromas.com/entrar-no-grupo/";
 
 const products = [
   {
