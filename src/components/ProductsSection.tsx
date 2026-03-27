@@ -11,9 +11,7 @@ import saltedBlissCandleImg from "@/assets/salted-bliss-candle.png";
 import saltedBlissDropsImg from "@/assets/salted-bliss-drops.png";
 import saltedBlissSprayImg from "@/assets/salted-bliss-spray.png";
 
-const scrollToForm = () => {
-  document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
-};
+const VIP_LINK = "https://grupovipavec.avecaromas.com/entrar-no-grupo/";
 
 const products = [
   {
@@ -128,7 +126,7 @@ const ProductsSection = () => (
                   <motion.button
                     whileHover={{ scale: 1.03, y: -2 }}
                     whileTap={{ scale: 0.97 }}
-                    onClick={scrollToForm}
+                    onClick={() => window.open(VIP_LINK, "_blank")}
                     className="px-8 py-3.5 rounded-full bg-chocolate text-primary-foreground font-body font-semibold tracking-wide shadow-[0_8px_30px_-8px_hsl(25_55%_25%/0.4)] hover:shadow-[0_14px_40px_-8px_hsl(25_55%_25%/0.5)] transition-all duration-300"
                   >
                     Quero garantir o meu →

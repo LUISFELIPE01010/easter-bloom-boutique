@@ -2,9 +2,7 @@ import { motion } from "framer-motion";
 import { Flame, Sparkles, Gift, Leaf } from "lucide-react";
 import avecProducts from "@/assets/avec-products.png";
 
-const scrollToForm = () => {
-  document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
-};
+const VIP_LINK = "https://grupovipavec.avecaromas.com/entrar-no-grupo/";
 
 const features = [
   {
@@ -103,7 +101,7 @@ const EventSection = () => (
         className="text-center mt-16"
       >
         <button
-          onClick={scrollToForm}
+          onClick={() => window.open(VIP_LINK, "_blank")}
           className="px-10 py-4 rounded-full bg-chocolate text-primary-foreground font-display tracking-wide shadow-lg hover:shadow-xl hover:bg-chocolate-light transition-all duration-300"
         >
           Participar do evento →

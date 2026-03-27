@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 import flatlayImg from "@/assets/flatlay-easter.jpg";
 
-const scrollToForm = () => {
-  document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
-};
+const VIP_LINK = "https://grupovipavec.avecaromas.com/entrar-no-grupo/";
 
 const IntroSection = () =>
 <section className="relative py-28 overflow-hidden">
@@ -66,7 +64,7 @@ const IntroSection = () =>
           </div>
 
           <button
-          onClick={scrollToForm}
+          onClick={() => window.open(VIP_LINK, "_blank")}
           className="mt-10 px-8 py-4 rounded-full bg-chocolate text-primary-foreground font-display tracking-wide shadow-lg hover:shadow-xl hover:bg-chocolate-light transition-all duration-300">
           
             Quero participar da pré-venda →

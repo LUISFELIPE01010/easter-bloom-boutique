@@ -38,9 +38,7 @@ const CountdownTimer = () => {
   const isUrgent = remaining < 5 * 60 * 1000 && remaining > 0;
   const isExpired = remaining <= 0;
 
-  const scrollToForm = () => {
-    document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
-  };
+const VIP_LINK = "https://grupovipavec.avecaromas.com/entrar-no-grupo/";
 
   return (
     <motion.div
@@ -71,7 +69,7 @@ const CountdownTimer = () => {
         )}
 
         <button
-          onClick={scrollToForm}
+          onClick={() => window.open(VIP_LINK, "_blank")}
           className="text-xs sm:text-sm font-display text-gold hover:text-gold-light underline underline-offset-2 transition-colors"
         >
           Garantir vaga →

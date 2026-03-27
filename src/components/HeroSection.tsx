@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-easter-painting.png";
 import avecTextLogo from "@/assets/avec-text-logo.png";
-import LeadForm from "./LeadForm";
+
+const VIP_LINK = "https://grupovipavec.avecaromas.com/entrar-no-grupo/";
 
 const HeroSection = () => {
   return (
@@ -43,15 +44,26 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="flex items-center justify-center"
           >
-            <div className="rounded-3xl p-8 bg-black/10 backdrop-blur-sm border border-white/10 shadow-2xl">
-              <div className="text-center mb-6">
-                <h2 className="font-body text-2xl font-bold text-white">Entre para o Grupo VIP</h2>
-                <p className="font-body text-base text-white/60 mt-1">
-                  Receba acesso antecipado e brindes
-                </p>
-              </div>
-              <LeadForm variant="hero" />
+            <div className="rounded-3xl p-8 bg-black/10 backdrop-blur-sm border border-white/10 shadow-2xl text-center max-w-md w-full">
+              <h2 className="font-body text-2xl font-bold text-white">Entre para o Grupo VIP</h2>
+              <p className="font-body text-base text-white/60 mt-1">
+                Receba acesso antecipado e brindes
+              </p>
+              <motion.a
+                href={VIP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.02, y: -1 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-block w-full mt-6 py-4 rounded-2xl bg-white/90 text-chocolate font-body text-lg font-semibold tracking-wide shadow-[0_8px_25px_-8px_rgba(0,0,0,0.3)] hover:bg-white transition-all duration-300 text-center"
+              >
+                Entrar para o Grupo →
+              </motion.a>
+              <p className="text-center mt-3 font-body text-sm text-white/35">
+                Vagas limitadas · Acesse agora
+              </p>
             </div>
           </motion.div>
         </div>
