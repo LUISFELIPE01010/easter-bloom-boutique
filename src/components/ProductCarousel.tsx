@@ -10,6 +10,10 @@ const ProductCarousel = ({ images }: ProductCarouselProps) => {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
 
+  // Reset index if images array shrinks
+  const safeIndex = current >= images.length ? 0 : current;
+  if (safeIndex !== current) setCurrent(safeIndex);
+
   const go = (dir: number) => {
     setDirection(dir);
     setCurrent((prev) => (prev + dir + images.length) % images.length);
