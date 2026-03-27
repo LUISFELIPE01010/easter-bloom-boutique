@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ProductCarousel from "@/components/ProductCarousel";
+import chocoCrunchKitImg from "@/assets/choco-crunch-kit.png";
 import chocoCrunchCandleImg from "@/assets/choco-crunch-candle.png";
 import chocoCrunchDropsImg from "@/assets/choco-crunch-drops.png";
 import chocoCrunchSprayImg from "@/assets/choco-crunch-spray.png";
@@ -20,6 +21,7 @@ const products = [
       "Uma experiência sensorial única que transporta para uma confeitaria europeia. As notas de topo de chocolate amargo se misturam com a avelã torrada, enquanto a base de baunilha bourbon cria uma atmosfera acolhedora e envolvente.",
     details: ["Duração: +40 horas", "Cera de soja 100% natural", "Pavio de algodão ecológico"],
     images: [
+      { src: chocoCrunchKitImg, alt: "Choco Crunch - Kit Completo" },
       { src: chocoCrunchCandleImg, alt: "Choco Crunch - Vela" },
       { src: chocoCrunchDropsImg, alt: "Choco Crunch - Essência" },
       { src: chocoCrunchSprayImg, alt: "Choco Crunch - Spray" },
