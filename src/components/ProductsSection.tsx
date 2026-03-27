@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import ProductCarousel from "@/components/ProductCarousel";
 import chocoCrunchImg from "@/assets/choco-crunch.png";
 import chocoCrunchKitImg from "@/assets/choco-crunch-kit.png";
-import chocoCrunchCandleImg from "/lovable-uploads/d5dde764-9b82-460a-9420-122e23b925fc.png";
+import chocoCrunchCandleImg from "/lovable-uploads/72cd3a67-12ce-4199-a044-ac061fc5c489.png";
 import chocoCrunchDropsImg from "@/assets/choco-crunch-drops.png";
 import chocoCrunchSprayImg from "@/assets/choco-crunch-spray.png";
 import saltedBlissImg from "@/assets/salted-bliss.png";
