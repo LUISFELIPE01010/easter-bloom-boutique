@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-easter-painting.png";
 import avecTextLogo from "@/assets/avec-text-logo.png";
-import LeadForm from "./LeadForm";
+
+const VIP_LINK = "https://grupovipavec.avecaromas.com/entrar-no-grupo/";
 
 const HeroSection = () => {
   return (
