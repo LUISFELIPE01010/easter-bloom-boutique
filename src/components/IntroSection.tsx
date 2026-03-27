@@ -16,7 +16,7 @@ const IntroSection = () =>
         className="relative">
         
           <div className="rounded-3xl overflow-hidden border border-gold-light/20 shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.15)]">
-            <img alt="Coleção de Páscoa Avec" loading="lazy" className="w-full h-auto" src="/lovable-uploads/277fe838-4b84-4a1d-a512-19b14241b311.png" />
+            <img alt="Coleção de Páscoa Avec" loading="lazy" className="w-full h-auto" src="/lovable-uploads/59639311-ccb9-4e1a-8958-c60559ae7611.png" />
           </div>
           {/* Decorative accent */}
           <div className="absolute -bottom-8 -right-8 w-40 h-40 rounded-full bg-blush/40 blur-3xl" />
