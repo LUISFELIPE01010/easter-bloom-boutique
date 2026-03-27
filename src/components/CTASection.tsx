@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 import watercolorBg from "@/assets/watercolor-garden-cta.png";
 
-const scrollToForm = () => {
-  document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
-};
+const VIP_LINK = "https://grupovipavec.avecaromas.com/entrar-no-grupo/";
 
 const CTASection = () =>
 <section className="relative py-16 md:py-24 overflow-hidden">
