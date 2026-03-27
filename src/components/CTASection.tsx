@@ -34,7 +34,7 @@ const CTASection = () =>
         <motion.button
         whileHover={{ scale: 1.03, y: -2 }}
         whileTap={{ scale: 0.97 }}
-        onClick={scrollToForm}
+        onClick={() => window.open(VIP_LINK, "_blank")}
         className="mt-8 px-10 py-4 rounded-full bg-warm-white text-chocolate font-display text-lg tracking-wide shadow-[0_8px_30px_-8px_hsl(25_55%_25%/0.4)] hover:shadow-[0_14px_40px_-8px_hsl(25_55%_25%/0.5)] transition-all duration-300">
         
           Garantir minha vaga 
