@@ -69,7 +69,7 @@ const VIP_LINK = "https://grupovipavec.avecaromas.com/entrar-no-grupo/";
         )}
 
         <button
-          onClick={scrollToForm}
+          onClick={() => window.open(VIP_LINK, "_blank")}
           className="text-xs sm:text-sm font-display text-gold hover:text-gold-light underline underline-offset-2 transition-colors"
         >
           Garantir vaga →
