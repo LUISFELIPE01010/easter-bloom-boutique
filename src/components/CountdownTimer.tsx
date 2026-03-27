@@ -38,9 +38,7 @@ const CountdownTimer = () => {
   const isUrgent = remaining < 5 * 60 * 1000 && remaining > 0;
   const isExpired = remaining <= 0;
 
-  const scrollToForm = () => {
-    document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
-  };
+const VIP_LINK = "https://grupovipavec.avecaromas.com/entrar-no-grupo/";
 
   return (
     <motion.div
