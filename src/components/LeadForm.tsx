@@ -68,7 +68,7 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
         type="submit"
         disabled={submitted}
         style={!submitted && isHero ? { backgroundColor: '#ECE4D2' } : undefined}
-        className={`w-full mt-2 py-4 rounded-2xl font-body text-lg font-semibold tracking-wide transition-all duration-500 text-white ${
+        className={`w-full mt-2 py-4 rounded-2xl font-body text-lg font-semibold tracking-wide transition-all duration-500 text-black ${
           submitted
             ? "bg-sage-deep"
             : isHero
