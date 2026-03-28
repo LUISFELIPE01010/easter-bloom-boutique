@@ -28,7 +28,7 @@ const ProductCarousel = ({ images }: ProductCarouselProps) => {
   return (
     <div className="relative group">
       <div className="overflow-hidden rounded-3xl border border-chocolate/10 shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.15)] group-hover:shadow-[0_30px_80px_-15px_hsl(25_55%_25%/0.25)] transition-shadow duration-500">
-        <div className="relative aspect-square max-w-[500px] mx-auto bg-cream-deep/30">
+        <div className="relative aspect-[3/4] max-w-[420px] mx-auto bg-cream-deep/30">
           <AnimatePresence initial={false} custom={direction} mode="popLayout">
             <motion.img
               key={current}
