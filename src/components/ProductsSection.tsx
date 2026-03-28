@@ -82,12 +82,12 @@ const ProductsSection = () => (
                   <ProductCarousel images={p.images} />
                 ) : (
                   <div className="relative group">
-                    <div className="overflow-hidden rounded-3xl border border-chocolate/10 shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.15)] group-hover:shadow-[0_30px_80px_-15px_hsl(25_55%_25%/0.25)] transition-shadow duration-500">
-                      <img
-                        src={p.images[0].src}
-                        alt={p.images[0].alt}
-                        loading="lazy"
-                        className="w-full aspect-[3/4] max-w-[420px] mx-auto object-cover group-hover:scale-105 transition-transform duration-700"
+                      <div className="w-full max-w-[500px] mx-auto overflow-hidden rounded-3xl border border-chocolate/10 shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.15)] group-hover:shadow-[0_30px_80px_-15px_hsl(25_55%_25%/0.25)] transition-shadow duration-500">
+                        <img
+                          src={p.images[0].src}
+                          alt={p.images[0].alt}
+                          loading="lazy"
+                          className="block w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700"
                       />
                     </div>
                   </div>
