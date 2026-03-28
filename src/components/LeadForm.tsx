@@ -67,11 +67,12 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
         whileTap={{ scale: 0.98 }}
         type="submit"
         disabled={submitted}
+        style={!submitted && isHero ? { backgroundColor: '#ECE4D2' } : undefined}
         className={`w-full mt-2 py-4 rounded-2xl font-body text-lg font-semibold tracking-wide transition-all duration-500 ${
           submitted
             ? "bg-sage-deep text-warm-white"
             : isHero
-              ? "text-chocolate font-bold shadow-[0_8px_25px_-8px_rgba(0,0,0,0.3)]" style={{ backgroundColor: '#ECE4D2' }}
+              ? "text-chocolate font-bold shadow-[0_8px_25px_-8px_rgba(0,0,0,0.3)] hover:brightness-105"
               : "bg-chocolate text-primary-foreground shadow-[0_8px_25px_-8px_hsl(25_55%_25%/0.35)] hover:shadow-[0_12px_35px_-8px_hsl(25_55%_25%/0.45)]"
         }`}
       >
