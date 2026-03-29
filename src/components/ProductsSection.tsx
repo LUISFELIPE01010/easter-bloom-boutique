@@ -4,11 +4,10 @@ import chocoCrunchKitImg from "@/assets/choco-crunch-kit.png";
 import chocoCrunchCandleImg from "@/assets/choco-crunch-candle.png";
 import chocoCrunchDropsImg from "@/assets/choco-crunch-drops.png";
 import chocoCrunchSprayImg from "@/assets/choco-crunch-spray.png";
-import saltedBlissImg from "@/assets/salted-bliss.png";
-import saltedBlissKitImg from "@/assets/salted-bliss-kit.png";
 import saltedBlissCandleImg from "@/assets/salted-bliss-candle.png";
 import saltedBlissDropsImg from "@/assets/salted-bliss-drops.png";
 import saltedBlissSprayImg from "@/assets/salted-bliss-spray.png";
+import saltedBlissKitImg from "@/assets/salted-bliss-kit.png";
 
 const VIP_LINK = "https://grupovipavec.avecaromas.com/entrar-no-grupo/";
 
