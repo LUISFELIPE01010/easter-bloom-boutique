@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-start md:items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroImg} alt="" className="w-full h-full object-cover" />
+        <img src={heroImg} alt="" className="w-full h-full object-cover" fetchPriority="high" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" />
       </div>
 
