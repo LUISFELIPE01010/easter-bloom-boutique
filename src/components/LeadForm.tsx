@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { User, Mail, Phone } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+
+const ZAPIER_WEBHOOK_URL = "COLE_SUA_URL_ZAPIER_AQUI";
 
 interface LeadFormProps {
   id?: string;
@@ -10,12 +13,39 @@ interface LeadFormProps {
 const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
   const [formData, setFormData] = useState({ name: "", email: "", whatsapp: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
-    setFormData({ name: "", email: "", whatsapp: "" });
+    setIsLoading(true);
+
+    try {
+      await fetch(ZAPIER_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        mode: "no-cors",
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          whatsapp: formData.whatsapp,
+          timestamp: new Date().toISOString(),
+        }),
+      });
+
+      setSubmitted(true);
+      setFormData({ name: "", email: "", whatsapp: "" });
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (error) {
+      console.error("Erro ao enviar dados:", error);
+      toast({
+        title: "Erro",
+        description: "Não foi possível enviar seus dados. Tente novamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const isHero = variant === "hero";
@@ -66,7 +96,7 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
         whileHover={{ scale: 1.02, y: -1 }}
         whileTap={{ scale: 0.98 }}
         type="submit"
-        disabled={submitted}
+        disabled={submitted || isLoading}
         className={`w-full mt-2 py-4 rounded-2xl font-body text-lg font-semibold tracking-wide transition-all duration-500 ${
           submitted
             ? "bg-sage-deep text-white"
@@ -75,7 +105,7 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
               : "bg-chocolate text-white shadow-[0_8px_25px_-8px_hsl(25_55%_25%/0.35)] hover:shadow-[0_12px_35px_-8px_hsl(25_55%_25%/0.45)]"
         }`}
       >
-        {submitted ? "✨ Cadastro realizado!" : "Entrar para o Grupo"}
+        {submitted ? "✨ Cadastro realizado!" : isLoading ? "Enviando..." : "Entrar para o Grupo"}
       </motion.button>
 
       <p className={`text-center mt-3 font-body text-sm ${isHero ? "text-white/35" : "text-chocolate-light/40"}`}>
