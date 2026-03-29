@@ -34,11 +34,10 @@ const products = [
       "Um equilíbrio perfeito entre doce e salgado. O caramelo artesanal se encontra com cristais de flor de sal, enquanto o âmbar dourado confere profundidade e elegância. Uma fragrância que transforma qualquer espaço.",
     details: ["Duração: +40 horas", "Cera de soja 100% natural", "Pavio de algodão ecológico"],
     images: [
-      { src: saltedBlissImg, alt: "Salted Bliss" },
       { src: saltedBlissCandleImg, alt: "Salted Bliss - Vela" },
       { src: saltedBlissDropsImg, alt: "Salted Bliss - Essência" },
-      { src: saltedBlissKitImg, alt: "Salted Bliss - Kit Completo" },
       { src: saltedBlissSprayImg, alt: "Salted Bliss - Spray" },
+      { src: saltedBlissKitImg, alt: "Salted Bliss - Kit Completo" },
     ],
   },
 ];
