@@ -65,7 +65,7 @@ const IntroSection = () =>
           </div>
 
           <button
-          onClick={() => window.open(VIP_LINK, "_blank")}
+          onClick={() => document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" })}
           className="mt-10 px-8 py-4 rounded-full bg-chocolate text-primary-foreground font-display tracking-wide shadow-lg hover:shadow-xl hover:bg-chocolate-light transition-all duration-300">
           
             Quero participar da pré-venda →
