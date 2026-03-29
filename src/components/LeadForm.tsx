@@ -96,7 +96,7 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
         whileHover={{ scale: 1.02, y: -1 }}
         whileTap={{ scale: 0.98 }}
         type="submit"
-        disabled={submitted}
+        disabled={submitted || isLoading}
         className={`w-full mt-2 py-4 rounded-2xl font-body text-lg font-semibold tracking-wide transition-all duration-500 ${
           submitted
             ? "bg-sage-deep text-white"
@@ -105,7 +105,7 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
               : "bg-chocolate text-white shadow-[0_8px_25px_-8px_hsl(25_55%_25%/0.35)] hover:shadow-[0_12px_35px_-8px_hsl(25_55%_25%/0.45)]"
         }`}
       >
-        {submitted ? "✨ Cadastro realizado!" : "Entrar para o Grupo"}
+        {submitted ? "✨ Cadastro realizado!" : isLoading ? "Enviando..." : "Entrar para o Grupo"}
       </motion.button>
 
       <p className={`text-center mt-3 font-body text-sm ${isHero ? "text-white/35" : "text-chocolate-light/40"}`}>
