@@ -4,11 +4,10 @@ import chocoCrunchKitImg from "@/assets/choco-crunch-kit.png";
 import chocoCrunchCandleImg from "@/assets/choco-crunch-candle.png";
 import chocoCrunchDropsImg from "@/assets/choco-crunch-drops.png";
 import chocoCrunchSprayImg from "@/assets/choco-crunch-spray.png";
-import saltedBlissImg from "@/assets/salted-bliss.png";
-import saltedBlissKitImg from "@/assets/salted-bliss-kit.png";
 import saltedBlissCandleImg from "@/assets/salted-bliss-candle.png";
 import saltedBlissDropsImg from "@/assets/salted-bliss-drops.png";
 import saltedBlissSprayImg from "@/assets/salted-bliss-spray.png";
+import saltedBlissKitImg from "@/assets/salted-bliss-kit.png";
 
 const VIP_LINK = "https://grupovipavec.avecaromas.com/entrar-no-grupo/";
 
@@ -35,11 +34,10 @@ const products = [
       "Um equilíbrio perfeito entre doce e salgado. O caramelo artesanal se encontra com cristais de flor de sal, enquanto o âmbar dourado confere profundidade e elegância. Uma fragrância que transforma qualquer espaço.",
     details: ["Duração: +40 horas", "Cera de soja 100% natural", "Pavio de algodão ecológico"],
     images: [
-      { src: saltedBlissImg, alt: "Salted Bliss" },
       { src: saltedBlissCandleImg, alt: "Salted Bliss - Vela" },
       { src: saltedBlissDropsImg, alt: "Salted Bliss - Essência" },
-      { src: saltedBlissKitImg, alt: "Salted Bliss - Kit Completo" },
       { src: saltedBlissSprayImg, alt: "Salted Bliss - Spray" },
+      { src: saltedBlissKitImg, alt: "Salted Bliss - Kit Completo" },
     ],
   },
 ];
