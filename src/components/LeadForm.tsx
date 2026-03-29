@@ -21,7 +21,10 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
     setIsLoading(true);
 
     try {
-      await fetch(ZAPIER_WEBHOOK_URL, {
+      // Abre o link imediatamente (no contexto do clique) para evitar bloqueio de popup no mobile
+      window.open("https://grupovipavec.avecaromas.com/entrar-no-grupo/", "_blank");
+
+      fetch(ZAPIER_WEBHOOK_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         mode: "no-cors",
@@ -35,7 +38,6 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
 
       setSubmitted(true);
       setFormData({ name: "", email: "", whatsapp: "" });
-      window.open("https://grupovipavec.avecaromas.com/entrar-no-grupo/", "_blank");
       setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
       console.error("Erro ao enviar dados:", error);
