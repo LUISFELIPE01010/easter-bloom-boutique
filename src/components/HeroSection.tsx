@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-start md:items-center justify-center overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src={heroImg} alt="" className="w-full h-full object-cover" />
+        <img src={heroImg} alt="" className="w-full h-full object-cover" fetchPriority="high" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" />
       </div>
 
@@ -23,7 +23,7 @@ const HeroSection = () => {
             className="text-center lg:text-left"
           >
             <h1 className="font-display font-black leading-[1.05] mb-6">
-              <img src={avecTextLogo} alt="Avec" className="block h-24 md:h-28 lg:h-36 w-auto mx-auto lg:mx-0" />
+              <img src={avecTextLogo} alt="Avec" className="block h-24 md:h-28 lg:h-36 w-auto mx-auto lg:mx-0" fetchPriority="high" />
               <span className="block text-2xl md:text-3xl lg:text-4xl text-white font-semibold mt-2">
                 Aromas que contam
               </span>

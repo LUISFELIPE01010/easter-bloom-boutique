@@ -84,7 +84,7 @@ const ProductsSection = () => (
                         <img
                           src={p.images[0].src}
                           alt={p.images[0].alt}
-                          loading="lazy"
+                          loading="eager"
                           className="block w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700"
                       />
                     </div>
