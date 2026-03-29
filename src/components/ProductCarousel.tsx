@@ -1,22 +1,51 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface ProductCarouselProps {
   images: { src: string; alt: string }[];
+  autoPlayInterval?: number;
 }
 
-const ProductCarousel = ({ images }: ProductCarouselProps) => {
+const ProductCarousel = ({ images, autoPlayInterval = 4000 }: ProductCarouselProps) => {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
-  // Reset index if images array shrinks
   const safeIndex = current >= images.length ? 0 : current;
   if (safeIndex !== current) setCurrent(safeIndex);
 
-  const go = (dir: number) => {
+  const go = useCallback((dir: number) => {
     setDirection(dir);
     setCurrent((prev) => (prev + dir + images.length) % images.length);
+  }, [images.length]);
+
+  // Auto-rotation
+  useEffect(() => {
+    if (isPaused || images.length <= 1) return;
+    const timer = setInterval(() => go(1), autoPlayInterval);
+    return () => clearInterval(timer);
+  }, [go, isPaused, autoPlayInterval, images.length]);
+
+  // Swipe handlers
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    setIsPaused(true);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current;
+    const threshold = 50;
+    if (Math.abs(diff) > threshold) {
+      go(diff > 0 ? 1 : -1);
+    }
+    setTimeout(() => setIsPaused(false), 3000);
   };
 
   const variants = {
@@ -26,8 +55,17 @@ const ProductCarousel = ({ images }: ProductCarouselProps) => {
   };
 
   return (
-    <div className="relative group">
-      <div className="w-full max-w-[500px] mx-auto overflow-hidden rounded-3xl border border-chocolate/10 shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.15)] group-hover:shadow-[0_30px_80px_-15px_hsl(25_55%_25%/0.25)] transition-shadow duration-500">
+    <div
+      className="relative group"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      <div
+        className="w-full max-w-[500px] mx-auto overflow-hidden rounded-3xl border border-chocolate/10 shadow-[0_20px_60px_-15px_hsl(25_55%_25%/0.15)] group-hover:shadow-[0_30px_80px_-15px_hsl(25_55%_25%/0.25)] transition-shadow duration-500"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <div className="relative aspect-square bg-cream-deep/30">
           <AnimatePresence initial={false} custom={direction} mode="popLayout">
             <motion.img
@@ -86,7 +124,6 @@ const ProductCarousel = ({ images }: ProductCarouselProps) => {
           ))}
         </div>
       )}
-
     </div>
   );
 };
