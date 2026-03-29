@@ -41,7 +41,7 @@ const ProductCarousel = ({ images }: ProductCarouselProps) => {
               exit="exit"
               transition={{ duration: 0.4, ease: "easeInOut" }}
               className="absolute inset-0 w-full h-full object-cover"
-              loading="lazy"
+              loading={current === 0 ? "eager" : "lazy"}
               decoding="async"
               draggable={false}
             />
