@@ -7,7 +7,7 @@ interface ProductCarouselProps {
   autoPlayInterval?: number;
 }
 
-const ProductCarousel = ({ images, autoPlayInterval = 4000 }: ProductCarouselProps) => {
+const ProductCarousel = ({ images, autoPlayInterval = 8000 }: ProductCarouselProps) => {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
