@@ -1,7 +1,7 @@
 import avecLogo from "@/assets/avec-logo.png";
 
 const scrollToForm = () => {
-  document.getElementById("lead-form")?.scrollIntoView({ behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 const Navbar = () =>
