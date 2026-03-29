@@ -23,7 +23,7 @@ const HeroSection = () => {
             className="text-center lg:text-left"
           >
             <h1 className="font-display font-black leading-[1.05] mb-6">
-              <img src={avecTextLogo} alt="Avec" className="block h-24 md:h-28 lg:h-36 w-auto mx-auto lg:mx-0" />
+              <img src={avecTextLogo} alt="Avec" className="block h-24 md:h-28 lg:h-36 w-auto mx-auto lg:mx-0" fetchPriority="high" />
               <span className="block text-2xl md:text-3xl lg:text-4xl text-white font-semibold mt-2">
                 Aromas que contam
               </span>
