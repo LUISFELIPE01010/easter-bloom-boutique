@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { User, Mail, Phone } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+
+const ZAPIER_WEBHOOK_URL = "COLE_SUA_URL_ZAPIER_AQUI";
 
 interface LeadFormProps {
   id?: string;
@@ -10,12 +13,39 @@ interface LeadFormProps {
 const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
   const [formData, setFormData] = useState({ name: "", email: "", whatsapp: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
-    setFormData({ name: "", email: "", whatsapp: "" });
+    setIsLoading(true);
+
+    try {
+      await fetch(ZAPIER_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        mode: "no-cors",
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          whatsapp: formData.whatsapp,
+          timestamp: new Date().toISOString(),
+        }),
+      });
+
+      setSubmitted(true);
+      setFormData({ name: "", email: "", whatsapp: "" });
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (error) {
+      console.error("Erro ao enviar dados:", error);
+      toast({
+        title: "Erro",
+        description: "Não foi possível enviar seus dados. Tente novamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const isHero = variant === "hero";
