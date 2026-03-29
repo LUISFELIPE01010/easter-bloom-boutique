@@ -35,6 +35,7 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
 
       setSubmitted(true);
       setFormData({ name: "", email: "", whatsapp: "" });
+      window.open("https://grupovipavec.avecaromas.com/entrar-no-grupo/", "_blank");
       setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
       console.error("Erro ao enviar dados:", error);
