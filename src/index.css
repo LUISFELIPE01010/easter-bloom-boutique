@@ -119,21 +119,22 @@
 /* Gold shimmer text */
 .text-shimmer {
   background: linear-gradient(
-    120deg,
+    90deg,
     hsl(var(--chocolate)) 0%,
-    hsl(var(--gold)) 40%,
-    hsl(var(--chocolate-light)) 60%,
-    hsl(var(--gold)) 100%
+    hsl(var(--chocolate)) 30%,
+    hsl(var(--gold)) 45%,
+    hsl(var(--chocolate-light)) 50%,
+    hsl(var(--gold)) 55%,
+    hsl(var(--chocolate)) 70%,
+    hsl(var(--chocolate)) 100%
   );
-  background-size: 200% auto;
-  background-repeat: no-repeat;
+  background-size: 300% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: shimmer 14s linear infinite;
   -webkit-box-decoration-break: slice;
   box-decoration-break: slice;
-  display: inline-block;
   padding-left: 0.04em;
 }
 
