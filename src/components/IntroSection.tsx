@@ -36,23 +36,19 @@ const IntroSection = () =>
         viewport={{ once: true }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}>
         
-          <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Uma experiência sensorial</span>
+          <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">PASCOAVEC 2026</span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-bold mt-4 leading-[1.1] italic text-shimmer">
-            Quando o aroma<br />
-            conta uma história
+            A melhor parte da Páscoa<br />
+            nunca foi o chocolate.
           </h2>
           
           <div className="mt-8 space-y-6">
             <p className="font-body text-lg text-chocolate-light/80 leading-relaxed">
-              A coleção de Páscoa Avec não é apenas sobre velas é sobre criar momentos. Cada fragrância foi cuidadosamente desenvolvida para despertar memórias e sensações que só a Páscoa traz.
-            
-
-          </p>
-            
-
-
-
-          
+              Foram as memórias criadas. O cheiro do bolo assando e tomando conta da casa inteira. O caramelo derretendo na panela. A família reunida no domingo…
+            </p>
+            <p className="font-body text-lg text-chocolate-light/80 leading-relaxed">
+              Criamos aromas inspirados nessas memórias e sensações, cheirinhos exclusivos e com unidades limitadas, feitas à mão.
+            </p>
           </div>
 
           {/* Feature pills */}
