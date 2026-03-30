@@ -108,7 +108,7 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
               : "bg-chocolate text-white shadow-[0_8px_25px_-8px_hsl(25_55%_25%/0.35)] hover:shadow-[0_12px_35px_-8px_hsl(25_55%_25%/0.45)]"
         }`}
       >
-        {submitted ? "✨ Cadastro realizado!" : isLoading ? "Enviando..." : "Entrar para o Grupo"}
+        {submitted ? "✨ Cadastro realizado!" : isLoading ? "Enviando..." : "Receber acesso VIP"}
       </motion.button>
 
       <p className={`text-center mt-3 font-body text-sm ${isHero ? "text-white/35" : "text-chocolate-light/40"}`}>
