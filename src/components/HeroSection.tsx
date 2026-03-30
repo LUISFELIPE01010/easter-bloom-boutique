@@ -10,6 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img src={heroImg} alt="" className="w-full h-full object-cover" fetchPriority="high" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" />
+        <div className="absolute inset-0 bg-black/20 md:bg-transparent" />
       </div>
 
       {/* Content */}
@@ -22,20 +23,18 @@ const HeroSection = () => {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="text-center lg:text-left"
           >
-            <div className="inline-block md:bg-transparent bg-black/30 md:backdrop-blur-none backdrop-blur-[2px] rounded-2xl px-4 py-3 md:p-0">
-              <h1 className="font-display font-black leading-[1.05] mb-6">
-                <img src={avecTextLogo} alt="Avec" className="block h-24 md:h-28 lg:h-36 w-auto mx-auto lg:mx-0" fetchPriority="high" />
-                <span className="block text-4xl md:text-5xl lg:text-6xl mt-2" style={{ color: '#ECE4D2' }}>
-                  A Páscoa que você sente.
-                </span>
-              </h1>
+            <h1 className="font-display font-black leading-[1.05] mb-6">
+              <img src={avecTextLogo} alt="Avec" className="block h-24 md:h-28 lg:h-36 w-auto mx-auto lg:mx-0" fetchPriority="high" />
+              <span className="block text-4xl md:text-5xl lg:text-6xl mt-2" style={{ color: '#ECE4D2' }}>
+                A Páscoa que você sente.
+              </span>
+            </h1>
 
-              <p className="font-elegant text-lg md:text-xl text-white max-w-md mx-auto lg:mx-0 leading-relaxed">
-                Dois aromas limitados que irão desbloquear as suas melhores memórias
-                <br />
-                (Além de perfumar de verdade!)
-              </p>
-            </div>
+            <p className="font-elegant text-lg md:text-xl text-white max-w-md mx-auto lg:mx-0 leading-relaxed">
+              Dois aromas limitados que irão desbloquear as suas melhores memórias
+              <br />
+              (Além de perfumar de verdade!)
+            </p>
           </motion.div>
 
           {/* Form side */}
