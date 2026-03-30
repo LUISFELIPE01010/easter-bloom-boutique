@@ -54,10 +54,10 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
   const isHero = variant === "hero";
 
   const inputClass = isHero
-    ? "w-full pl-12 pr-5 py-4 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/15 font-body text-white placeholder:text-white/40 focus:outline-none focus:border-white/40 focus:shadow-[0_0_0_3px_rgba(255,255,255,0.08)] transition-all duration-300"
+    ? "w-full pl-12 pr-5 py-4 rounded-2xl bg-black/10 backdrop-blur-sm border border-black/15 font-body text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-black/40 focus:shadow-[0_0_0_3px_rgba(0,0,0,0.08)] transition-all duration-300"
     : "w-full pl-12 pr-5 py-4 rounded-2xl bg-warm-white/80 backdrop-blur-sm border border-gold-light/25 font-body text-foreground placeholder:text-chocolate-light/40 focus:outline-none focus:border-gold focus:shadow-[0_0_0_3px_hsl(38_70%_52%/0.1)] transition-all duration-300";
 
-  const iconClass = isHero ? "text-white/30" : "text-chocolate-light/30";
+  const iconClass = isHero ? "text-foreground/30" : "text-chocolate-light/30";
 
   return (
     <form id={id} onSubmit={handleSubmit} className="w-full space-y-3">
@@ -104,14 +104,14 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
           submitted
             ? "bg-sage-deep text-white"
             : isHero
-              ? "bg-white text-black font-bold shadow-[0_8px_25px_-8px_rgba(0,0,0,0.3)] hover:brightness-95"
+              ? "bg-chocolate text-white font-bold shadow-[0_8px_25px_-8px_rgba(0,0,0,0.3)] hover:brightness-95"
               : "bg-chocolate text-white shadow-[0_8px_25px_-8px_hsl(25_55%_25%/0.35)] hover:shadow-[0_12px_35px_-8px_hsl(25_55%_25%/0.45)]"
         }`}
       >
         {submitted ? "✨ Cadastro realizado!" : isLoading ? "Enviando..." : "Receber acesso VIP"}
       </motion.button>
 
-      <div className={`flex items-center justify-center gap-4 mt-3 font-body text-sm ${isHero ? "text-white/45" : "text-chocolate-light/45"}`}>
+      <div className={`flex items-center justify-center gap-4 mt-3 font-body text-sm ${isHero ? "text-foreground/45" : "text-chocolate-light/45"}`}>
         <span>✓ Gratuito</span>
         <span>✓ Dados Seguros</span>
         <span>✓ +1700 pessoas</span>
