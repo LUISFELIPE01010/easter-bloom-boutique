@@ -104,7 +104,7 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
           submitted
             ? "bg-sage-deep text-white"
             : isHero
-              ? "bg-white text-black font-bold shadow-[0_8px_25px_-8px_rgba(0,0,0,0.3)] hover:brightness-95"
+              ? "bg-chocolate text-white font-bold shadow-[0_8px_25px_-8px_rgba(0,0,0,0.3)] hover:brightness-95"
               : "bg-chocolate text-white shadow-[0_8px_25px_-8px_hsl(25_55%_25%/0.35)] hover:shadow-[0_12px_35px_-8px_hsl(25_55%_25%/0.45)]"
         }`}
       >
