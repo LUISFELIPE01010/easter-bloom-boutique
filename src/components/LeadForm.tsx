@@ -57,7 +57,7 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
     ? "w-full pl-12 pr-5 py-4 rounded-2xl bg-black/10 backdrop-blur-sm border border-black/15 font-body text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-black/40 focus:shadow-[0_0_0_3px_rgba(0,0,0,0.08)] transition-all duration-300"
     : "w-full pl-12 pr-5 py-4 rounded-2xl bg-warm-white/80 backdrop-blur-sm border border-gold-light/25 font-body text-foreground placeholder:text-chocolate-light/40 focus:outline-none focus:border-gold focus:shadow-[0_0_0_3px_hsl(38_70%_52%/0.1)] transition-all duration-300";
 
-  const iconClass = isHero ? "text-white/30" : "text-chocolate-light/30";
+  const iconClass = isHero ? "text-foreground/30" : "text-chocolate-light/30";
 
   return (
     <form id={id} onSubmit={handleSubmit} className="w-full space-y-3">
