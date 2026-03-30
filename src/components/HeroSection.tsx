@@ -30,7 +30,9 @@ const HeroSection = () => {
             </h1>
 
             <p className="font-elegant text-lg md:text-xl text-white max-w-md mx-auto lg:mx-0 leading-relaxed">
-              Dois aromas limitados que irão desbloquear as suas melhores memórias (Além de perfumar de verdade!)
+              Dois aromas limitados que irão desbloquear as suas melhores memórias
+              <br />
+              (Além de perfumar de verdade!)
             </p>
           </motion.div>
 
