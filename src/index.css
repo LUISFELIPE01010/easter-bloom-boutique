@@ -132,7 +132,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: shimmer 14s linear infinite;
+  animation: shimmer 20s linear infinite;
   -webkit-box-decoration-break: slice;
   box-decoration-break: slice;
   padding-left: 0.04em;
