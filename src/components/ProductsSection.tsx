@@ -14,11 +14,11 @@ const VIP_LINK = "https://grupovipavec.avecaromas.com/entrar-no-grupo/";
 const products = [
   {
     name: "Choco Crunch",
-    note: "Chocolate Belga · Avelã · Baunilha",
-    tagline: "O abraço quente do cacau belga com a crocância da avelã.",
+    note: "CHOCOLATE 70% · BOLO DE CENOURA",
+    tagline: "O exato cheirinho da cobertura crocante do bolo de cenoura.",
     description:
-      "Uma experiência sensorial única que transporta para uma confeitaria europeia. As notas de topo de chocolate amargo se misturam com a avelã torrada, enquanto a base de baunilha bourbon cria uma atmosfera acolhedora e envolvente.",
-    details: ["Duração: +40 horas", "Cera de soja 100% natural", "Pavio de algodão ecológico"],
+      "Domingo à tarde. O bolo acabou de sair do forno. A cobertura de chocolate esfria na bancada e começa a formar aquela casquinha crocante.\n\nA Choco Crunch captura esse momento. Chocolate 70% com profundidade — sem ser doce demais. Notas de bolo de cenoura caseiro — aquele da infância. Um aroma feito pra sua criança interior.\n\nEm 2025, esgotou em 12 minutos.",
+    details: ["Unidades Limitadas", "Artesanal", "Ceras 100% Naturais"],
     images: [
       { src: chocoCrunchKitImg, alt: "Choco Crunch - Kit Completo" },
       { src: chocoCrunchCandleImg, alt: "Choco Crunch - Vela" },
@@ -28,11 +28,11 @@ const products = [
   },
   {
     name: "Salted Bliss",
-    note: "Caramelo Salgado · Flor de Sal · Âmbar",
-    tagline: "A sofisticação do caramelo com toques de flor de sal e âmbar dourado.",
+    note: "FLOR DE SAL · CARAMELO AMANTEIGADO",
+    tagline: "O cheiro de um croissant amanteigado com um fio de caramelo salgado por cima.",
     description:
-      "Um equilíbrio perfeito entre doce e salgado. O caramelo artesanal se encontra com cristais de flor de sal, enquanto o âmbar dourado confere profundidade e elegância. Uma fragrância que transforma qualquer espaço.",
-    details: ["Duração: +40 horas", "Cera de soja 100% natural", "Pavio de algodão ecológico"],
+      "Sim — salgado. Um aroma de Páscoa com Flor de Sal de verdade.\n\nNada de aromas de \"Caramelo Salgado\" que são apenas doces. É uma presença real que contrasta com o caramelo amanteigado e te leva direto pra uma padaria artesanal numa manhã de sol. Massa folhada, manteiga dourada, aquele cheirinho agridoce que dá água na boca.\n\nO aroma mais diferentão que a Avec já criou. A combinação que não deveria funcionar — mas que vicia desde a primeira fungada (Ainda estamos falando de aromas, ok?)\n\nEm 2025, esgotou em 8 minutos.",
+    details: ["Unidades Limitadas", "Artesanal", "Ceras 100% Naturais"],
     images: [
       { src: saltedBlissKitImg, alt: "Salted Bliss - Kit Completo" },
       { src: saltedBlissCandleImg, alt: "Salted Bliss - Vela" },
