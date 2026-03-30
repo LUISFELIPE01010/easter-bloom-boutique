@@ -3,20 +3,28 @@ import { useState } from "react";
 
 const faqs = [
   {
+    q: "As velas perfumam de verdade?",
+    a: "Esse é o motivo da Avec existir. A marca nasceu da frustração com velas que prometem e não entregam. Nossos aromas são desenvolvidos pra ter presença real!",
+  },
+  {
     q: "Como funciona o Grupo VIP?",
-    a: "O Grupo VIP é o nosso canal direto com você no WhatsApp. Por lá, os membros recebem acesso prioritário aos links das promoções, novidades e lançamentos exclusivos antes de todo mundo.",
+    a: "É um grupo no WhatsApp onde você recebe acesso antecipado às coleções antes do público geral, spoilers e condições exclusivas. É gratuito e você sai quando quiser.",
   },
   {
     q: "O cadastro tem algum custo?",
-    a: "Zero! Entrar para o Grupo VIP é totalmente gratuito e sem compromisso. Você só precisa se cadastrar.",
+    a: "Nenhum. O cadastro é 100% gratuito. Você só compra quando a coleção for lançada — se quiser.",
   },
   {
     q: "Quando começa a coleção de Páscoa?",
-    a: "A coleção de Páscoa 2026 será lançada em breve. Membros VIP terão acesso antecipado e condições que ninguém mais vai ter.",
+    a: "A PascoAvec 2026 será lançada no dia 03/04. O Grupo VIP terá acesso antecipado — e no ano passado, quem não estava no grupo ficou sem.",
   },
   {
     q: "As velas são veganas?",
-    a: "Sim! Todas as nossas velas são feitas com cera de soja 100% vegetal, sem testes em animais e com embalagens recicláveis.",
+    a: "Sim. Cera 100% natural, pavio de algodão, sem ingredientes de origem animal.",
+  },
+  {
+    q: "Posso comprar como presente?",
+    a: "Com certeza. A coleção de Páscoa é perfeita pra presentear. Aromas que sem dúvidas irão marcar quem receber!",
   },
 ];
 
@@ -35,7 +43,7 @@ const FAQSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Tire suas dúvidas</span>
+          <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">TIRE SUAS DÚVIDAS</span>
           <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-chocolate mt-3">
             Perguntas <span className="italic">frequentes</span>
           </h2>
