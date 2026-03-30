@@ -128,7 +128,10 @@
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   animation: shimmer 14s linear infinite;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 /* Ornate border */
@@ -229,6 +232,7 @@ html { scroll-behavior: smooth; }
 }
 
 .text-shimmer {
+  padding-top: 0.1em;
   padding-bottom: 0.15em;
 }
 
