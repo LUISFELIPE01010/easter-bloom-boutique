@@ -22,19 +22,18 @@ const HeroSection = () => {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="text-center lg:text-left"
           >
-            <h1 className="font-display font-black leading-[1.05] mb-6">
+             <h1 className="font-display font-black leading-[1.05] mb-6">
               <img src={avecTextLogo} alt="Avec" className="block h-24 md:h-28 lg:h-36 w-auto mx-auto lg:mx-0" fetchPriority="high" />
               <span className="block text-2xl md:text-3xl lg:text-4xl text-white font-semibold mt-2">
-                Aromas que contam
+                A Páscoa que você
               </span>
               <span className="block text-4xl md:text-5xl lg:text-6xl italic mt-1 pb-2" style={{ color: '#ECE4D2' }}>
-                histórias de Páscoa
+                sente.
               </span>
             </h1>
 
             <p className="font-elegant text-lg md:text-xl text-white max-w-md mx-auto lg:mx-0 leading-relaxed">
-              Velas artesanais feitas com amor. Entre no grupo VIP e seja a primeira a garantir os cheirinhos mais
-              desejados!
+              Dois aromas limitados que irão desbloquear as suas melhores memórias (Além de perfumar de verdade!)
             </p>
           </motion.div>
 
