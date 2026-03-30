@@ -32,7 +32,7 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
           name: formData.name,
           email: formData.email,
           whatsapp: formData.whatsapp,
-          timestamp: new Date().toISOString(),
+          timestamp: new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" }),
         }),
       });
 
