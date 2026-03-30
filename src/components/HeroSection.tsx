@@ -45,9 +45,9 @@ const HeroSection = () => {
           >
             <div className="rounded-3xl p-8 backdrop-blur-sm border border-white/10 shadow-2xl" style={{ backgroundColor: 'rgba(236, 228, 210, 0.15)' }}>
               <div className="text-center mb-6">
-                <h2 className="font-body text-2xl font-bold text-white">Entre para o Grupo VIP</h2>
+                <h2 className="font-body text-2xl font-bold text-white">Garanta seu acesso VIP</h2>
                 <p className="font-body text-base text-white/60 mt-1">
-                  Receba acesso antecipado e brindes
+                  Dois aromas que esgotaram em minutos no ano passado
                 </p>
               </div>
               <LeadForm variant="hero" />

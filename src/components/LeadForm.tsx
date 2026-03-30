@@ -111,9 +111,11 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
         {submitted ? "✨ Cadastro realizado!" : isLoading ? "Enviando..." : "Receber acesso VIP"}
       </motion.button>
 
-      <p className={`text-center mt-3 font-body text-sm ${isHero ? "text-white/35" : "text-chocolate-light/40"}`}>
-        Seus dados estão seguros · Vagas limitadas
-      </p>
+      <div className={`flex items-center justify-center gap-4 mt-3 font-body text-sm ${isHero ? "text-white/45" : "text-chocolate-light/45"}`}>
+        <span>✓ Gratuito</span>
+        <span>✓ Dados Seguros</span>
+        <span>✓ +1700 pessoas</span>
+      </div>
     </form>
   );
 };

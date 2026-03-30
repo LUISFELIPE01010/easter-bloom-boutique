@@ -67,10 +67,10 @@ const SocialProof = () => {
           className="text-center mb-12 md:mb-16"
         >
           <span className="font-elegant text-sm md:text-base tracking-[0.3em] text-gold uppercase">
-            Quem ama, recomenda
+            QUEM SENTIU, NÃO ESQUECEU
           </span>
           <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-chocolate mt-3">
-            O que dizem sobre a <span className="italic text-gold">Avec</span>
+            O que dizem sobre a <span className="italic text-gold">Coleção de Páscoa</span>
           </h2>
         </motion.div>
 

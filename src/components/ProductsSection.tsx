@@ -99,7 +99,11 @@ const ProductsSection = () => (
 
                 <p className="font-body text-lg text-chocolate/70 mt-4 leading-relaxed italic">{p.tagline}</p>
 
-                <p className="font-body text-base text-chocolate-light/60 mt-4 leading-relaxed">{p.description}</p>
+                <div className="font-body text-base text-chocolate-light/60 mt-4 leading-relaxed space-y-4">
+                  {p.description.split('\n\n').map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
+                </div>
 
                 {/* Details chips */}
                 <div className={`flex flex-wrap gap-2 mt-6 ${isReversed ? "md:justify-end" : ""}`}>
