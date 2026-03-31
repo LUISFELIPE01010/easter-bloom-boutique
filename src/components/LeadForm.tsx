@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { User, Mail, Phone } from "lucide-react";
+import { User, Mail, Phone, ShieldCheck, Users, Sparkles } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/27011460/un5ogym/";
