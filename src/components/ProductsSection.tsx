@@ -57,7 +57,7 @@ const ProductsSection = () => (
         className="text-center mb-16 md:mb-20"
       >
         <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">COLEÇÃO PASCOAVEC 2026</span>
-        <h2 className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-chocolate mt-3">
+        <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-chocolate mt-3">
           Dois cheirinhos. Duas memórias. <span className="italic text-gold">Unidades Limitadas</span>
         </h2>
       </motion.div>
