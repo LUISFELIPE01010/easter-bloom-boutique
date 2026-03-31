@@ -111,7 +111,7 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
         {submitted ? "✨ Cadastro realizado!" : isLoading ? "Enviando..." : "Receber acesso VIP"}
       </motion.button>
 
-      <div className={`grid grid-cols-3 gap-2 mt-4 ${isHero ? "text-foreground/50" : "text-chocolate-light/50"}`}>
+      <div className={`grid grid-cols-3 gap-4 mt-4 ${isHero ? "text-foreground/50" : "text-chocolate-light/50"}`}>
         {[
           { icon: Sparkles, label: "Gratuito" },
           { icon: ShieldCheck, label: "Dados seguros" },
