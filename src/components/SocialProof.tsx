@@ -1,23 +1,39 @@
 import { useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import feedback1 from "@/assets/feedback-1.jpg";
-import feedback2 from "@/assets/feedback-2.jpg";
+import feedbackNew1 from "@/assets/feedback-new-1.png";
+import feedbackNew2 from "@/assets/feedback-new-2.png";
+import feedbackNew3 from "@/assets/feedback-new-3.png";
+import feedbackNew4 from "@/assets/feedback-new-4.png";
 import feedback3 from "@/assets/feedback-3.jpg";
 
 const feedbacks = [
   {
-    src: feedback1,
-    name: "Cliente VIP",
-    product: "Salted Bliss",
-    quote: "O aroma que conquista à primeira vela. Minha casa nunca mais foi a mesma! 🕯️",
+    src: feedbackNew1,
+    name: "Cliente Avec",
+    product: "Salted Bliss & Choco Crunch",
+    quote: "Finalmente abri minha caixinha! Agora entendi porque falaram tanto da Salted. O salgado dá um toque muito diferente. A de Choco também, que delícia! 😍",
     stars: 5,
   },
   {
-    src: feedback2,
+    src: feedbackNew2,
     name: "Apaixonada por velas",
     product: "Choco Crunch",
-    quote: "Irresistível do início ao fim. O cheirinho de chocolate belga preenche todos os ambientes. 🍫",
+    quote: "Boa noite com a maioralll ✨ A Choco Crunch acesa é puro aconchego!",
+    stars: 5,
+  },
+  {
+    src: feedbackNew3,
+    name: "Beca",
+    product: "Choco Crunch",
+    quote: "Hoje vou dormir com a Choco kkk perfeição ❤️❤️❤️",
+    stars: 5,
+  },
+  {
+    src: feedbackNew4,
+    name: "Fã da Salted",
+    product: "Salted Bliss",
+    quote: "O que é a Salted? A Salted é uma MARAVILHA! 🥰🥰🥰 Enfim chegaram!",
     stars: 5,
   },
   {
