@@ -26,7 +26,7 @@ const HeroSection = () => {
             <h1 className="font-display font-black leading-[1.05] mb-6">
               <img src={avecTextLogo} alt="Avec" className="block h-24 md:h-28 lg:h-36 w-auto mx-auto lg:mx-0" fetchPriority="high" />
               <span className="block text-4xl md:text-5xl lg:text-6xl mt-2" style={{ color: '#ECE4D2' }}>
-                A Páscoa que você sente.
+                A Páscoa que<br />você sente.
               </span>
             </h1>
 
