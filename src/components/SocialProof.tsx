@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import feedbackNew1 from "@/assets/feedback-new-1.png";
 import feedbackNew2 from "@/assets/feedback-new-2.png";
-import feedbackNew3 from "@/assets/feedback-new-3.png";
+import feedbackNew3 from "@/assets/feedback-new-5.png";
 import feedbackNew4 from "@/assets/feedback-new-4.png";
 import feedback3 from "@/assets/feedback-3.jpg";
 
@@ -24,9 +24,9 @@ const feedbacks = [
   },
   {
     src: feedbackNew3,
-    name: "Beca",
-    product: "Choco Crunch",
-    quote: "Hoje vou dormir com a Choco kkk perfeição ❤️❤️❤️",
+    name: "Kelly Mohsen",
+    product: "Salted Bliss",
+    quote: "E esperar mais um ano pela Salted é fora de cogitação. Meu cheirinho preferido até agora. Acendi no café da manhã de domingo, com uns croissants, bolinho ❤️",
     stars: 5,
   },
   {
