@@ -34,7 +34,8 @@ const IntroSection = () =>
         initial={{ opacity: 0, x: 60 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}>
+        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        className="text-center">
         
           <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">PASCOAVEC 2026</span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-bold mt-4 leading-[1.1] italic text-shimmer">
