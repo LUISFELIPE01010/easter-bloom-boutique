@@ -111,10 +111,17 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
         {submitted ? "✨ Cadastro realizado!" : isLoading ? "Enviando..." : "Receber acesso VIP"}
       </motion.button>
 
-      <div className={`flex items-center justify-center gap-4 mt-3 font-body text-sm ${isHero ? "text-foreground/45" : "text-chocolate-light/45"}`}>
-        <span>✓ Gratuito</span>
-        <span>✓ Dados Seguros</span>
-        <span>✓ +1700 pessoas</span>
+      <div className={`grid grid-cols-3 gap-2 mt-4 ${isHero ? "text-foreground/50" : "text-chocolate-light/50"}`}>
+        {[
+          { icon: Sparkles, label: "Gratuito" },
+          { icon: ShieldCheck, label: "Dados seguros" },
+          { icon: Users, label: "+1700 pessoas" },
+        ].map((item) => (
+          <div key={item.label} className="flex flex-col items-center gap-1.5 py-2">
+            <item.icon size={15} strokeWidth={1.5} />
+            <span className="font-body text-xs tracking-wide">{item.label}</span>
+          </div>
+        ))}
       </div>
     </form>
   );
