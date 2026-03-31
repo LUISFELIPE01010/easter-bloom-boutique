@@ -24,9 +24,9 @@ const feedbacks = [
   },
   {
     src: feedbackNew3,
-    name: "Beca",
-    product: "Choco Crunch",
-    quote: "Hoje vou dormir com a Choco kkk perfeição ❤️❤️❤️",
+    name: "Kelly Mohsen",
+    product: "Salted Bliss",
+    quote: "E esperar mais um ano pela Salted é fora de cogitação. Meu cheirinho preferido até agora. Acendi no café da manhã de domingo, com uns croissants, bolinho ❤️",
     stars: 5,
   },
   {
