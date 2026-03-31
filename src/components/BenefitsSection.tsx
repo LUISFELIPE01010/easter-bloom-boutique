@@ -41,7 +41,7 @@ const BenefitsSection = () => (
         className="text-center mb-14"
       >
         <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">Por que entrar?</span>
-        <h2 className="font-display text-3xl md:text-5xl font-bold text-cream mt-3 leading-tight">
+        <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-cream mt-3 leading-tight">
           O que o <span className="italic text-gold">Grupo VIP</span> te dá
         </h2>
         <p className="font-elegant text-lg text-cream/50 mt-3 max-w-lg mx-auto">

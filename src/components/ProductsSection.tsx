@@ -94,8 +94,8 @@ const ProductsSection = () => (
 
               {/* Details */}
               <div className={`${isReversed ? "md:order-1 md:text-right" : "md:order-2"} flex flex-col justify-center pt-6 md:pt-0`}>
-                <h3 className="font-display text-3xl md:text-4xl font-bold text-chocolate">{p.name}</h3>
-                <p className="font-elegant text-sm text-gold tracking-[0.2em] mt-2 uppercase">{p.note}</p>
+                <h3 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-chocolate">{p.name}</h3>
+                <p className="font-elegant text-base text-gold tracking-[0.2em] mt-3 uppercase">{p.note}</p>
 
                 <p className="font-body text-lg text-chocolate/70 mt-4 leading-relaxed italic">{p.tagline}</p>
 

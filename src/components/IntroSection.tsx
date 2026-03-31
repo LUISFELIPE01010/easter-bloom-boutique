@@ -38,7 +38,7 @@ const IntroSection = () =>
         className="text-center">
         
           <span className="font-elegant text-base tracking-[0.3em] text-gold uppercase">PASCOAVEC 2026</span>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-bold mt-4 leading-[1.1] italic text-shimmer">
+          <h2 className="font-display text-4xl md:text-6xl lg:text-[4rem] font-bold mt-4 leading-[1.1] italic text-shimmer">
             A melhor parte da Páscoa<br />
             nunca foi o chocolate
           </h2>

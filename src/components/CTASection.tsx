@@ -23,7 +23,7 @@ const CTASection = () =>
       className="text-center">
       
         <span className="font-elegant text-base tracking-[0.3em] text-cream uppercase">Última chance</span>
-        <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-warm-white mt-3 leading-tight">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-warm-white mt-3 leading-tight">
           As vagas estão<br />
           <span className="italic">acabando</span>
         </h2>
