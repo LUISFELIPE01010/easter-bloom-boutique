@@ -115,11 +115,11 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
         {[
           { icon: Sparkles, label: "Gratuito" },
           { icon: ShieldCheck, label: "Dados seguros" },
-          { icon: Users, label: "+1700 membros" },
+          { icon: Users, label: "+1700 pessoas" },
         ].map((item) => (
-          <div key={item.label} className="flex flex-col items-center gap-1.5 py-2">
+          <div key={item.label} className="flex flex-col items-center gap-1.5 py-2 text-center">
             <item.icon size={15} strokeWidth={1.5} />
-            <span className="font-body text-xs tracking-wide">{item.label}</span>
+            <span className="font-body text-xs tracking-wide whitespace-nowrap">{item.label}</span>
           </div>
         ))}
       </div>
