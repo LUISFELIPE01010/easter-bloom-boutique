@@ -65,7 +65,7 @@ const SocialProof = () => {
 
   // Auto-play
   useEffect(() => {
-    const timer = setInterval(() => go(1), 5000);
+    const timer = setInterval(() => go(1), 8000);
     return () => clearInterval(timer);
   }, [go]);
 
