@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import feedbackNew1 from "@/assets/feedback-new-1.png";
 import feedbackNew2 from "@/assets/feedback-new-2.png";
-import feedbackNew3 from "@/assets/feedback-new-3.png";
+import feedbackNew3 from "@/assets/feedback-new-5.png";
 import feedbackNew4 from "@/assets/feedback-new-4.png";
 import feedback3 from "@/assets/feedback-3.jpg";
 
