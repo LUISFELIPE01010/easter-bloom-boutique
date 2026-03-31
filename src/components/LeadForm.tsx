@@ -36,6 +36,13 @@ const LeadForm = ({ id = "lead-form", variant = "default" }: LeadFormProps) => {
         }),
       });
 
+      // Dispara evento de Lead no Meta Pixel
+      if (typeof window !== "undefined" && (window as any).fbq) {
+        (window as any).fbq("track", "Lead", {
+          content_name: "Grupo VIP Avec",
+        });
+      }
+
       setSubmitted(true);
       setFormData({ name: "", email: "", whatsapp: "" });
       setTimeout(() => setSubmitted(false), 5000);
